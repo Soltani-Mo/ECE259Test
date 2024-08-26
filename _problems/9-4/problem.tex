@@ -1,0 +1,62 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.6-40] Find the mutual inductance between two coplanar rectangular loops with parallel sides, as shown in Fig. 6-50. Assume that $h_1>>h_2$ ($h_2<w_2<d$).
+
+\begin{center}
+\includegraphics[width=\textwidth]{\ppath Cheng6-40_prompt.png}
+\end{center}}
+
+\solution{We can approximate the magnetic flux from the large loop as two infinitely long wires on the long sides of the loop with lengths $h_1$. These infinitely long wires would carry a current $I$ in opposite directions. We can neglect the two short sides of the large loop with length $w_1$.
+\begin{align*}
+\Lambda_{12} &= \frac{\mu_0 h_2 I}{2\pi} \int_0^{w_2} \left( \frac{1}{d+x}-\frac{1}{w_1+d+x}\right)\text{d}x\\
+&= \frac{\mu_0 h_2 I}{2\pi} \ln\left( \frac{w_2+d}{d}\cdot \frac{w_1+d}{w_1+w_2+d}\right).
+\end{align*}
+Dividing by the current we get
+\begin{align*}
+L_{12} &= \Lambda_{12}/I\\
+&= \frac{\mu_0 h_2 }{2\pi} \ln\left( \frac{w_2+d}{d}\cdot \frac{w_1+d}{w_1+w_2+d}\right).
+\end{align*}
+}
+
+\answer{\begin{align*}
+L_{12}=\frac{\mu_o h_2}{2\pi}\ln \frac{(w_1+d)(w_2+d)}{d(w_1+w_2+d)}
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

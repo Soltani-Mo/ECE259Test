@@ -1,0 +1,96 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 4-5.
+\textbf{Goal:} Assume a point charge $Q$ above an infinite conducting ground plane at $y=0$. Prove that $V(x,y,z)$ in equation (4-37) satisfies Laplace's equation if the conducting plane is maintained at zero potential. Find the expression for $V(x,y,z)$ if the potential were non-zero, and find the electrostatic force of attraction between the charge Q and the conducting plane.\\
+\\
+\textbf{Steps:} 
+\begin{enumerate}
+\item Apply Laplacian in cartesian coordinates.
+
+\solution{
+\begin{align*}
+\nabla^2 V &= \frac{\partial^2 V}{\partial x^2} + \frac{\partial^2 V}{\partial y^2} + \frac{\partial^2 V}{\partial x^2} \\
+&= 0
+\end{align*} 
+since,
+\begin{align*}
+\frac{\partial^2 V}{\partial x^2} &= \frac{Q}{4\pi \varepsilon_0}\left[ \frac{2x^2 - (y-d)^2 - z^2}{(x^2 + (y-d)^2 + z^2)^{5/2}} + \frac{-2x^2 + (y+d)^2 + z^2}{(x^2 + (y+d)^2 + z^2)^{5/2}} \right] \\
+\frac{\partial^2 V}{\partial y^2} &= \frac{Q}{4\pi \varepsilon_0}\left[ \frac{2(y-d)^2 - x^2 -  z^2}{(x^2 + (y-d)^2 + z^2)^{5/2}} + \frac{-2 (y+d)^2 + x^2+ z^2}{(x^2 + (y+d)^2 + z^2)^{5/2}} \right] \\
+\frac{\partial^2 V}{\partial z^2} &= \frac{Q}{4\pi \varepsilon_0}\left[ \frac{2z^2 - (y-d)^2 - x^2 }{(x^2 + (y-d)^2 + z^2)^{5/2}} + \frac{-2z^2 + (y+d)^2 + x^2}{(x^2 + (y+d)^2 + z^2)^{5/2}} \right] \\
+\end{align*}}
+
+\item Find a new $V$ that still satisfies the Laplace equation plus the new boundary condition that $V(x,0,z)=V_0$. \\
+
+\solution{
+Using image theory, we can write that the total potential as the sum of the potentials due to two charges on either side of the conducting plane
+\begin{align*}
+V &= \frac{Q}{4\pi\varepsilon_0} \left( \frac{1}{R_+} - \frac{1}{R_-} \right) + V_0 \\
+\text{where,}& \\
+R_+ &= \left[x^2 + (y-d)^2 + z^2 \right]^{1/2} \\
+R_- &= \left[ x^2 + (y+d)^2 + z^2 \right]^{1/2}\,.
+\end{align*}}
+
+\item Find the electric field from the potential, and then use this to find the force as field times charge. \\
+
+\solution{
+The electric force exerted on the charge $Q$ will come from the electric field due to the image charge $-Q$, which is given by
+\begin{align*}
+E_- &= -\nabla\left( \frac{-Q}{4\pi\varepsilon_0} \frac{1}{R_-}\right) \\
+E_-(y=d) &= \frac{-Q}{4\pi\varepsilon_0} \left (\frac{x \uvect{a}_x + 2d \uvect{a}_y + z \uvect{a}_z}{\left( x^2 + (2d)^2 + z^2 \right)^{3/2}} \right)
+\end{align*}
+The force on the charge $Q$ is then equal to the charge multiplied by the electric field
+\begin{align*}
+F_{+}  &= \frac{-Q^2}{4\pi\varepsilon_0} \left (\frac{x \uvect{a}_x + 2d \uvect{a}_y + z \uvect{a}_z}{\left( x^2 + (2d)^2 + z^2 \right)^{3/2}} \right)
+\end{align*}
+Note that charges can not cause forces on themselves, so we only considered the electric field due to the other charges in the system to find the electric force acting on the charge $Q$.}
+\end{enumerate}
+\answer{\begin{enumerate}[label=(\alph*)] 
+\item Proof problem
+\item \begin{align*}
+V &= \frac{Q}{4\pi\varepsilon_0} \left( \frac{1}{R_+} - \frac{1}{R_-} \right) + V_0 \\
+\text{where,}& \\
+R_+ &= \left[x^2 + (y-d)^2 + z^2 \right]^{1/2} \\
+R_- &= \left[ x^2 + (y+d)^2 + z^2 \right]^{1/2}\,.
+\end{align*}
+\item \begin{align*}
+F_{+}  &= \frac{-Q^2}{4\pi\varepsilon_0} \left (\frac{x \uvect{a}_x + 2d \uvect{a}_y + z \uvect{a}_z}{\left( x^2 + (2d)^2 + z^2 \right)^{3/2}} \right)
+\end{align*}
+\end{enumerate}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

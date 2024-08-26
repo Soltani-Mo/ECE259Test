@@ -1,0 +1,78 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.6-17] The magnetic flux density $\vec{B}$ for an infinitely long cylindrical conductor has been found in Example 6-1. Determine the vector magnetic potential $\vec{A}$ both inside and outside the conductor from the relation $\vec{B} = \nabla\times\vec{A}$.}
+
+\solution{
+Suppose the conductor has radius $b$ and carries current $I$.
+\emph{Inside} the conductor ($0\leq r\leq b$),
+\begin{align*}
+	\vec{B}_\mathrm{in} = \vec{a}_\phi \frac{\mu_0 I}{2\pi b^2}r.
+\end{align*}
+\emph{Outside} the conductor ($r \geq b$),
+\begin{align*}
+	\vec{B}_\mathrm{out} = \vec{a}_\phi \frac{\mu_0 I}{2\pi r}.
+\end{align*}
+Then, comparing $\vec{a}_\phi$ components of $\vec{B} = \nabla\times\vec{A}$, we can write
+\begin{align*}
+	\vec{B} &= \nabla\times\vec{A}\\
+	\implies \vec{a}_\phi B &= \vec{a}_\phi\left(\frac{\partial A_r}{\partial z} - \frac{\partial A_z}{\partial r}\right)
+\end{align*}
+For an infinite conductor oriented along $z$, $A_r$ is invariant along $z$. Therefore,
+\begin{align*}
+	\vec{B} &= \nabla\times\vec{A}\\
+	\implies B &= -\frac{\partial A_z}{\partial r}
+\end{align*}
+Substituing the expressions for $\vec{B}_\mathrm{in}$ and $\vec{B}_\mathrm{out}$ into the above and integrating,
+\begin{align*}
+	\vec{A}_\mathrm{in} &= \vec{a}_z \left[ -\frac{\mu_0 I}{4\pi}\frac{r^2}{b^2} + c_1 \right],\quad (0 \leq r\leq b)\\
+	\vec{A}_\mathrm{out} &= \vec{a}_z \left[ -\frac{\mu_0 I}{2\pi}\mathrm{ln}(r) + c_2 \right],\quad (r \geq b)
+\end{align*}
+At $r=b$, $\vec{A}_\mathrm{in} = \vec{A}_\mathrm{out}$ which allows us to write
+\begin{align*}
+	c_2 = \frac{\mu_0 I}{4\pi}\left(2\mathrm{ln}(b) - 1\right) + c_1
+\end{align*}
+}
+\answer{\begin{align*}
+	\vec{A}_\mathrm{in} &= \vec{a}_z \left[ -\frac{\mu_0 I}{4\pi}\frac{r^2}{b^2} + c_1 \right],\quad (0 \leq r\leq b)\\
+	\vec{A}_\mathrm{out} &= \vec{a}_z \left[ -\frac{\mu_0 I}{2\pi}\mathrm{ln}(r) + c_2 \right],\quad (r \geq b)\\
+	c_2 &= \frac{\mu_0 I}{4\pi}\left(2\mathrm{ln}(b) - 1\right) + c_1
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

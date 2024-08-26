@@ -1,0 +1,59 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.6-14] Find the total magnetic flux through a circular toroid with a rectangular cross section of height $h$. The inner and outer radii of the toroid are $a$ and $b$, respectively. A current $I$ flows in $N$ turns of closely wound wire around the toroid. Determine the percentage of error if the flux is found by multiplying the cross-sectional area by the flux density at the mean radius.}
+
+\solution{
+\begin{align*}
+	B_\phi &= \frac{\mu_0NI}{2\pi r},\\
+	\Phi &= \int_S B_\phi \,ds = \frac{\mu_0NI}{2\pi} \int_a^b \frac{h}{r}\,dr = \frac{\mu_0NIh}{2\pi}\,\ln\frac{b}{a}
+\end{align*}
+If $B_\phi$ at $r = \frac{a+b}{2}$ is used,
+\begin{align*}
+	\Phi' &=  \frac{\mu_0NIh}{\pi}\,\left(\frac{b-a}{b+a}\right),\\
+	\text{Percent error} &= \frac{\Phi' - \Phi}{\Phi}\times 100\\
+	&= \left[ \frac{2(b-a)}{(b+a) \ln (b/a)} - 1 \right]\times 100 \%.
+\end{align*}
+}
+\answer{\begin{align*}
+\vect{\phi}=\frac{\mu_o N I h}{2\pi}\ln \frac{b}{a}\\
+\%\,\, \text{error}=\Big[\frac{2(b-a)}{(b+a)\ln \frac{b}{a}}-1\Big]\times 100
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

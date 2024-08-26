@@ -1,0 +1,93 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.7-4] A conducting equilateral triangular loop is placed near a very long straight wire, shown in Fig. 6-48, with $d=b/2$. A current $i(t)=I\sin\omega t$ flows in the straight wire.
+\begin{enumerate}[label=(\alph*)]
+\item Determine the voltage registered by a high-impedance rms voltmeter inserted in the loop.
+\item Determine the voltmeter reading when the triangular loop is rotated by $60^\circ$ about a perpendicular axis through its center.
+\end{enumerate}
+
+\begin{center}
+\includegraphics[scale=0.5]{\ppath Cheng7-4_prompt.png}
+\end{center}}
+
+\solution{
+The magnetic flux density from the wire is given by 
+\begin{align*}
+\vect{B} = \uvect{a}_\phi \frac{\mu_0I\sin\omega t}{2\pi r}.
+\end{align*}
+The flux through the loop is $\Phi=\int_S \vect{B}\cdot d\vect{S}$, where $d\vect{S} = \uvect{a}_\phi 2zdr$ and $z=\frac{\sqrt{3}}{3}(r-d)$. We will use the sketch below to solve the problem.
+\begin{center}
+\includegraphics[scale=0.5]{\ppath Cheng7-4_diagram.png}
+\end{center}
+
+\begin{enumerate}[label=(\alph*)]
+\item 
+\begin{align*}
+\Phi &= \frac{\sqrt{3}}{3}\frac{\mu_0I\sin\omega t}{\pi}\int_d^{\frac{\sqrt{3}}{2}(b+d)}\left( 1-\frac{d}{r}\right)dr\\
+&= \frac{\sqrt{3}\mu_0I\sin\omega t}{3\pi}\left[ \frac{\sqrt{3}}{2}b-d\ln\left( \frac{\frac{\sqrt{3}}{2}b+d}{d} \right) \right]. \; d=b/2.
+\end{align*}
+The voltage can now be calculated.
+\begin{align*}
+V &= -\frac{d\Phi}{dt}\\
+&= -\frac{\sqrt{3}\mu_0I\omega b}{3\pi}\left[ \frac{\sqrt{3}}{2}-\frac{1}{2}\ln (\sqrt{3}+1)\right] \cos \omega t\\
+&= V_m \cos\omega t.\\
+V_{\text{rms} }&= \frac{\sqrt{2}}{2}\vert V_m \vert\\
+&= \frac{\sqrt{6}\mu_0I\omega b}{12\pi}\left[ \sqrt{3}-\ln (\sqrt{3}+1)\right]\\
+&= 0.0472\mu_0 I\omega b \;\text{(V)}.
+\end{align*}
+\item 
+\begin{align*}
+z &= \frac{1}{\sqrt{3}}\left[ \frac{b}{2}\left( 1+\frac{4}{3}\right)-r\right];\\
+\int \vect{B}\cdot d\vect{S} &= -\frac{\mu_0I\sin\omega t}{\sqrt{3}\pi}\int_{\frac{b}{2}\left(1+\frac{1}{\sqrt{3}}\right)}^{\frac{b}{2}\left(1+\frac{4}{\sqrt{3}}\right)}\left[ \frac{b}{2}\left(1+\frac{4}{\sqrt{3}}\right)\frac{1}{r}-1\right]dr\\
+&= -\frac{\mu_0I\sin\omega t}{\sqrt{3}\pi}\left[ \frac{b}{2}\left(1+\frac{4}{\sqrt{3}}\right)\ln\left(\frac{4+\sqrt{3}}{1+\sqrt{3}}\right)-\frac{\sqrt{3}}{2}b \right].\\
+V_{\text{rms}} &= \frac{1}{\sqrt{2}}\frac{\mu_0I\omega}{\sqrt{3}\pi}\frac{b}{2}\Bigg| \left( 1+\frac{4}{\sqrt{3}}\right)\ln\left(\frac{4+\sqrt{3}}{1+\sqrt{3}}\right)-\sqrt{3}\Bigg|
+&= 0.0469\mu_0 I \omega b\; \text{(V)}.
+\end{align*}
+\end{enumerate}
+
+}
+
+\answer{
+\begin{enumerate}[label=(\alph*)]
+\item $V_{\text{rms}} = 0.0472\mu_0 I\omega b \;\text{(V)}.$
+\item $V_{\text{rms}} = 0.0469\mu_0 I \omega b\; \text{(V)}.$
+\end{enumerate}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+% Same as Workbook 3-1
+\problem{Consider the system in the figure below and assume that $a=5\cm$, $b=1\cm$, and $d = 1\m$, as well as that the total charge of the two spheres is $Q = 600\pC$. Find the potential of the spheres and the electric field intensities $E_a$, $E_b$ near the surfaces of the spheres. The two spheres are galvanically connected.
+\begin{center}
+\includegraphics[scale = 0.6] {\ppath Q8.jpg}
+\end{center}}
+
+\solution {Because $d>>a,b$ we can assume that the potential of one sphere won't effect the potential of the other and as a result treat each sphere separately. In addition, because the spheres are galvanically connected we know the potential on each sphere will be the same. First, we will try to determine the charge on each sphere $Q_a$ and $Q_b$ 
+\begin{align*}
+Q &= Q_a+Q_b\\
+V_a&=V_b\rightarrow \frac{Q_a}{4\pi\varepsilon_0 a}=\frac{Q_b}{4\pi\varepsilon_0 b}\rightarrow\frac{Q_a}{Q_b}=\frac{a}{b}\\
+Q_a &= \frac{a}{a+b}Q=500\,\textrm{pC}\\
+Q_b &= \frac{b}{a+b}Q=100\,\textrm{pC}.
+\end{align*}
+\begin{enumerate}[label=(\alph*)]
+\item Using our values for $Q_a$ and $Q_b$ we can determine the potentials
+\begin{align*}
+V_a &= \frac{Q_a}{4\pi\varepsilon_0 a}=\frac{500\textrm{pC}}{4\pi\varepsilon_0 (5\textrm{cm})}=90\,\textrm{V}\\
+V_b &= \frac{Q_b}{4\pi\varepsilon_0 b}=\frac{100\textrm{pC}}{4\pi\varepsilon_0 (1\textrm{cm})}=90\,\textrm{V}.
+\end{align*}
+\item We can find the fields $E_a$ $E_b$ just above the two spheres using the surface charge densities \begin{align*}
+E_a &= \frac{\rho_{sa}}{\varepsilon_0}=\frac{Q_a}{4\pi a^2}\frac{1}{\varepsilon_0} \\
+E_a&=1.8\,\textrm{kV/m}\\
+E_b &= \frac{\rho_{sb}}{\varepsilon_0}=\frac{Q_b}{4\pi  b^2}\frac{1}{\varepsilon_0}\\
+E_b &= 9\,\text{kV/m}.
+\end{align*}
+\end{enumerate}
+}
+
+\answer{
+\begin{enumerate}[label=(\alph*)]
+\item \begin{align*}
+V_a = V_b = 90\,\text{V}\,.
+\end{align*}
+\item \begin{align*}
+E_a &= 1.8 \,\text{kV/m} \\
+E_b &= 9\,\text{kV/m}
+\end{align*}
+\end{enumerate}
+}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

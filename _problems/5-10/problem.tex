@@ -1,0 +1,80 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+% Same as Workbook 5-3 Part 2
+\problem{[Cheng P.5-7] Refer to Problem P.5-6.
+\begin{enumerate}[label=(\alph*)]
+\item Calculate the time it takes for the charge density in the sphere to diminish to $1\%$ of its initial value.
+\item Calculate the change in the electrostatic energy stored in the sphere as the charge density diminishes from the initial value to $1\%$ of its value. What happens to this energy?
+\item Determine the electrostatic energy stored in the space outside the sphere. Does this energy change with time?
+\end{enumerate}
+}
+
+\solution{
+\begin{enumerate}[label=(\alph*)]
+\item 
+\begin{align*}
+e^{-(\sigma/\varepsilon)t}=\frac{\rho}{\rho_0} = 0.01 \rightarrow t = \frac{\ln 100}{(\sigma/\varepsilon)}=4.88\times10^{-12}\,[\text{s}] = 4.88\,[\text{ps}].
+\end{align*}
+\item \begin{align*}
+W_i = \frac{\varepsilon}{2}\int_{v'}E_i^2 dv' = \frac{2\pi\rho_0b^3}{45\varepsilon}e^{-2(\sigma/\varepsilon)t} = (W_i)_0\left[ e^{-(\sigma/\varepsilon)t}\right]^2.
+\end{align*}
+Therfore,
+\begin{align*}
+\frac{W_i}{(W_i)_0} = \left[ e^{-(\sigma/\varepsilon)t}\right]^2=0.01^2=10^{-4}\,[\text{J}].
+\end{align*}
+This energy is dissipated as heat loss.
+\item The electrostatic energy stored outside the sphere is given by
+\begin{align*}
+W_o &= \frac{\varepsilon}{2}\int_b^{\infty} E_o^2 4\pi R^2dR\\
+&= \frac{Q_o^2}{8\pi\varepsilon_0b}\\
+&= 45\,[\text{kJ}].
+\end{align*}
+This energy is constant.
+\end{enumerate}
+}
+
+\answer{
+\begin{enumerate}[label=(\alph*)]
+\item $ 4.88\,[\text{ps}]$
+\item $10^{-4}\,[\text{J}]$, dissipated as heat loss.
+\item $45\,[\text{kJ}]$, the energy is constant over time.
+\end{enumerate}}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{A line charge of uniform density $\rho_l$ in free space forms a semicircle of radius $b$. Determine the magnitude and direction of the electric field intensity at the center of the semicircle.}
+
+\solution{We can begin by placing the semicircle extending from $\phi=0$ to $\phi=\pi$ along the radius $r=b$. The semicircle is now within the $+y$ half of the $xy$ plane. From this, we can recognize by symmetry that the only electric field component that will be non-zero is in the $y$-direction. This is because any $\uvect{a}_x$ components of the field from one side of the semicircle are cancelled by an equal and opposite contribution from the other side.
+
+Starting with the differential field from our contour of line charge to the origin,
+\begin{align*}
+	d\vect{E}&=-\dfrac{\rho_ldl}{4\pi\varepsilon_0 r^2}\uvect{a}_r
+\end{align*}
+and the fact that $\uvect{a}_y=b\sin\phi\uvect{a}_r$, we arrive at
+\begin{align*}
+	\vect{E}_y&=-\frac{1}{4\pi\epsilon_0}\int_0^{\pi}\frac{\rho_lbd\phi}{b^2}\sin\phi\vect{a}_y\\
+	&=-\frac{\rho_l}{2\pi\epsilon_0b}\vect{a}_y
+\end{align*}}
+
+\answer{
+\begin{align*}
+	\vect{E}_y&=-\frac{\rho_l}{2\pi\epsilon_0b}\vect{a}_y
+\end{align*}
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

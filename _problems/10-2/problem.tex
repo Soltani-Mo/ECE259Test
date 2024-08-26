@@ -1,0 +1,65 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{%Notaros example 6.8
+\textit{Open-circuit coil around a solenoid.} An air-filled solenoid of length $l=2$\,m and circular cross section of radius $a=10$\,cm has $N_1= 1750$ turns of wire. There is a low-frequency time-harmonic current of intensity $i(t) = I_o \sin\omega t$ flowing through the winding, where $I_o = 10$\,A and $\omega = 10^6$\,rad/s. An open-circuited short coil with $N_2 = 10$ turns of wire is placed around the solenoid, as shown in Fig.~Q6.11(a). Compute the voltages between the terminals of the coil.
+\begin{center}
+\includegraphics[scale=0.4]{\ppath NotarosExample6-8.png}\\
+\textbf{Figure 6.11} An open-circuited short coil placed around a very long solenoid carrying a low-frequency current: (a) three-dimensional view showing the windings and (b) cross-sectional view showing the reference directions for the emf and voltage.
+\end{center}}
+
+\solution{
+	The solenoid is very long ($l\gg a$), so that the end effects can be neglected while computing the magnetic field about its center. This means that the solenoid can be considered as infinitely long while computing the magnetic flux through the short coil in Fig. 6.11(a). As the coil consists of $N_2$ wire turns, this flux is given by
+	\begin{equation*}
+		\Phi=N_2\Phi_{single\ turn},
+	\end{equation*}
+	where $\Phi_{single\ turn}$ is the flux through a surface spanned over any of the turns. In other words, the electromotive forces induced in individual turns all add in series, and hence the total emf in the coil is
+	\begin{equation*}
+		e_{ind}=-N_2\frac{d\Phi_{single\ turn}}{dt}=-\frac{\pi\mu_0N_1N_2a^2}{l}\frac{di}{dt}=-\frac{I_0\omega\pi\mu_0N_1N_2a^2}{l}\cos\omega t
+	\end{equation*}
+	There is no current in the coil, because it is open-circuited, so that the voltage across the terminals is [Fig. 6.11(b)]
+	\begin{equation*}
+		v(t)=-e_{ind}(t)=\frac{I_0\omega\pi\mu_0N_1N_2a^2}{l}\cos\omega t=3.45\cos10^6t\ kV\ \ \ (t\ \text{in}\ s)
+	\end{equation*}
+}
+\answer{\begin{align*}
+v(t)=\frac{I_0\omega\pi\mu_0N_1N_2a^2}{l}\cos\omega t=3.45\cos10^6t\ kV\ \ \ (t\ \text{in}\ s)
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,103 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 5-13. 
+\textbf{Goal:} A d-c voltage $V_o$ is applied across a cylindrical capacitor of length $L$. The radii of the inner and outer conductors are $a$ and $b$, respectively. The space between the conductors is filled with two different lossy dielectrics having, respectively, permittivity $\varepsilon_1$ and conductivity $\sigma_1$ in the region $a < r < c$, and permittivity $\varepsilon_2$ and conductivity $\sigma_2$ in the region $c < r < b$. Find the current density in each region and the surface charge density on the two conductors and the interface between the dielectrics.\\
+\\
+\textbf{Steps:} 
+\begin{enumerate}
+
+\item Find the resistance of the first layer of dielectric ($a < r < c$).\\
+\solution{
+\begin{equation*}
+R_1 = \frac{\ln(c/a)}{2\pi \sigma_1 L}
+\end{equation*}
+}
+
+\item Find the resistance of the second layer of dielectric ($c < r < b$).\\
+\solution{
+\begin{equation*}
+R_2 = \frac{\ln(b/c)}{2\pi\sigma_2 L}
+\end{equation*}
+}
+
+\item From the two resistance values to find the resistance of the bilayered dielectric present between the conductors ($a < r < b$).\\
+\solution{
+\begin{equation*}
+R_\text{total} = R_1 + R_2 = \frac{1}{2 \pi L} \left( \frac{1}{\sigma_1}\ln\left(\frac{c}{a}\right) + \frac{1}{\sigma_2}\ln\left(\frac{b}{c}\right) \right)
+\end{equation*}
+}
+
+\item Find the current density that flows between the two conductors, and the $\vec{E}$ field between the conductors.\\
+\solution{
+\begin{equation*}
+\vec{J}_1 = \vec{J}_2 = \frac{\sigma_1 \sigma_2 V_o}{r (\sigma_1 \ln(b/c) + \sigma_2 \ln(c/a) )}
+\end{equation*}
+\begin{eqnarray*}
+\vec{E}_1 &=& \frac{1}{\sigma_1}\vec{J}_1 = \frac{\sigma_2 V_o}{r (\sigma_1 \ln(b/c) + \sigma_2 \ln(c/a) )}\\
+\vec{E}_2 &=& \frac{1}{\sigma_2}\vec{J}_2 = \frac{\sigma_1 V_o}{r (\sigma_1 \ln(b/c) + \sigma_2 \ln(c/a) )}
+\end{eqnarray*}
+}
+
+\item Find the surface charge density on the surface of the two conductors ($r = a$ and $r = b$).\\
+\solution{
+Using boundary condition for $\vec{D}$.
+\begin{eqnarray*}
+\rho_{s,a} &=& \varepsilon_1 E_1 \bigg|_{r=a} = \frac{\varepsilon_1 \sigma_2 V_o}{a (\sigma_1 \ln(b/c) + \sigma_2 \ln(c/a) )}\\
+\rho_{s,b} &=& -\varepsilon_2 E_2 \bigg|_{r=a} = -\frac{\varepsilon_2 \sigma_1 V_o}{b (\sigma_1 \ln(b/c) + \sigma_2 \ln(c/a) )}
+\end{eqnarray*}
+}
+
+\item Find the surface charge density at the interface between the two dielectrics ($r = c$).\\
+\solution{
+\begin{equation*}
+\rho_{s,c} = -(\varepsilon_1 E_1 - \varepsilon_2 E_2) \bigg|_{r=c} = \frac{(\varepsilon_2 \sigma_1 - \varepsilon_1 \sigma_2) V_o}{c (\sigma_1 \ln(b/c) + \sigma_2 \ln(c/a) ) }
+\end{equation*}
+}
+
+\end{enumerate}
+\answer{
+\begin{eqnarray*}
+\rho_{s,a} &= \frac{\varepsilon_1 \sigma_2 V_o}{a (\sigma_1 \ln(b/c) + \sigma_2 \ln(c/a) )}\\
+\rho_{s,b} &= -\frac{\varepsilon_2 \sigma_1 V_o}{b (\sigma_1 \ln(b/c) + \sigma_2 \ln(c/a) )}
+\end{eqnarray*}
+\begin{equation*}
+\rho_{s,c} = \frac{(\varepsilon_2 \sigma_1 - \varepsilon_1 \sigma_2) V_o}{c (\sigma_1 \ln(b/c) + \sigma_2 \ln(c/a) ) }
+\end{equation*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

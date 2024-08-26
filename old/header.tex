@@ -1,0 +1,263 @@
+% DOCUMENT: SCRIPT ARTICLE (STANDARD KOMA-SCRIPT)
+\documentclass[
+	%letterpaper,						% geometry might overwrite this!
+	twoside=true,						% oneside/twoside
+	captions=nooneline,			% do not care about two-lined captions
+	listof=totoc,						% include lists into register
+	bibliography=totoc,			% include bibliography into register
+	listof=numbered,					% numerate register
+	bibliography=totocnumbered,		% numerate bibliography
+	numbers=noenddot,				% no point at the end of a structure
+	parskip=half,						% paragraph spacing: "half" 
+	cleardoublepage=empty,	% completely empty page
+	fontsize=11pt
+	%,headsepline,headtopline,footsepline,footbotline
+	]{article}
+	
+\usepackage{etex}					% extended tex
+\usepackage{etoolbox}			% provides boolean an such (for solution switch)
+
+	
+% PAGE SETUP
+\usepackage[letterpaper,includeheadfoot,heightrounded,
+	left = 2.5cm,
+	right = 2cm,
+	top = 1.25cm,
+	bottom = 1.5cm]{geometry}
+	
+%\usepackage[headsepline,footsepline]{scrpage2}	% has to be included before hyperref!
+		%%\newpagestyle{lineHeadFooter}
+			%%{
+				%%{\clearscrheadfoot\hrulefill}								% head even
+				%%{\clearscrheadfoot\hrulefill}					% head odd
+				%%{\clearscrheadfoot\hrulefill}					% head only
+			%%}
+			%%{
+				%%{\clearscrheadfoot\cfoot{\pagemark}} 
+				%%{\clearscrheadfoot\cfoot{\pagemark}}		% head only
+				%%{}
+			%%}
+		%%\pagestyle{lineHeadFooter}
+		%
+%%\clearscrheadfoot
+%\pagestyle{scrheadings}
+%%\setheadtopline{1pt} 
+%\setheadsepline{0.4pt}
+%\setfootsepline{0.4pt}
+%%\setfootbotline{1pt}
+
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\renewcommand{\headrulewidth}{0.4pt}
+%\fancyfoot[EL]{\thepage}
+%\fancyfoot[OR]{\thepage}
+%\renewcommand{\footrulewidth}{0.4pt}
+
+\usepackage{subfiles}		% mainfile needs subfile package here
+
+% CAPTIONS
+\usepackage[format=plain,indention=0cm,labelfont=sf,bf,labelsep=quad,justification=centering]{caption}
+\usepackage{subfigure}	% use subcaptions with own labels
+
+%% REFERENCES AND LINKS %%
+%\usepackage[
+%	pdftex,
+%	hyperfootnotes=false,
+%	pdfpagelabels=true,
+%	plainpages=false, 					% false: so that there are no equal page numbers
+%	backref=page,							% reference in bibliography
+%	pagebackref=false,					% --> change to 'true' for debug
+%	bookmarksnumbered=true,		% integrate chapter numbers
+%	bookmarksopen=true,				% open bookmarks when clicked on
+%	pdfstartview=FitH,					% optionally zoom to viewer size		
+%	colorlinks=true,
+%	linkcolor=black,						% --> change to 'red' for debug
+%	citecolor=black,
+%	urlcolor=black
+%		]{hyperref}
+%\usepackage[all]{hypcap}		% target is upper edge for all floating links, not caption
+
+% ENCODING
+%\usepackage[american]{babel}	
+%\usepackage{cmap}							% make PDF searchable in Acrobat Reader
+%\usepackage[T1]{fontenc}			
+%\usepackage[utf8]{inputenc}
+
+% FONTS
+%\usepackage[scaled=0.92]{helvet} 	% Helvetica titles (92% is suitable with Times)
+%\usepackage{times} 						% Times font
+%\usepackage{textcomp}					% vertical mu (\textmu) for units, include after fontenc!
+%\usepackage{xcolor}
+
+% MATH
+\usepackage{amsmath,amssymb,bm}
+\usepackage{tabularx,multicol,multirow,longtable,array,booktabs}
+%\usepackage{wasysym}	 % smiley/frownie
+%\usepackage{array} 
+
+% ADDITIONAL STUFF (FIGURES, TABLES, ENUMERATIONS ETC.)
+\usepackage{placeins}					% provides \FloatBarrier command
+\usepackage{cite}
+\usepackage{enumerate,enumitem}
+%\usepackage{ifthen}
+\usepackage[pdftex]{graphicx}			% <- these together allow eps graphics (but 
+%\def\pdfshellescape{1}
+\graphicspath{{graphics/}}
+%\usepackage{epstopdf}							% <- the compilation takes longer than with pdf files)
+\usepackage{tikz} 					
+%	\usetikzlibrary{arrows,shapes,positioning,calc,fadings,patterns,decorations,decorations,decorations.pathreplacing,decorations.pathmorphing}
+%\usepackage[figuresright]{rotating}	% use 'figuresright' to overrule twoside, figure bottoms always right-sided
+
+
+		
+
+%\pagestyle{scrheadings} 
+
+% GLOBAL CONSTANTS
+\newcommand{\eqsep}{1em}
+\newcommand{\seqsep}{0.5em}
+\newcommand{\hpt}{\hspace*{1pt}}
+
+% MATH STUFF
+%\usepackage{ulem}
+%\newcommand{\duline}[1]{\uuline{\vphantom{g}#1}}
+\newcommand{\e}{\mathrm{e}}				% use upright e for Euler's number
+\newcommand{\bs}[1]{\textbf{#1}}
+\newcommand{\abs}[1]{\left|#1\right|}
+%\newcommand{\bnabla}{\bm{\nabla}}
+\renewcommand\Re{\operatorname{Re}}
+\renewcommand\Im{\operatorname{Im}}
+
+\ifcsname tpath\endcsname%
+  \else%
+    \def\tpath{}
+  \fi%
+
+
+\title{\vspace*{-1.5cm}%\hrulefill\\[2mm]
+\mbox{
+\begin{minipage}{0.945\textwidth}
+	\vspace*{2mm}
+	\centering
+	\includegraphics[height=1.2in, keepaspectratio=true]{\tpath graphics/ECE_UT.pdf} \\
+	%\fontsize{20}{20}\selectfont {ECE259} -- Homework Problems
+	\fontsize{20}{20}\selectfont {ECE259} -- Problem Set \problemsetnumber
+	\end{minipage}}\\[4mm]
+	\hrulefill\vspace*{-2.5cm}
+}
+\date{}
+\author{}
+
+\setlength{\fboxsep}{10pt}
+
+% DOC SETTINGS
+%\addtokomafont{section}{\normalfont\LARGE\bfseries\sffamily}
+%\addtokomafont{subsection}{\normalfont\Large\bfseries\sffamily}
+%\addtokomafont{subsubsection}{\normalfont\large\bfseries\sffamily}
+\newcommand{\itemi}[1]{\textbf{\textsf{#1}}}
+
+
+%\newcommand{\bibsection}{\subsection*{References}}
+\newcommand{\figref}[1]{Fig.~\ref{#1}}
+\newcommand{\Eqref}[1]{Eqn.~\eqref{#1}}
+\newcommand{\tabref}[1]{Tab.~\ref{#1}}
+\newcommand{\notaros}[1]{\textbf{Notaros Question #1}}
+
+\definecolor{shadecolor}{gray}{.91}
+\renewcommand{\boxed}[1]{\colorbox{shadecolor}{\normalcolor\relax$\displaystyle#1$}}
+
+
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\uvect}[1]{\mathbf{#1}}
+
+%\renewcommand{\labelitemi}{$\blacksquare$}
+	%\renewcommand{\labelenumi}{\textsf{\textbf{\theenumi.}}}
+	%\newcommand{\enumi}[1]{\bfseries\textsf{#1}}
+
+	
+	\newcommand\mm{\ensuremath{\,\text{mm}}}
+	\newcommand\cm{\ensuremath{\,\text{cm}}}
+	\newcommand\m{\ensuremath{\,\text{m}}}
+	\newcommand\km{\ensuremath{\,\text{km}}}
+	
+	\newcommand\pC{\ensuremath{\,\text{pC}}}
+	\newcommand\nC{\ensuremath{\,\text{nC}}}
+	\newcommand\uC{\ensuremath{\,\text{\textmu{}C}}}
+	
+	\renewcommand\d{\ensuremath{d}}
+	%\renewcommand{\d}{\ensuremath{\partial}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage{varwidth}
+%\newcommand\hide[1]{\phantom{\varwidth{\linewidth}#1\endvarwidth}}
+
+%
+%	\ifcsname showproblems\endcsname\else\def\showproblems{true}\fi%
+%	\newbool{showproblems}
+%	\setbool{showproblems}{\showproblems}
+%
+%	\ifcsname showsolutions\endcsname\else\def\showsolutions{true}\fi%
+%	\newbool{showsolutions}
+%	\setbool{showsolutions}{\showsolutions}
+%	
+%\ifcsname showanswers\endcsname\else\def\showanswers{true}\fi%
+%	\newbool{showanswers}
+%	\setbool{showanswers}{\showanswers}
+%	
+%	\newcommand\Solution{\textit{Solution:}{~}}
+%	\newcommand\Answer{\textit{Answer:}{~}}
+%	\newcommand{\problem}[1]{\ifbool{showproblems}{#1}{}}
+%	\newcommand{\solution}[1]{\ifbool{showsolutions}{{\color{blue}\Solution #1}}{}}
+%	\newcommand{\answer}[1]{\ifbool{showanswers}{{\color{blue}\Answer #1}}{}}
+%	
+%	%\newcommand{\smallsolution}[1]{\ifbool{showsolutions}{\textcolor{blue}{#1}}{}}
+%	%\newcommand{\marksolution}[1]{\ifbool{showsolutions}{\textcolor{blue}{\underline{#1}}}{#1}}
+%	%\newcommand{\switchsolution}[2]{\ifbool{showsolutions}{{\color{blue} #1}}{#2}}
+%	%\newcommand{\blanksolution}[1]{\ifbool{showsolutions}{{\color{blue}\Solution #1}}{\hide{\Solution #1}}}
+%	
+%	\ifcsname showworkbooks\endcsname\else\def\showworkbooks{true}\fi%
+%	\newbool{showworkbooks}
+%	\setbool{showworkbooks}{\showworkbooks}
+%	
+%		
+%	\ifcsname ppath\endcsname\else\def\ppath{}\fi%
+%	\ifcsname cpath\endcsname\else\def\cpath{}\fi%
+%	\ifcsname npath\endcsname\else\def\npath{}\fi%
+%	\ifcsname wpath\endcsname\else\def\wpath{}\fi%
+%	\ifcsname snum\endcsname\else\def\snum{}\fi%
+%	\ifcsname pnum\endcsname\else\def\pnum{}\fi%
+%	
+%	\newcommand\includeproblem[2]{
+%	\def\ppath{\tpath _problems/#1-#2/}
+%	\def\snum{#1}
+%	\def\pnum{#2}
+%	\begin{itemize}[label=$\blacksquare$]
+%		\item\itemi{Problem \snum-\pnum}  \hfill \textcolor{gray}{[P\snum-\pnum]} \\[-1.9em]
+%	\subfile{\ppath problem.tex}
+%	\end{itemize}}
+%	
+%	\newcommand\includequestion[2]{
+%	\def\npath{\tpath _questions/#1-#2/}
+%	\def\cpath{\tpath _questions/#1-#2/}
+%	\def\snum{#1}
+%	\def\pnum{#2}
+%	\begin{itemize}[label=$\blacksquare$]
+%		\item\itemi{Conceptual question \snum-\pnum} \hfill \textcolor{gray}{[Q\snum-\pnum]}  \\[-1.9em]
+%	\subfile{\npath problem.tex}
+%	\end{itemize}}
+%	
+%	\newcommand\includeworkbook[2]{
+%	\def\wpath{\tpath _workbooks/#1-#2/}
+%	\def\snum{#1}
+%	\def\pnum{#2}
+%	\ifbool{showworkbooks}{
+%	\begin{itemize}[label=$\blacksquare$]
+%		\item\itemi{Workbook \snum-\pnum} \hfill \textcolor{gray}{[W\snum-\pnum]}  \\[-1.9em]
+%	\subfile{\wpath workbook.tex}
+%	\end{itemize}
+%	\clearpage}{}}
+%	
+%	\newcommand\subsectionWorkbooks{\ifbool{showworkbooks}{\clearpage\subsection*{Workbooks}}{}}

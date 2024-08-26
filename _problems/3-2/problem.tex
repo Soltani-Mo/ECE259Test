@@ -1,0 +1,78 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{Consider a rectangular dielectric parallelepiped $0 \le x \le a, 0 \le y \le b, 0 \le z \le c$. The polarization vector in the dielectric is given by:
+\begin{equation*}
+\vec{P} = P_o \left( \frac{x}{a} \vec{a}_x + \frac{y}{b} \vec{a}_y + \frac{z}{c} \vec{a}_z \right)
+\end{equation*}
+where $P_o$ is a constant.
+\begin{enumerate}[label=(\alph*)]\setlength{\parskip}{1pt}
+\item Find the densities of volume and surface bound (polarization) charge in the parallelepiped.
+\item Show that the total bound charge in the parallelepiped is zero.
+\end{enumerate}}
+
+\solution{
+\begin{enumerate}[label=(\alph*)]
+\item ~\\[-2em]
+\begin{align*}
+\rho_p &= - \nabla\cdot \vect{P} \\
+ &= - P_0 \left(\frac{1}{a} + \frac{1}{b} + \frac{1}{c} \right) \\
+\rho_{p,s} = \uvect{a}_n \cdot \vect{P}
+&= \begin{cases}
+P_0 \quad  & {x = a, y=b, z=c}  \\
+0 \quad  & { x=0, y=0, z=0}\,.
+\end{cases}
+\end{align*}
+\item $\text{Total bound charge}=\text{Volume} + \text{Surface polarization charge} = \rho_p\cdot abc + P_0\cdot( ab + bc + ac) = 0$\,.
+\end{enumerate}}
+\answer{
+\begin{enumerate}[label=(\alph*)]
+\item ~\\[-2em]
+\begin{align*}
+\rho_p &= - P_0 \left(\frac{1}{a} + \frac{1}{b} + \frac{1}{c} \right) \\
+\rho_{p,s}&= \begin{cases}
+P_0 \quad  & {x = a, y=b, z=c}  \\
+0 \quad  & { x=0, y=0, z=0}\,.
+\end{cases}
+\end{align*}
+\item Total bound charge = 0\,.
+\end{enumerate}}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

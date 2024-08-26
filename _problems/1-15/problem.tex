@@ -1,0 +1,78 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{
+	Two infinitely long coaxial cylindrical surfaces, $r=a$ and $r=b$ $(b>a)$, carry surface charge densities $\rho_{sa}$ and $\rho_{sb}$ respectively.
+	\begin{enumerate} [label=(\alph*)]
+		\item Determine $\vec{E}$ everywhere
+		\item What must be the relation between $a$ and $b$ in order that $\vec{E}$ vanishes for $r>b$?
+	\end{enumerate}
+}
+
+\solution{
+Due to cylindrical symmetry, $\vect{E} = \uvect{a}_r E_r(r)$. Applying Gauss' law with a cylinder of radius $r$:
+\begin{enumerate}
+\item[(a)] \begin{align*}
+2\pi r\varepsilon_0 E_r (r<a) &= 0\\
+E_r (r<a) &= 0\\
+2\pi r\varepsilon_0 E_r(a<r<b) &= 2\pi a \rho_{s,a}\\
+E_r(a<r<b) &= \frac{a \rho_{s,a}}{\varepsilon_0 r}\\
+2\pi r\varepsilon_0 E_r(r<b) &= 2\pi a \rho_{s,a}+2\pi b \rho_{s,b}\\
+E_r(r>b) &= \frac{a\rho_{s,a} + b \rho_{s,b}}{\varepsilon_0 r}
+\end{align*}
+\item [(b)]
+\begin{align*}
+	\frac{a\rho_{s,a} + b \rho_{s,b}}{\varepsilon_0 r}&=0\\
+	\frac{b}{a} &= - \frac{\rho_{s,a}}{\rho_{s,b}}
+\end{align*}
+\end{enumerate}}
+\answer{
+\begin{enumerate}[label=(\alph*)]
+\item \begin{align*}
+E_r (r<a) &= 0\\
+E_r(a<r<b) &= \frac{a \rho_{s,a}}{\varepsilon_0 r}\\
+E_r(r>b) &= \frac{a\rho_{s,a} + b \rho_{s,b}}{\varepsilon_0 r}
+\end{align*}
+\item 
+\begin{align*}
+	\frac{b}{a} &= - \frac{\rho_{s,a}}{\rho_{s,b}}
+\end{align*}
+\end{enumerate}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

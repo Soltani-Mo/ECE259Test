@@ -1,0 +1,77 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.6-37] Calculate the mutual inductance per unit length between two parallel wire transmission lines $A-A'$ and $B-B'$ separated by a distance $D$, as shown in Fig. 6-47. Assume the wire radius is much smaller than $D$ and the wire spacing $d$.
+\begin{center}
+\includegraphics[scale=1]{\ppath Cheng6-37_prompt.png}
+\end{center}}
+
+\solution{ The magnetic flux density is a function of distance from the wire as shown in the diagram below.
+\begin{center}
+\includegraphics[scale=0.4]{\ppath Cheng6-37_diagram.png}
+\end{center}
+$\vect{B}$ at a distance $r$ from an infinitely long line carrying current $I$ is $\vect{B} = \uvect{a}_\phi\frac{\mu I}{2\pi r}$.
+
+For a unit length flux due to $I$ in line $A$ that links with the second line pair $B-B'$ is
+\begin{align*}
+\Phi_A' = \frac{\mu_0 I}{2\pi} \int_{AB}^{AC} \frac{\text{d}r}{r} = \frac{\mu_0 I}{2\pi}\ln\frac{AC}{AB}.
+\end{align*}
+That unit length flux due to $A'$ is 
+\begin{align*}
+\Phi_{A'}' = \frac{\mu_0 I}{2\pi}\ln\frac{A'C'}{A'B'}.
+\end{align*}
+The total flux linkage is therefore
+\begin{align*}
+\Lambda_{12}' &=  \Phi_{A'}+\Phi_{A'}'\\
+&=  \frac{\mu_0 I}{2\pi}\ln\frac{(AC)(A'C')}{(AB)(A'B')}\\
+&=  \frac{\mu_0 I}{2\pi}\ln\frac{(AB')(A'B)}{(AB)(A'B')}\\
+&=  \frac{\mu_0 I}{2\pi}\ln\frac{D^2+d^2}{D^2}.
+\end{align*}
+Finally we can determine the mutual inductance by simply dividing by the current
+\begin{align*}
+M_{12}'&= \frac{\Lambda_{12}'}{I}\\
+&= \frac{\mu_0}{2\pi}\ln\left(1+\frac{d^2}{D^2}\right).
+\end{align*}
+}
+
+\answer{\begin{align*}
+M^{'}_{12}=\frac{\mu_o}{2\pi}\ln \Big(1+\frac{d^2}{D^2}\Big)
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

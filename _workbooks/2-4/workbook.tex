@@ -1,0 +1,77 @@
+\def\showsolutions{true}
+\def\showworkbooks{true}
+
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+\textbf{Goal:} Find the work done by electric forces in moving a charge $Q = 1\nC$ from the coordinate origin to the point $(1\m,1\m,1\m)$ in the electrostatic field given by $\vect{E}(x,y,z) = (x \uvect{a}_x  + y^2 \uvect{a}_y - \uvect{a}_z)\, \text{V/m}$ along the straight line.\\
+\\
+\textbf{Steps:} 
+\begin{enumerate}
+\item Choose a path that would facilitate the computation of the work, based on the fact that 
+$\int_C \vec{E} \cdot \d\vec{l}$ is path-independent. 
+
+\solution{The parametric line describing the path from origin to point $(1\m,1\m,1\m)$ is given by:
+\begin{equation*}
+\vect{l}(t) = t \left( \uvect{a}_x + \uvect{a}_y + \uvect{a}_z\right)\;[\textrm{m}] \quad t \in [0,1]
+\end{equation*}}{\vskip 80pt}
+
+\item Compute scalar potential difference between point $(1\m,1\m,1\m)$ and the origin.
+
+\solution{\begin{align*}
+V &= -\int_{0}^{1} \vect{E}(x,y,z) \cdot d\vect{l}(t) \\
+	&= - \int_{0}^{1} (x \uvect{a}_x  + y^2 \uvect{a}_y - \uvect{a}_z) \cdot \left( \uvect{a}_x + \uvect{a}_y + \uvect{a}_z \right) dt \\
+ &=  0.1667\;[\textrm{V}]
+\end{align*}
+}{\vskip 80pt \newpage}
+
+\item Use the potential to compute work done by electric forces, recalling the fundamental definition 
+of electric potential difference as work per unit charge. 
+
+\solution{\begin{align*}
+W &= q V \\
+& = 166.67\,\textrm{pJ}
+\end{align*}
+Therefore, the work done by the electric field is $-166.67\,\textrm{pJ}$.}{\vskip 80pt}
+%\item Does the work done by electric forces change if we traverse a different path? Explain.
+
+%\vskip 80pt
+\end{enumerate}
+\answer{\textit{W}=\,-\,166.67\,pJ}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

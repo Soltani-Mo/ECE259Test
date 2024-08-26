@@ -1,0 +1,88 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.3-44] A parallel-plate capacitor of width $w$, length $L$, and separation $d$ is partially filled with a dielectric medium of dielectric constant $\varepsilon_r$ as shown in Fig. 3-43. A battery of $V_0$ volts is connected between the plates.
+\begin{enumerate}[label=(\alph*)]
+\item Find $\vect{D}$, $\vect{E}$, and $\rho_s$ in each region.
+\item Find the distance $x$ such that the electrostatic energy stored in each region is the same.
+\end{enumerate}
+\begin{center}
+\includegraphics[width=\textwidth]{\ppath Q6_prompt.png}
+\end{center}
+}
+
+
+\solution{
+Region 1 - dielectric; region 2 -- air
+\begin{enumerate}[label=(\alph*)]
+\item
+\begin{align*}
+\vect{E}_1 &= - \uvect{a}_y \frac{V_0}{d} \,, \\
+\vect{D}_1 &= - \uvect{a}_y \varepsilon_0 \varepsilon_r \frac{V_0}{d} \\
+\rho_{s1} &= \varepsilon_0 \varepsilon_r \frac{V_0}{d}\,, \text{ (top plate).}\\
+\vect{E}_2 &= - \uvect{a}_y \frac{V_0}{d} \,, \\
+\vect{D}_2 &= - \uvect{a}_y \varepsilon_0  \frac{V_0}{d} \\
+\rho_{s2} &= \varepsilon_0 \frac{V_0}{d}\,, \text{ (top plate).}
+\end{align*}
+\item 
+We must now try to equate the stored energies in each region to solve for $x$. 
+\begin{align*}
+W_{e1}&=W_{e2}\\
+\frac{1}{2}C_1 V_0^2&=\frac{1}{2}C_2 V_0^2\\
+\frac{1}{2}\frac{Q_1}{V_0} V_0^2&=\frac{1}{2}\frac{Q_2}{V_0} V_0^2\\
+\frac{1}{2}\frac{\rho_{s,1}x}{V_0} V_0^2&=\frac{1}{2}\frac{\rho_{s,2}(L-x)}{V_0} V_0^2\\
+\frac{1}{2}\frac{\varepsilon_0\varepsilon_1 V_0}{d}x V_0 &=\frac{1}{2}\frac{\varepsilon_0 V_0}{d}(L-x) V_0\\
+\varepsilon_1 x &=(L-x)\\
+x &= \frac{L}{\varepsilon_r +1}\,.
+\end{align*}
+\end{enumerate}}
+\answer{
+\begin{enumerate}[label=(\alph*)]
+\item 
+\begin{align*}
+\rho_{s1} &= \varepsilon_0 \varepsilon_r \frac{V_0}{d}\,, \text{ (top plate).}
+\end{align*}
+\item 
+\begin{align*}
+x = \frac{L}{\varepsilon_r +1}\,.
+\end{align*}
+\end{enumerate}}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

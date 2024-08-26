@@ -1,0 +1,87 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 6-46
+\textbf{Goal:} The bar AA' in the figure below serves as a conducting path (such as the blade of a circuit breaker) for the current $I$ in two very long (semi-infinite) parallel lines. The lines have a radius $b$ and are spaced at a distance $d$ apart. Find the direction and the magnitude of the magnetic force on the bar.
+\begin{center}
+\includegraphics[scale = 0.6]{\wpath Q6-46.png}
+\end{center}
+\textbf{Steps:} 
+\begin{enumerate}
+\item In order to compute the force, first determine the magnetic flux density $\vect{B}_{1}$  at point $(0,y)$ due to the current in line \#1. Use Biot-Savart law to find $\vect{B}_1$.
+\begin{enumerate}
+\item What is $\vect{R} - \vect{R}'$?
+%\vskip 20pt
+
+\solution{
+\begin{align*}
+\vect{R} - \vect{R}' = y \uvect{a}_y - x' \uvect{a}_x
+\end{align*}}
+
+\item What is the differential current $d\vect{I}'$?
+%\vskip 20pt
+
+\solution{
+\begin{align*}
+d\vect{I}' = -I dx' \uvect{a}_x
+\end{align*}}
+
+\item What is differential magnetic flux density $d\vect{B}_1$?
+%\vskip 20pt
+
+\solution{
+\begin{align*}
+d\vect{B}_1 &= \frac{\mu_0 I}{4\pi} \left(\frac{-\uvect{a}_x dx' \times \left(y\uvect{a}_y - x' \uvect{a}_x  \right) }{ (y^2 + (x')^2 )^{3/2} } \right) \\
+&= \frac{\mu_0 I}{4\pi} \frac{-y dx'\uvect{a}_z }{(y^2 + (x')^2)^{3/2}}
+\end{align*}}
+
+\item What is $\vect{B}_1$?
+%\vskip 20pt
+
+\solution{
+\begin{align*}
+\vect{B}_1 &= -\uvect{a}_z \frac{\mu_0 I}{4\pi} \int_0^{\infty} \frac{y}{(y^2 + (x')^2)^{3/2}}dx'\\
+&=-\uvect{a}_z \frac{\mu_0 I}{4\pi y}
+\end{align*}}
+\end{enumerate}
+
+\item Use results in part (1) to find the magnetic flux density $\vect{B}_2$ at point $(0,y)$ due to line \#2.
+%\vskip 30pt
+\begin{align*}
+\vect{B}_2 = -\uvect{a}_z \frac{\mu_0 I}{4\pi (d-y)}
+\end{align*}
+
+
+\item What is the  force  $d\vect{F}$ acting on a short section $dy$ of the bar AA'? Let $(0,y)$ be the position of the differential section.
+%\vskip 30pt
+
+\solution{
+\begin{align*}
+d\vect{F} &= I dy \uvect{a}_y  \times \left(\vect{B}_1 + \vect{B}_2 \right) \\
+&= \frac{\mu_0 I^2 dy}{4\pi} \left( \uvect{a}_y \times \uvect{a}_z \left( -\frac{1}{y}  - \frac{1}{d-y} \right)\right) \\
+&= -\uvect{a}_x \frac{\mu_0 I^2 }{4\pi} \left(\frac{1}{y} + \frac{1}{d-y} \right)dy
+\end{align*}}
+
+\item Integrate $d\vect{F}$ to find the total force on the bar.
+%\vskip 40pt
+
+\solution{
+\begin{align*}
+\vect{F} &= -\uvect{a}_x \frac{\mu_0 I^2 }{4\pi} \int_{b}^{d-b} \left(\frac{1}{y} + \frac{1}{d-y} \right)dy \\
+&= -\uvect{a}_x \frac{\mu_0 I^2 }{4\pi} \left[ \ln \left(\frac{d-b}{b} \right) - \ln \left( \frac{b}{d-b} \right) \right] \\
+&= -\uvect{a}_x \frac{\mu_0 I^2 }{2\pi} \ln \left(\frac{d}{b} - 1 \right)
+\end{align*}}
+\end{enumerate}
+\answer{\begin{align*}
+\vect{F}&= -\uvect{a}_x \frac{\mu_0 I^2 }{2\pi} \ln \left(\frac{d}{b} - 1 \right)
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.3-17] In Example 3-5 we obtained the electric field intensity around an infinitely long line of charge of a uniform charge density in a very simple manner by applying Gauss' law. Since $\vert \vect{E}\vert$ is a function of $r$ only, any coaxial cylinder around the line of charge is an equipotential surface. In practice, all conductors are of finite length. A finite line charge carrying a constant charge density $\rho_\ell$ along the axis, however, does not produce a constant potential on a concentric cylindrical surface. Given the finite line charge $\rho_\ell$ of a length $L$ in Fig. 3-40, find the potential along a cyclindrical surface of radius $b$ as a function of $x$ and plot it. 
+\begin{center}
+\includegraphics[scale=1]{\ppath Q9_prompt.png}
+\end{center}
+}
+
+\solution{
+We begin by finding the potential due to a small length of charge on the line, which we consider a point charge.  We can then use our formula for the potential of a point charge to find the potential due to a small length of the charged line
+\begin{align*}
+dV_p(x) &= \frac{\rho_{l}dx'}{4\pi\varepsilon_0\sqrt{(x-x')^2+b^2}}.
+\end{align*}
+To find the potential due to the entire line of charge as a function of $x$, we now must integrate over all of the individual charges on the wire. This yields
+\begin{align*}
+	V_p(x) &= \frac{\rho_{l}}{4\pi\varepsilon_0} \int_0^L \frac{dx'}{\sqrt{(x-x')^2+b^2}} \\
+	V_p(x) &= \frac{\rho_{l}}{4\pi \varepsilon_0} \left[ \sinh^{-1} \left(\frac{L-x}{b}\right) + \sinh^{-1}\left(\frac{x}{b}\right) \right].
+	\end{align*}}
+	\answer{
+\begin{align*}
+	V_p(x) = \frac{\rho_{l}}{4\pi \varepsilon_0} \left[ \sinh^{-1} \left(\frac{L-x}{b}\right) + \sinh^{-1}\left(\frac{x}{b}\right) \right]
+	\end{align*}}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

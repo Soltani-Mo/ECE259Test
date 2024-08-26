@@ -1,0 +1,93 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+\textbf{Goal:} For the structure composed of an infinitely long line charge distribution $\rho_l$ along the $z$-axis and a charged semi-cylinder with surface charge density $\rho_s$ at  $r=a$, $\frac{\pi}{2} \leq \phi \leq \frac{3\pi}{2}$, find the force per unit length on the semi-cylinder.
+\\
+\\
+\textbf{Steps:}
+\begin{enumerate}
+	\item Choose a coordinate system\\
+	\solution{
+		Let us define a coordinate system for the problem as follows:
+		\begin{center}
+			\includegraphics{\wpath Q6.jpg}
+		\end{center}
+		Hence, the cylinder is expressed as: $r=a$, $\pi/2 \le \phi \le 3\pi/2, -\infty<z<\infty$.
+	}
+	
+	\item Find the electric field due to the line charge at the semi-cylinder.\\
+	\solution{
+		Due to symmetry, only a radial component of the electric field will exist due to the infinite line charge. The electric field a radial distance $r$ from the line can be found by integrating the differential electric field created by a differential length of the line charge
+		\begin{align*}
+			dE_r&=dE\frac{r}{\sqrt{z^2+r^2}}\\
+			E_r&=\frac{1}{4\pi\epsilon_0}\int_{-\infty}^\infty\frac{\rho_ldz}{z^2+r^2}\frac{r}{\sqrt{z^2+r^2}}\\
+			E_r&=\frac{\rho_lr}{4\pi\epsilon_0}\frac{2}{r^2}\\
+			\vec{E}&=\frac{\rho_l}{2\pi \varepsilon_0 r} \uvect{a}_r
+		\end{align*}
+		hence, at the position of the cylinder, the field is
+		\begin{equation*}
+			\vect{E} = \frac{\rho_l}{2\pi \varepsilon_0 a} \uvect{a}_r\,.
+		\end{equation*}
+	}
+
+	\item Find the force acting on a small element of the semi-cylinder ds.\\
+	\solution{
+		Consider a differential surface element on the surface of the cylinder:
+		$ds = r\,d\phi\,dz$, carrying charge $dQ = \rho_s a\,d\phi\,dz$ at position $\vect{R} = a \uvect{a}_r + z \uvect{a}_z$. Because of the field of the line charge, this $dQ$ receives a force:
+		\begin{equation*}
+			d\vect{F} = dQ \vect{E} = \rho_s a\,d\phi\,dz \frac{\rho_l}{2\pi \varepsilon_0 a} \uvect{a}_r = \frac{\rho_l \rho_s}{2\pi \varepsilon_0} d\phi\,dz\,(\uvect{a}_x \cos \phi + \uvect{a}_y \sin \phi ) 
+		\end{equation*}
+	}	
+
+	\item Integrate over a length L of the semi-cylinder to find the force per unit length.\\
+	\solution{
+		\begin{equation*}
+			\vect{F} = \int_{\text{semi-cylinder}} d\vect{F} = \frac{\rho_l \rho_s}{2\pi \varepsilon_0} \int_{z=0}^{z=L} dz \int_{\phi = \pi/2}^{\phi = 3\pi/2}d\phi \left( \uvect{a}_x \cos\phi + \uvect{a}_y \sin \phi \right) = - \uvect{a}_x \frac{\rho_l \rho_s}{\pi \epsilon_0} L
+		\end{equation*}
+		Hence, per unit length:
+		\begin{equation*}
+			\frac{\vect{F}}{L} = - \uvect{a}_x \frac{\rho_l \rho_s}{\pi \varepsilon_0}
+		\end{equation*}
+		Confirm that the units are Newton/m.
+	}	
+\end{enumerate}
+\answer{\begin{align*}
+\vect{F^{'}}=- \uvect{a}_x \frac{\rho_l \rho_s}{\pi \varepsilon_0}
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

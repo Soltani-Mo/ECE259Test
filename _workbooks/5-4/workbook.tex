@@ -1,0 +1,117 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 5-15. 
+\textbf{Goal:} Find the resistance of two concentric spherical surfaces of radii $R_1$ and $R_2$ ($R_1 < R_2$). The space in between is filled with a material of conductivity $\sigma$.\\
+\\
+\textbf{Steps:} 
+\begin{enumerate}
+\item Choose a coordinate system.  \\
+\solution{Spherical.}
+
+\item Assume a charge $Q$ on the inner conductor, use Gauss law to find the field it creates. Which Gauss surface are you going to choose? Alternatively, assume potential $V_0$ on the one conductor and zero on the other. From Laplace equation, find $V$ and then $E$.\\
+\solution{
+Using sphere of radius R as a Gaussian surface:
+\begin{align}
+\iint \vect{E} \cdot d\vect{S} &= \frac{Q}{\varepsilon} \nonumber \\
+(4 \pi r^2) E_r &= \frac{Q}{\varepsilon}\,, \nonumber \\
+E_r &= \frac{Q}{4 \pi \varepsilon  R^2 } \,.
+\end{align}
+From Laplace equation:
+\begin{align*}
+\nabla^2 V &= 0 \\
+\frac{1}{R^2} \frac{\partial }{\partial R} \left(R^2 \frac{\partial V}{\partial R}\right) &= 0\\
+\end{align*}
+Solution to this equation is
+\begin{align*}
+V = -\frac{c_1}{R} + c_2
+\end{align*}
+Applying the boundary conditions ($V(R_1) = V_0$ and $V(R_2) = 0$) gives:
+\begin{align*}
+c_1 &= \frac{V_0}{\frac{1}{R_2} - \frac{1}{R_1} } \\
+c_2 &= \frac{1}{R_2} \frac{V_0}{\frac{1}{R_2} - \frac{1}{R_1} }
+\end{align*}
+From scalar potential,
+\begin{align}
+\vect{E} &= - \nabla V \nonumber
+\\&= \left( \frac{V_0}{\frac{1}{R_1} - \frac{1}{R_2}} \right)\frac{1}{R^2} \uvect{a}_R\,. 
+\end{align}
+}
+\solution{
+Note: the electric field obtained using Gauss' law (1) and Laplace equation (2) are equivalent. We can relate the two by performing a line integral on (1):
+\begin{align}
+V_0 &= -\int_{R_2}^{R_1} E_r  d R \,, \nonumber \\
+&= -\int_{R_2}^{R_1} \frac{Q}{4\pi \varepsilon R^2} d R \,, \nonumber \\
+&= \frac{Q}{4\pi \varepsilon } \left(\frac{1}{R_1} - \frac{1}{R_2} \right )
+\end{align}
+}
+
+\item Having $\vect{E}$, find $\vect{J}$. Can you find the total current $I$ that this $\vect{J}$ creates? Choose the surface that you need to use to apply the formula: 
+$I = \iint_S \vect{J} \cdot \vect{dS}$.\\
+\solution{
+\begin{align*}
+\vect{J} &= \sigma \vect{E} \\
+\vect{J} &= \sigma \left( \frac{V_0}{\frac{1}{R_1} - \frac{1}{R_2}} \right)\frac{1}{R^2} \uvect{a}_R\,.
+\end{align*}
+In order to calculate total current $I$ integrate $\vect{J}$ over a sphere:
+\begin{align*}
+I &= \int_{0}^{2\pi} \int_{0}^{\pi}\sigma \left( \frac{V_0}{\frac{1}{R_1} - \frac{1}{R_2}} \right)\frac{1}{R^2} \uvect{a}_R \cdot \uvect{a}_R R^2 sin\theta d\theta d\phi \,, \\
+&= \frac{4 \pi \sigma V_0}{\frac{1}{R_1} - \frac{1}{R_2} }
+\end{align*}
+}
+
+\item Having $\vect{E}$, find the voltage between the conductors (if you did not assume it 
+already). Then, $R=V/I$. Confirm that $R C = \epsilon / \sigma $ (capacitance for this geometry was found in the previous problem set). \\
+\solution{
+\begin{align*}
+R &= \frac{V_0}{I} \\
+&= \frac{1}{4\pi \sigma} \left(\frac{1}{R_1} - \frac{1}{R_2}\right )  \\
+C &= \frac{Q}{V_0} \\
+&= \frac{Q}{ \frac{Q}{4\pi \varepsilon } \left(\frac{1}{R_1} - \frac{1}{R_2} \right )} \\
+&= \frac{4\pi\varepsilon}{  \left(\frac{1}{R_1} - \frac{1}{R_2} \right )}\\
+RC &= \varepsilon / \sigma
+\end{align*}
+%\vskip 200pt
+%\setcounter{equation}{0}
+}
+\answer{\begin{align*}
+R= \frac{1}{4\pi \sigma} \left(\frac{1}{R_1} - \frac{1}{R_2}\right )
+\end{align*}}
+\end{enumerate}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

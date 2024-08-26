@@ -1,0 +1,86 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%\notaros{5-6}
+\textbf{Goal:} \textit{Infinite cylinder with circular magnetization.} An infinitely-long ferromagnetic cylinder of radius $a$ in air has a nonuniform magnetization. In a cylindrical coordinate system whose $z$-axis coincides with the cylinder axis, $\vec{M} = M_o (r/a) \vec{a}_\phi$ ($0 \le r \le a$), where $M_o$ is a constant. Find the current densities $\vec{J}_m$ in the cylinder and $\vec{J}_{ms}$ on the cylinder, as well as the magnetic flux density $\vec{B}$ inside and outside the cylinder.\\
+\\
+\textbf{Steps:} 
+\begin{enumerate}
+\item Find the volume magnetization current density vector in the cylinder.\\
+\solution{
+Use the formula
+\begin{equation*}
+\vec{J}_m = \nabla \times \vec{M} = \frac{1}{r} \frac{\partial}{\partial r} \left( r M_\phi(z) \right) \vec{a}_z = \frac{2 M_o}{a} \vec{a}_z
+\end{equation*}
+}
+
+\item Find the surface magnetization current density on the cylinder surface.\\
+\solution{
+Use the formula
+\begin{equation*}
+\vec{J}_{ms} = M_\phi(a^-)\vec{a}_\phi \times \vec{a}_r = -M_o \vec{a}_z.
+\end{equation*}
+}
+
+\item Find the magnetic flux density vector in the cylinder.\\
+\solution{
+Because of symmetry, the $\vec{B}$-field in the cylinder (due to its magnetization currents assume to reside in a vaccum) is circular (magnetic-field lines are circles centered at the cylinder axis). To find the $\vec{B}$-field, we apply Amp\`{e}re's law as if the magnetization currents found in (a) and (b) were conduction currents in a nonmagnetic medium, to the circular contour $C$ of radius $r$, to give
+\begin{equation*}
+B 2 \pi r  = \mu_o J_m \pi r^2 \rightarrow \vec{B} = \frac{\mu_o J_m r}{2} \vec{a}\phi = \frac{\mu_o M_o r}{a} \vec{a}_\phi = \mu_o \vec{M}, \quad (0 \le r \le a)
+\end{equation*}
+}
+
+\item Find the magnetic flux density vector outside the cylinder.\\
+\solution{
+For the observation point outside the cylinder, the right-hand side of Amp\`{e}re's law includes the surface magnetization current density $\vec{J}_{ms}$ as well, and this current amounts to $J_{ms}$ times the circumference of the cylinder. Hence, $\vec{B}$ outside the ferromagnetic cylinder is computed as
+\begin{eqnarray*}
+B 2 \pi r &=& \mu_o (J_m \pi a^2 + J_{ms} 2 \pi a)\\
+B &=& \frac{\mu_o a}{r} \left( \frac{J_m a}{2} + J_{ms} \right)\\
+&=& \frac{\mu_o a}{r} (M_o - M_o) = 0, \quad (a < r < \infty)
+\end{eqnarray*}
+}
+
+\end{enumerate}
+\answer{\begin{align*}
+\vec{J}_m = \frac{2 M_o}{a} \vec{a}_z\\
+\vec{J}_{ms} = -M_o \vec{a}_z\\
+\vec{B} = \mu_o \vec{M}, \quad (0 \le r \le a)\\
+\vec{B} = 0, \quad (a < r < \infty)
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

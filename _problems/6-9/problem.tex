@@ -1,0 +1,67 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.6-13] A thin conducting wire is bent into the shape of a regular polygon of $N$ sides. A current $I$ flows in the wire. Show that the magnetic flux density at the center is 
+\begin{align*}
+\vect{B} = \uvect{a}_n \frac{\mu_0 N I }{2\pi b}\tan\frac{\pi}{N},
+\end{align*}
+where $b$ is the radius of the circle circumscribing the polygon and $\uvect{a}_n$ is a unit vector normal to the plane of the polygon. Show also that, as $N$ becomes very large, this result reduces to that given in Eq. (6-38) with z=0.
+}
+
+\solution{
+Use Eq. (6-35) for a wire of length 2L.
+\begin{align*}
+\vect{B} = \uvect{a}_\phi \frac{\mu_0IL}{2\pi r \sqrt{L^2+r^2}}.
+\end{align*}
+Using the diagram below $\alpha = \frac{\pi}{N}$, $\frac{L}{r} = \tan \alpha = \tan \frac{\pi}{N}$.
+\begin{center}
+\includegraphics[scale = 0.5]{\ppath Cheng6-13_diagram.png}
+\end{center}
+Using this result
+\begin{align*}
+\vect{B} &= \uvect{a}_n N\left( \frac{\mu_0 IL}{2\pi r b}\right)\\
+\vect{B} &= \uvect{a}_n \frac{N\mu_0 I}{2\pi b}\tan \frac{\pi}{N}.
+\end{align*}
+When $N$ is very large, $\tan \frac{\pi}{N}\approx \frac{\pi}{N}$. Therefore $\vect{B} \rightarrow \uvect{a}_n\frac{\mu_0I}{2b}$. This is the same as Eq. (6-38) with $z=0$.
+}
+
+
+\answer{Proof problem}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

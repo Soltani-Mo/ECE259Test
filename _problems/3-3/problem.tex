@@ -1,0 +1,76 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{A very (infinitely) long homogeneous dielectric cylinder, of radius $a$ and relative dielectric permittivity $\varepsilon_r$, is uniformly charged with free charge density $\rho$ throughout its volume. The cylinder is surrounded by air.
+\begin{enumerate}[label=(\alph*)]\setlength{\parskip}{1pt}
+\item Calculate the voltage between the axis and the surface of the cylinder.
+\item Find the bound charge distribution in the cylinder.
+\end{enumerate}}
+
+\solution{
+\begin{enumerate}[label=(\alph*)]
+\item Apply Gauss' law on a cylindrical surface to find $\vect{D}$ and calculate $\vect{E} = \vect{D}/\varepsilon$. Then, apply the standard formula for V to find  
+\begin{align*}
+V = \frac{\rho a^2}{4 \varepsilon_0 \varepsilon_r} \,.
+\end{align*}
+\item 
+\begin{align*}
+\nabla\cdot \vect{E} &= \frac{\rho+\rho_{p,v}}{\varepsilon_0} = \frac{\rho}{\varepsilon_0 \varepsilon_r}\\
+\rho_{p,v} &= \frac{\rho(1-\varepsilon_r)}{\varepsilon_r} \,, \quad 0 \le r < a \\
+\rho_{p,v} &= -\nabla\cdot \vect{P}\\
+\vect{P} &= -\frac{r\rho_{p,v}}{2} \vect{a}_r\\
+\rho_{p,s} (r = a) &= -\frac{a\rho_{p,v}}{2} = \frac{\rho (\varepsilon_r - 1) a}{2 \varepsilon_r} \,.
+\end{align*}
+ 
+\end{enumerate}}
+\answer{
+\begin{enumerate}[label=(\alph*)]
+\item  
+\begin{align*}
+V = \frac{\rho a^2}{4 \varepsilon_0 \varepsilon_r} \,.
+\end{align*}
+\item 
+\begin{align*}
+\rho_{p,v} &= \frac{\rho(\varepsilon_r - 1)}{\varepsilon_r} \,, \quad 0 \le r < a \\
+\rho_{p,s} (r = a) &= \frac{\rho (\varepsilon_r - 1) a}{2 \varepsilon_r} \,.
+\end{align*}
+\end{enumerate}}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

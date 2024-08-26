@@ -1,0 +1,75 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.3-47] The conductors of an isolated two-wire transmission line, each of radius $b$, are spaced at a distance $D$ apart. Assuming $D>>b$ and a voltage $V_0$ between the lines, find the force per unit length on the lines.}
+
+\solution{
+\begin{center}
+\includegraphics[scale=0.2]{\ppath fig.pdf}
+\end{center}
+Assume line charge densities $\rho_l$ and $-\rho_l$ on conductors 1 and 2, respectively. At point P,
+\begin{align*}
+	\vec{E}_p &= \vec{E}_1 + \vec{E}_2\\
+	&= \vec{a}_x \left[ \frac{\rho_l}{2\pi\epsilon_0x} + \frac{\rho_l}{2\pi\epsilon_0(D-x)} \right]\quad (\mathrm{V/m}).\\
+	V_0 = V_1 - V_2 &= \int_b^{D-b} \vec{E}_p\cdot\vec{dx}\\
+	&= \frac{\rho_l}{2\pi\epsilon_0}\int_b^{D-b}\left( \frac{1}{x} + \frac{1}{D-x} \right)dx\\
+	&= \frac{\rho_l}{2\pi\epsilon_0}\left( \ln\frac{D-b}{b} - \ln\frac{b}{D-b} \right)\\
+	&= \frac{\rho_l}{\pi\epsilon_0}\ln\frac{D-b}{b}\\
+	&\simeq \frac{\rho_l}{\pi\epsilon_0}\ln\frac{D}{b}\quad (\mathrm{V}).\\
+	C' &= \frac{\rho_l}{V_0} = \frac{\pi\epsilon_0}{\ln(D/b)}\quad (\mathrm{F/m}).\\
+	F' =&= \nabla W_e = \vec{a}_x \frac{V_0}{2}\frac{\partial C'}{\partial D}\\
+	&= -\vec{a}_x\,\frac{\pi\epsilon_0V_0^2}{2D[\ln(D/b)]^2}\quad\mathrm{N/m}\text{ (in the direction of decreasing D)}
+\end{align*}
+}
+\answer{
+\begin{enumerate}[label=(\alph*)]
+\item \begin{align*}
+V_{o}=V_{1}-V_{2}=\frac{\rho_{l}}{\pi\varepsilon_{o}}\ln \frac{D}{b}\quad\mathrm{V}.
+\end{align*}
+\item \begin{align*}
+C^{'}=\frac{\pi\varepsilon_{o}}{\ln\frac{D}{b}}\quad\mathrm{F/m}.
+\end{align*}
+\item \begin{align*}
+F^{'}=-a_{x}\,\frac{\pi\varepsilon_{o}V^2_{o}}{2D(\ln\frac{D}{b})^2}\quad\mathrm{N/m}.
+\end{align*}
+\end{enumerate}
+}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

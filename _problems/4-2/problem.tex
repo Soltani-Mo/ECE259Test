@@ -1,0 +1,96 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.3-37] A capacitor consists of two concentric spherical shells of radii $R_i$ and $R_o$. The space between them is filled with a dielectric of relative permittivity $\varepsilon_r$ from $R_i$ to $b$ $(R_i<b<R_o)$ and another dielectric or relative permittivity $2\varepsilon_r$ from $b$ to $R_o$.
+\begin{enumerate}[label=(\alph*)]
+\item Determine $\vect{E}$ and $\vect{D}$ everywhere in terms of an applied voltage $V$.
+\item Determine the capacitance.
+\end{enumerate}
+} 
+
+\solution{
+Assume charge $Q$ on inner shell and $-Q$ on outer shell.
+For $R_i < R < R_o$: 
+\begin{align*}
+\vect{D} = \uvect{u}_r \frac{Q}{4\pi R^2} \,,
+\end{align*}
+for $R_i < R < b$:
+\begin{align*}
+\vect{E}_1 = \frac{\vect{D}}{\varepsilon_0 \varepsilon_r} \,,
+\end{align*}
+for  $b < R < R_0$:
+\begin{align*}
+\vect{E}_2 = \frac{\vect{D}}{2\varepsilon_0 \varepsilon_r} \,.
+\end{align*}
+Potential:
+\begin{align*}
+V &= - \int_{R_0}^{R_1} \vect{E}\cdot d\vect{R}
+= -\int_b^{R_i} E_1\,dR - \int_{R_0}^{b} E_2\,dR 
+= \frac{Q}{4\pi \varepsilon_0 \varepsilon_r} \left( \frac{1}{R_i} - \frac{1}{2b} - \frac{1}{2R_0}\right) \,.
+\end{align*}
+
+\begin{enumerate}
+\item[a)] ~\\[-2em]
+\begin{align*}
+\vect{D} &= \uvect{a}_R \frac{\varepsilon_0 \varepsilon_r V}{R^2 \left( \frac{1}{R_i} - \frac{1}{2b} - \frac{1}{2R_0}\right)} \quad, R_i < R_0. \\
+\vect{D} &= 0 \, \quad \vect{E} = 0 \quad \text {for } R< R_i  \text{ and }  R>R_0 \\
+\vect{E}_1 &= \uvect{u}_R \frac{V}{R^2 \left(\frac{1}{R_i} - \frac{1}{2b} - \frac{1}{2R_0}\right)} \\
+\vect{E}_2 &= \uvect{u}_R \frac{V}{R^2 \left( \frac{2}{R_i} - \frac{1}{b} - \frac{1}{R_0} \right)}
+\end{align*}
+\item[b)] ~\\[-2em]
+\begin{align*}
+C = \frac{4 \pi \varepsilon_0 \varepsilon_r}{ \frac{1}{R_i} - \frac{1}{2b} - \frac{1}{2R_0}}
+\end{align*}
+\end{enumerate}}
+\answer{
+\begin{enumerate}[label=(\alph*)]
+\item~\\[-2em]
+\begin{align*}
+\vect{D} &= \uvect{a}_R \frac{\varepsilon_0 \varepsilon_r V}{R^2 \left( \frac{1}{R_i} - \frac{1}{2b} - \frac{1}{2R_0}\right)} \quad, R_i < R_0. \\
+\vect{D} &= 0 \, \quad \vect{E} = 0 \quad \text {for } R< R_i  \text{ and }  R>R_0 \\
+\vect{E}_1 &= \uvect{u}_R \frac{V}{R^2 \left(\frac{1}{R_i} - \frac{1}{2b} - \frac{1}{2R_0}\right)} \\
+\vect{E}_2 &= \uvect{u}_R \frac{V}{R^2 \left( \frac{2}{R_i} - \frac{1}{b} - \frac{1}{R_0} \right)}
+\end{align*}
+\item[b)] ~\\[-2em]
+\begin{align*}
+C = \frac{4 \pi \varepsilon_0 \varepsilon_r}{ \frac{1}{R_i} - \frac{1}{2b} - \frac{1}{2R_0}}
+\end{align*}
+\end{enumerate}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

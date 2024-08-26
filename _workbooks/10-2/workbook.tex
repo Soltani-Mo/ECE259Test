@@ -1,0 +1,77 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Notaros{6-13}
+\textbf{Goal:} \textit{Moving contour near an infinite dc line current.} Assume that the current in the straight wire conductor from Fig.~Q6.12 is time-invariant, with intensity $I$, and that the contour moves away from the wire at a constant velocity $v$, as shown in Fig.~Q6.17. At $t = 0$, the distance of the closer parallel side of the contour from the wire is $x = c$. Determine the emf induced in the contour.
+\begin{center}
+\includegraphics[width=0.3\textwidth]{\wpath NotarosExample6-15.png}\\
+\textbf{Figure 6.17} Evaluation of the emf in a rectangular contour moving in the magnetic field due to an infinitely long wire with a steady current.
+\end{center}
+\textbf{Steps:} 
+\begin{enumerate}
+\item What is the $B$-field everywhere due to the line current?
+%\vskip 80pt
+
+\solution{
+\begin{equation*}
+\vec{B}  = \frac{\mu_o I}{2 \pi r} \vec{a}_\phi
+\end{equation*}}
+
+\item What is the total magnetic flux through the contour?
+%\vskip 200pt
+
+\solution{
+The position as a function of time is $x(t) = c + vt$. Then we integrate over the area of the contour.
+\begin{equation*}
+\Phi (t) = \frac{\mu_o I b}{2\pi} \ln \frac{x+a}{x} = \frac{\mu_o I b}{2\pi} \ln \frac{c + a + vt}{c + vt}
+\end{equation*}}
+
+\item What is the emf induced in the contour?
+%\vskip 200pt
+
+\solution{
+\begin{equation*}
+e_\mathrm{ind}(t) = -\frac{d\Phi}{dt} = -\frac{d\Phi}{dx} \frac{dx}{dt} = -\frac{d\Phi}{dx} v = \frac{\mu_o I ab v}{2\pi} \frac{1}{x(x + a)} = \frac{ \mu_o I ab v }{2\pi (c + vt)(c + a + vt)}
+\end{equation*}}
+
+\end{enumerate}
+\answer{\begin{equation*}
+e_\mathrm{ind}(t) = \frac{ \mu_o I ab v }{2\pi (c + vt)(c + a + vt)}
+\end{equation*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

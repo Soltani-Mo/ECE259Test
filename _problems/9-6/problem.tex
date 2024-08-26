@@ -1,0 +1,64 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.6-44] Determine the force per unit length between two parallel, long, thin conducting strips of equal width $w$. The strips are at a distance $d$ apart and carry currents $I_1$ and $I_2$ in opposite directions as in Fig. 6-52.\begin{center}
+\includegraphics[width=\textwidth]{\ppath Cheng6-44_prompt.png}
+\end{center}
+}
+
+\solution{
+From problem P.6-4 we have the $y$-component of the magnetic flux density at an arbitrary point $P(d,y)$ on the right-hand strip due to $I_1$ in the left-hand strip
+\begin{align*}
+B_{Py} = -\frac{\mu_0 I_1}{2\pi w}\left[ \tan^{-1}\left( \frac{y}{d}\right) +\tan^{-1}\left(\frac{w-y}{d}\right)\right].
+\end{align*}
+The $x$-component of the force on a strip of width d$y$ due to $I_2$ in the right-hand conductor is 
+\begin{align*}
+\text{d}F_{2x}' &= \left(\frac{I_2}{w} \text{d}y\right)B_{Py}\; \text{(in the +\textit{x}-direction, a repulsive force)}\\
+\vect{F}_{2}' &= \uvect{a}_x\int \text{d}F_{2x}\\
+&= \uvect{a}_x \frac{\mu_0I_1I_2}{2\pi w^2} \int_0^w \left[ \tan^{-1}\left( \frac{y}{d}\right) +\tan^{-1}\left(\frac{w-y}{d}\right)\right]\text{d}y\\
+&= \uvect{a}_x \frac{\mu_0I_1I_2}{2\pi w^2} \left[ 2w\tan^{-1}\left(\frac{w}{d}\right) -d\ln\left( 1+\frac{w^2}{d^2}\right) \right] \; \text{per unit length}
+\end{align*}
+There are no net forces in the $y$-direction.
+}
+
+\answer{\begin{align*}
+\vect{F^{'}_{2}}=a_x\,\frac{\mu_o I_1 I_2}{2\pi w62}\Big[2w\tan^{-1}\Big(\frac{w}{d}\Big)-d\ln \Big(1+\frac{w^2}{d^2}\Big)\Big]
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

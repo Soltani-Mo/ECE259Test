@@ -1,0 +1,78 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.3-29] Refer to Example 3-16. Assuming the same $r_i$ and $r_o$ and requiring the maximum electric field intensities in the insulating materials not to exceed 25\% of their dielectric strengths, determine the voltage rating of the coaxial cable 
+\begin{enumerate}[label = \alph*]
+\item if $r_p  = 1.75r_i$;
+\item if $r_p  = 1.35r_i$.
+\item Plot the variations of $E_r$ and $V$ versus $r$ for both part (a) and part (b).
+\end{enumerate}}
+
+\solution{
+25\% of the dielectric strength of rubber is $0.25\times25\times10^6=6.25\times10^6 [V/m]$. 25\% of the dielectric strength of polystyrene is $0.25\times20\times10^6=5\times10^6 [V/m]$.
+\begin{enumerate}[label=(\alph*)] 
+	\item 
+	\begin{align*}
+	r_p&=1.75r_i\\
+	r_i&=1.189r_o\\
+	\text{Max.} E_r&=\frac{\rho_l}{2\pi\varepsilon_0}\frac{1}{3.2r_i}\rightarrow \frac{\rho_l}{2\pi\varepsilon_0} = 3.2r_i 6.25\times10^6 = r_i 20\times10^6\\
+	\text{Max.} E_p&=\frac{\rho_l}{2\pi\varepsilon_0}\frac{1}{4.55r_i}\rightarrow \frac{\rho_l}{2\pi\varepsilon_0} = 4.55r_i 5\times10^6= r_i 22.75\times10^6\\
+	\frac{\text{Max.} E_r}{\text{Max.} E_p}&=\frac{4.55}{3.22}>\frac{6.25}{5}.
+	\end{align*}
+	From this we can see that the rubber will determine the breakdown voltage.
+	\begin{align*}
+	\frac{\rho_l}{2\pi\varepsilon_0}&=r_i 20\times10^6\\
+	\frac{\rho_l}{2\pi\varepsilon_0}&=0.004\times 20\times10^6=8\times 10^4.
+	\end{align*}
+	We can determine the breakdown voltage as
+	\begin{align*}
+	V_{\text{max}}&=\frac{\rho_l}{2\pi\varepsilon_0}\left(\frac{1}{2.6}ln\frac{r_o}{r_p}+ \frac{1}{3.2}ln\frac{r_p}{r_i}\right)\\
+	V_{\text{max}}&=8\times 10^4\left(\frac{1}{2.6}ln1.189+ \frac{1}{3.2}ln1.35\right)\\
+	V_{\text{max}}&=19.3 kV
+	\end{align*}	
+	\item Similar to part (a), $V_{\text{max}}=1.82 kV$
+\end{enumerate}}
+\answer{
+\begin{enumerate}[label=(\alph*)] 
+	\item 19.3 kV
+	\item 1.82 kV
+\end{enumerate}}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

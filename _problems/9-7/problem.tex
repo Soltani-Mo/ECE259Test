@@ -1,0 +1,65 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.6-45] Refer to Problem 6-39 and Fig. 6-49. Find the force on the circular loop that is exerted by the magnetic field due to an upward current $I_1$ in the long straight wire. The circular loop carries a current $I_2$ in the counterclockwise direction.
+\begin{center}
+\includegraphics[scale=0.5]{\ppath Cheng6-39_prompt.png}
+\end{center}}
+
+\solution{The magnetic flux density $\vect{B}$ due to $I_1$ in the straight wire in the $z$-direction at an elemental arc $b d\theta$ on the circular loop is given by 
+\begin{align*}
+\vect{B} = \uvect{a}_\phi \frac{\mu_0 I_1}{2\pi(d+b\cos\theta )}
+\end{align*}
+where $\theta$,$b$, and $d$ are shown in the sketch below.
+\begin{center}
+\includegraphics[scale=0.5]{\ppath Cheng6-45_diagram.png}
+\end{center}
+As hinted by the diagram, there will be no $y$-component to the force $\vect{F}_{\text{on loop}}$. This is because the force is given by $\vect{F}_{\text{on loop}} = I_2\vect{d\ell} \times \vect{B}$. Using the right hand rule, the force in the $+y$-direction on the bottom half of the loop will cancel with the force in the $-y$-direction on the top half of the loop as the points are equidistant from the current $I_1$ generating $\vect{B}$. However, the force in the $+x$-direction on the left half of the loop is larger in than the force in the $-x$-direction on the right half of the loop as the points on the left half of the loop are closer to the current $I_1$ generating $\vect{B}$. As a result, we should expect a repulsive force. With that established, we can now perform the integration to find the force on the loop by finding the force on half the loop and doubling it.
+\begin{align*}
+\vect{F}_{\text{on loop}} &= 2\left[ -\uvect{a}_x \int_0^\pi\left( I_2bd\theta\right)\cos\theta\frac{\mu_0 I_1}{2\pi(d+b\cos\theta )}\right]\\
+&= -\uvect{a}_x \frac{\mu_0I_1I_2b}{\pi}\int_0^\pi \frac{cos\theta}{d+b\cos\theta}d\theta\\
+&= \uvect{a}_x \mu_0I_1I_2\left[ \frac{1}{\sqrt{1-(b/d)^2}}-1 \right] \;\text{(Repulsive force).}
+\end{align*}
+}
+
+\answer{\begin{align*}
+\vect{F_{\text{on loop}}}=\uvect{a}_x \mu_0I_1I_2\left[ \frac{1}{\sqrt{1-(b/d)^2}}-1 \right] \;\text{(Repulsive force).}
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

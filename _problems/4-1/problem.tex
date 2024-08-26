@@ -1,0 +1,56 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.3-30] The space between a parallel-plate capacitor of area $S$ is filled with a dielectric whose permittivity varies linearly from $\varepsilon_1$ at one plate $(y=0)$ to $\varepsilon_2$ at the other plate $(y=d)$. Neglecting fringing effects, find the capacitance.}
+% Note: I think Cheng's solution is incorrect. I think it should be ln(\varepsilon_1/\varepsilon_2) because the negative from the voltage equation isn't accounted for properly. I've corrected it here.
+
+\solution{
+$\varepsilon = \frac{\varepsilon_2 - \varepsilon_1}{d} y + \varepsilon_1$.
+Assume $Q$ on plate at $y=d$ and a plate surface area $S$\,.
+\begin{align*}
+\vect{E} &= - \uvect{a}_y \frac{\rho_s}{\varepsilon}=- \uvect{a}_y \frac{Q}{S\varepsilon} \\
+V &= -\int_{y=0}^{y=d} \vect{E} \cdot d\vect{l} = \frac{Q d \ln (\varepsilon_1/\varepsilon_2)}{S (\varepsilon_2 - \varepsilon_1)} \\
+C&= \frac{Q}{V}= \frac{S (\varepsilon_2 - \varepsilon_1)}{d \ln (\varepsilon_1/\varepsilon_2)}\,.
+\end{align*}}
+\answer{
+\begin{align*}
+C&= \frac{Q}{V}= \frac{S (\varepsilon_2 - \varepsilon_1)}{d \ln (\varepsilon_1/\varepsilon_2)}\,.
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

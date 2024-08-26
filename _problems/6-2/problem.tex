@@ -1,0 +1,98 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+% Same as Workbook 6-1
+\problem{[Cheng P.6-2] An electron is injected with a velocity $\vect{u}_0=\uvect{a}_y u_0$ into a region where both an electric field $\vect{E}$ and a magnetic field $\vect{B}$ exist. Describe the motion of the electron if
+\begin{enumerate}[label=(\alph*)]
+\item $\vect{E}=\uvect{a}_z E_0$ and $\vect{B}=\uvect{a}_x B_0$,
+\item $\vect{E}=-\uvect{a}_z E_0$ and $\vect{B}=-\uvect{a}_z B_0$.
+\end{enumerate}
+Discuss the effect of the relative magnitudes of $E_0$ and $B_0$ on the electron paths in parts (a) and (b). 
+}
+
+\solution{
+The electron will experience a force upon it from the electric and magnetic fields in the region, which will determine its motion.
+\begin{align*}
+\vect{F} &= ma\\
+q(\vect{E} + \vec{u}\times\vect{B}) &= m \frac{du}{dt}\\
+\frac{du}{dt} &= -\frac{e}{m}(\vect{E}+\vect{u}\times\vect{B})
+\end{align*} 
+
+\begin{enumerate}[label=(\alph*)]
+\item Here $\vect{E}=\uvect{a}_zE_0$ and $\vect{B} = \uvect{a}_x B_0$.
+\begin{align*}
+\begin{split}
+\frac{\partial u_x}{\partial t} &= 0\\
+\frac{\partial u_y}{\partial t} &= -\frac{e}{m}B_0 u_x\\
+\frac{\partial u_z}{\partial t} &= -\frac{e}{m}(E_0 - B_0 u_x)
+\end{split}
+\longrightarrow
+\begin{split}
+u_x &= 0\\
+u_y &= \left(u_0 - \frac{E_0}{B_0}\right)\cos \omega_0 t + \frac{E_0}{B_0}\\
+u_z &= \left(\frac{E_0}{B_0}-u_0\right)\sin \omega_0 t; \quad \omega_0 = \frac{e}{m}B_0
+\end{split}
+\end{align*}
+If the electron is injected at the origin at $t=0$ then $x=0$, $y=\frac{c_2}{\omega_0}\sin \omega_0 t + \frac{E_0}{B_0}t$, $z = -\frac{c_2}{\omega_0}(1-\cos \omega_0 t)$, and $c_2 = u_0 - \frac{E_0}{B_0}$. This yields the equation of motion
+\begin{align*}
+\left( y-\frac{E_0}{B_0}t\right)^2+\left( z+\frac{c_2}{\omega_0}\right)^2=\left( \frac{c_2}{\omega_0}\right)^2 .
+\end{align*}
+If $\frac{E_0}{B_0}=u_0$, $u_x=u_z=0$, $u_y = 0$, then $x=z=0$, and $y=u_0t$.
+
+\item Here $\vect{E}=-\uvect{a}_zE_0$ and $\vect{B} = -\uvect{a}_z B_0$.
+\begin{align*}
+\frac{\partial u_x}{\partial t} &= \frac{e}{m}B_0u_y = \omega_0u_y\\
+\frac{\partial u_y}{\partial t} &= -\omega_0 u_x\\
+\frac{\partial u_z}{\partial t} &= -\frac{e}{m}E_0.
+\end{align*}
+The first two equations are for circular motion, while the last one is acceleration in the $z$ direction. This creates a helical motion. See P6-1 for more details.
+\end{enumerate}
+}
+
+\answer{\begin{enumerate}[label=(\alph*)]
+\item \begin{align*}
+		\Big(y-\frac{E_o}{B_o}t\Big)^2+\Big(z+\frac{c_2}{\omega_0}\Big)^2=\Big(\frac{c_2}{\omega_0}\Big)^2\,\,\,where\,\,\, c_2=u_o-\frac{E_o}{B_o}
+	\end{align*}
+	\item \begin{align*}
+\frac{\partial u_x}{\partial t} &= \frac{e}{m}B_0u_y = \omega_0u_y\\
+\frac{\partial u_y}{\partial t} &= -\omega_0 u_x\\
+\frac{\partial u_z}{\partial t} &= -\frac{e}{m}E_0.
+\end{align*}
+	\end{enumerate}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

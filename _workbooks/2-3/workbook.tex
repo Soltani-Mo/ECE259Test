@@ -1,0 +1,85 @@
+\def\showsolutions{true}
+\def\showworkbooks{true}
+
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+\textbf{Goal:} Find the distribution of the electric scalar potential inside and outside a sphere $R=\alpha$, with volume charge density: $\rho = \rho_o {R}/{\alpha}$, where $R$ is the radial coordinate of the spherical coordinate system.\\
+\\
+\textbf{Steps:}
+	\begin{enumerate}
+	\item Choose a coordinate system.
+	
+	\solution{Spherical coordinate system.}{\vspace{30pt}}
+	
+	\item Find the total charge inside the sphere.
+	
+	\solution{\begin{eqnarray*}
+  \text{Total charge enclosed by sphere of radius }R &=& \int_0^R \int_0^{2\pi} \int_0^\pi \frac{\rho_o R'}{\alpha} R'^2 \sin\theta d\theta' d\phi'\ dR'\\
+	&=& \frac{\rho_o}{\alpha} (2\pi) (2) \frac{1}{4} R^4\\
+	&=& \rho \alpha^3 \pi \quad \text{for} \quad R = \alpha
+	\end{eqnarray*}}{\vspace{100pt}}
+	
+	\item Find the voltage in the region $R \ge \alpha$.
+	
+	\solution{Due to the spherical symmetry of the problem and finiteness of the spatial distribution of the present electric charges, the voltage within this region is similar to that of a point source whose electric charge is equal to the total charge calculated in the previous section. Hence,\begin{equation*}
+	V(R) = \frac{\rho_o \alpha^3}{4\varepsilon_o R} \quad \text{for} \quad R \ge \alpha
+	\end{equation*}}{\vspace{100pt}\newpage}
+	
+	\item Using Gauss' Law, find the electric inside the sphere.
+	
+	\solution{Use the spherical symmetry of the problem. Use
+	\begin{eqnarray*}
+	\int \vec{E} \cdot \vec{ds} &=& \frac{Q_\text{enclosed}}{\varepsilon_o} \\
+	E_R (4\pi R^2) &=& \frac{1}{\varepsilon_o} \left(\frac{\rho_o}{\alpha} \pi R^4 \right)\\
+	E_R &=& \frac{\rho_o R^2}{4\varepsilon_o \alpha}
+	\end{eqnarray*}}{\vspace{150pt}}
+	
+	\item Find the electric potential (voltage) inside the sphere, appropriately choosing the reference point. 
+	
+	\solution{\begin{eqnarray*}
+	V(R)-V(\alpha) = -\int_{\alpha}^R E_R dR, \quad \text{for} \quad R < \alpha\\
+	V(R) = \frac{\rho_o \alpha^2}{3\varepsilon_o} \left( 1 - \frac{R^3}{4\alpha^3} \right), \quad \text{for} \quad R < \alpha
+	\end{eqnarray*}}{\vspace{200pt}}
+	\end{enumerate}
+\answer{\begin{align*}
+V(R) = \frac{\rho_o \alpha^3}{4\varepsilon_o R} \quad \text{for} \quad R \ge \alpha\\
+V(R) = \frac{\rho_o \alpha^2}{3\varepsilon_o} \left( 1 - \frac{R^3}{4\alpha^3} \right), \quad \text{for} \quad R < \alpha
+\end{align*}}	
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,127 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 7-6:
+\textbf{Goal:} A suggested scheme for reducing eddy-current power loss in transformer cores with a circular cross section is to divide the cores into a large number of small insulated filamentary parts. As illustrated in Fig. 7-12, the section shown in part (a) is replaced by that in part (b). Assuming that $B(t) = B_0 \sin \omega t$ and that $N$ filamentary areas fill 95\% of the original cross-sectional area, find average eddy-current power loss in the section of core of height $h$ in Fig. 7-12 (a), and Fig. 7-12 (b).
+\begin{center}
+\includegraphics[width=0.9\columnwidth]{\wpath 7-12.png}\\
+Figure 7-12
+\end{center}
+\textbf{Steps:} 
+\begin{enumerate}
+\item We decompose the cylinder in Figure 7-12 (a) into thin cylindrical rings of of thickness $dr$ and radius $r$ as shown. For the ring, determine:
+\begin{enumerate}
+\item the magnetic flux $\Phi(t)$ through the ring's cross section%\\
+%\vskip 40pt
+
+\solution{
+\begin{align*}
+\Phi = \pi r^2 B(t)
+\end{align*}}
+
+\item the emf ${\cal V}$ induced on the ring (make sure that the direction of ${\cal V}$ is consistent with the direction of current  (clockwise) shown in Fig. 7-12 (a))%\\
+%\vskip 40pt
+
+\solution{
+\begin{align*}
+{\cal V} = i R_r = \frac{d\Phi}{d t} = \pi r^2 \frac{d B(t)}{d(t)}\,.
+\end{align*}}
+
+\item the resistance $R_r$ of the circular ring,%\\
+%\vskip 40pt
+
+\solution{
+\begin{align*}
+R_r = \frac{2\pi r}{\sigma h dr}
+\end{align*}}
+
+\item the current $i$ which is induced in the ring (note that ${\cal V} = i R_r$) %\\
+%\vskip 40pt
+
+\solution{
+\begin{align*}
+i &= {\cal V} / R_r \\
+&= \frac{\sigma h}{2}{r} dr \left( \frac{dB}{dt} \right)
+\end{align*}}
+
+\item the power $dP_r$ dissipated in the ring%\\
+%\vskip 40pt
+
+\solution{
+\begin{align*}
+dP_r &= i^2 R_r\\
+&= \frac{\pi \sigma h}{2} r^3 dr \left(\frac{dB}{dt} \right)^2\,.
+\end{align*}}
+
+\end{enumerate}
+\item Integrate $dP_r$ to find the instantaneous and average power dissipated in the transformer core illustrated in Fig 7-12 (a). %\\
+%\vskip 80pt
+
+\solution{
+\begin{align*}
+P &= \int_0^{a} dP_r \\
+&= \frac{\pi \sigma h}{8} a^4 \omega^2 B_0^2 \cos^2 \omega t\,. \\
+P_{av} &= \frac{\pi \sigma h}{16} a^4 \omega^2 B_0^2\,.
+\end{align*}}
+
+\item What is the radius $b$ of each filament in the transformer core shown in Fig. 7-12(b)?%\\
+%\vskip 40pt
+
+\solution{
+\begin{align*}
+N\pi b^2 &= 0.95 \pi a^2\\
+b &= \sqrt{\frac{0.95}{N} } a\,.
+\end{align*}}
+
+\item Using the result of  part 2., determine the total power loss in the transformer core shown in 7-12 (b). %\\
+%\vskip 80pt
+
+\solution{
+Substitute $a \rightarrow \sqrt{\frac{0.95}{N}}a $ in (2) to get power loss in single filament.
+\begin{align*}
+P' &=  N \left( \frac{\pi \sigma h}{8} \right) \left(a \sqrt{\frac{0.95}{N}} \right)^4 \omega^2 B_0^2 \cos^2\omega t \\
+&= \frac{0.95^2}{N} P. \\
+P'_{av} &= \frac{0.95^2}{N} P_{av}\,.
+\end{align*}}
+
+\end{enumerate}
+\answer{\begin{align*}
+P'_{av} &= \frac{0.95^2}{N} \frac{\pi \sigma h}{16} a^4 \omega^2 B_0^2\,.
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

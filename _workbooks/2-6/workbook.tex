@@ -1,0 +1,88 @@
+\def\showsolutions{true}
+\def\showworkbooks{true}
+
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+\textbf{Goal:} A charge $Q$ is distributed over the wall of a circular tube of radius $b$ and height $h$. The tube sits on $xy$-plane with its axis coinciding with $z$-axis. Determine $V$ and $\vect{E}$ along \underline{the axis of the tube}. \\
+\\
+\textbf{Steps:} 
+\begin{enumerate}
+\item Choose a coordinate system for this problem. 
+
+\solution{Cylindrical (or Cartesian)}
+
+\item Determine the charge density. 
+
+\solution{\begin{equation*}
+\rho_s = \frac{Q}{2\pi b h}
+\end{equation*}}
+
+\item Which components of $\vect{E}$ are non-zero? 
+
+\solution{The $z$-component.}
+
+\item What is the distance between source and observation point $\abs{\vect{R} - \vect{R}'}$? What is the differential surface element $\d{}S$'? 
+
+\solution{\begin{align*}
+\abs{\vect{R} - \vect{R}'}  &=  \left( (z-z')^2 + (x')^2 + (y')^2 \right)^{1/2}\\
+ 						 &= \left( (z-z')^2 + b^2 \right)^{1/2}\,. \\
+dS' &= b\,dz\,d\theta'.
+\end{align*}}
+
+\item Compute the potential $V$. 
+
+\solution{\begin{align*}
+V &= \frac{b\rho_s}{2\varepsilon_0} \ln \frac{\sqrt{b^2 + z^2} + z}{\sqrt{b^2 + (z-h)^2} + z - h} \\
+\end{align*}}
+
+\item Using the potential computed in part (5) determine the electric field $\vect{E}$. 
+\solution{\begin{align*}
+E &= -\nabla V = \uvect{a}_z \frac{b\rho_s}{2\varepsilon_0} \left[\frac{1}{\sqrt{b^2 + (z-h)^2}} - \frac{1}{\sqrt{b^2 + z^2}} \right]
+\end{align*}}
+\end{enumerate}
+\answer{\begin{enumerate}[label=(\alph*)]
+\item \begin{align*}
+V &= \frac{b\rho_s}{2\varepsilon_0} \ln \frac{\sqrt{b^2 + z^2} + z}{\sqrt{b^2 + (z-h)^2} + z - h} \\
+\end{align*}
+\item \begin{align*}
+E = \uvect{a}_z \frac{b\rho_s}{2\varepsilon_0} \left[\frac{1}{\sqrt{b^2 + (z-h)^2}} - \frac{1}{\sqrt{b^2 + z^2}} \right]
+\end{align*}
+\end{enumerate}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

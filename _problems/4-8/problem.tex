@@ -1,0 +1,45 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.3-48] A parallel-plate capacitor of width $w$, length $L$, and a separation $d$ has a solid dielectric slab of permittivity $\varepsilon$ in the space between the plates. The capacitor is charged to a voltage $V_0$ by a battery, as indicated in Fig. 3-45. Assuming that the dielectric slab is withdrawn to the position shown, determine the force acting on the slab
+\begin{enumerate}[label=(\alph*)]
+\item with the switch closed,
+\item after the switch is first opened.
+\end{enumerate}
+\begin{center}
+\includegraphics[scale=1]{\ppath Q8_prompt.png}
+\end{center}
+}
+
+\solution{
+\begin{enumerate}[label=(\alph*)]
+\item Switch closed $\to$ $V = V_0 = $ constant.
+\begin{align*}
+	W_e &= \frac{1}{2}CV^2,\\
+	C &= \frac{w}{d}\left[ \varepsilon x + \varepsilon_0(L-x) \right],\\
+	\vec{F}_V &= \nabla W_e\\
+	&= \vec{a}_x\frac{V_0^2}{2}\frac{\partial C}{\partial x}\\
+	&= \vec{a}_{x}\frac{V_0w}{2d}(\varepsilon-\varepsilon_0)
+\end{align*}
+\item Switch open $\to$ $Q = $ constant $ = CV_0$.
+\begin{align*}
+	W_e &= \frac{Q^2}{2C},\\
+	\vec{F}_Q &= -\nabla W_e = -\vec{a}_x\frac{Q^2}{2}\frac{\partial}{\partial x}\left(\frac{1}{C}\right)\\
+	&= \vec{a}_x \frac{Q^2d}{2w}\frac{\varepsilon - \varepsilon_0}{\left[\varepsilon x + \varepsilon_0(L-x)\right]^2}\\
+	&= \vec{a}_{x}\frac{V_{0}w}{2d}(\varepsilon-\varepsilon_{0})
+\end{align*}
+\end{enumerate}
+}
+\answer{
+\begin{enumerate}[label=(\alph*)]
+\item \begin{align*}
+\vec{F}_V = \vec{a}_{x}\frac{V_{0}w}{2d}(\varepsilon-\varepsilon_{0})
+\end{align*}
+\item \begin{align*}
+\vec{F}_Q = \vec{a}_{x}\frac{V_{0}w}{2d}(\varepsilon-\varepsilon_{0})
+\end{align*}
+\end{enumerate}
+}
+
+\end{document}

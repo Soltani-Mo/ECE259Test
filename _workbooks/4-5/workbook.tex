@@ -1,0 +1,79 @@
+\def\showsolutions{true}
+\def\showworkbooks{true}
+
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+\textbf{Goal:} Assume the Earth to be a large conducting sphere (radius $R_0 = 6.37 \times 10^3\km$) surrounded by air (dielectric strength $3 \times 10^6\,\text{V/m}$). Find the capacitance of the Earth and the maximum charge that can exist on it before the air breaks down.\\
+\\
+\textbf{Steps:} 
+\begin{enumerate}
+\item Using Gauss' law compute the electric field in air when charge $+Q$ is introduced on the surface of the earth. In this case $-Q$ is introduced at infinity.
+
+\solution{
+\begin{align*}
+\vect{E} = \uvect{a}_r \frac{Q}{4\pi \varepsilon_0 R^2} \,.
+\end{align*}}
+
+\item Compute the potential at the surface of the earth.
+
+\solution{
+\begin{align*}
+V = \frac{Q}{4\pi \varepsilon_0 R_0} \,.
+\end{align*}}
+
+\item Compute the capacitance of the earth.
+
+\solution{
+\begin{align*}
+C &= 4 \pi \varepsilon_0 R_0 \\
+&= 7.08\times 10^{-4}\,\text{F}\,.
+\end{align*}}
+
+\item What is the maximum charge that can exist on the earth before air breaks down.
+
+\solution{
+\begin{align*}
+E_{b} &= \frac{Q_\mathrm{max}}{4\pi \varepsilon_0 R_0^2} \\
+Q_\mathrm{max} &=   4 \pi \varepsilon_0 E_{b} R_0^2 \\
+&=  1.35 \times 10^{10}\,\text{C} \,.
+\end{align*}}
+\end{enumerate}
+\answer{C\,=\,7.08\,$\times$\,10$^{-4}$\,\,F\\$Q_{max}$=1.35\,$\times$\,10$^{10}$\,\,C}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

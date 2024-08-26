@@ -1,0 +1,114 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 5-10. 
+\textbf{Goal:} The space between two parallel conducting plates each having an area $S$ is filled with an inhomogeneous ohmic medium whose conductivity varies linearly from $\sigma_1$ at one plate ($y=0$) to $\sigma_2$ at the other plate ($y=d$). A d-c voltage $V_o$ is applied across the plates as shown below. Find the resistance between the plates, the surface charge density on the plates, and the amount of charge between the plates.
+\begin{center}
+\includegraphics[width=0.3\textwidth]{\wpath Cheng5-10.png}
+\end{center}
+\textbf{Steps:} 
+\begin{enumerate}
+\item Write an expression for $\sigma(y)$.\\
+\solution{
+\begin{equation*}
+\sigma(y) = \sigma_1 + (\sigma_2 - \sigma_1) \frac{y}{d}
+\end{equation*}
+}
+
+\item Write an expression relating $\vec{E}$ and $\sigma(y)$.\\
+\solution{
+\begin{equation*}
+\vec{E} = \frac{\vec{J}}{\sigma} = -\vec{a}_y \frac{J_o}{\sigma(y)}
+\end{equation*}
+}
+
+\item Find the total resistance between the two plates.\\
+\solution{
+\begin{equation*}
+V_o = - \int_0^d \vec{E} \cdot \vec{a}_y dy = \frac{J_o d}{\sigma_2 - \sigma_1} \ln \frac{\sigma_2}{\sigma_1}
+\end{equation*}
+Then
+\begin{equation*}
+R = \frac{V_o}{I} = \frac{V_o}{J_o S} = \frac{d}{(\sigma_2 - \sigma_1) S} \ln \frac{\sigma_2}{\sigma_1}
+\end{equation*}
+}
+
+\item Find the surface charge densities on the two plates.\\
+\solution{
+Upper plate:
+\begin{equation*}
+\rho_s = \varepsilon_o E_y(d) = \frac{\varepsilon_o J_o}{\sigma_2} = \frac{\varepsilon_o (\sigma_2 - \sigma_1) V_o}{\sigma_2 d \ln (\sigma_2/\sigma_1)}
+\end{equation*}
+Lower plate:
+\begin{equation*}
+\rho_s = \varepsilon_o E_y(0) = \frac{\varepsilon_o J_o}{\sigma_1} = \frac{\varepsilon_o (\sigma_2 - \sigma_1) V_o}{\sigma_1 d \ln (\sigma_2/\sigma_1)}
+\end{equation*}
+}
+
+\item Find the volume charge density and the total amount of charge between the plates.\\
+\solution{
+\begin{equation*}
+\rho = \nabla \cdot \vec{D} = \frac{d}{dy} (\varepsilon_o \vec{E}) = \varepsilon_o J_o \frac{(\sigma_2 - \sigma_1)}{d\left(\sigma_1 + (\sigma_2 - \sigma_1) \frac{y}{d}\right)^2}
+\end{equation*}
+Now, integrate the above expression from $y = 0$ to $y = d$ yields
+\begin{equation*}
+Q_\text{total} = \varepsilon_o J_o \left( \frac{1}{\sigma_1} - \frac{1}{\sigma_2} \right)
+\end{equation*}}
+
+\end{enumerate}
+
+\answer{
+\begin{enumerate}[label=(\alph*)]
+\item \begin{equation*}
+R = \frac{d}{(\sigma_2 - \sigma_1) S} \ln \frac{\sigma_2}{\sigma_1}
+\end{equation*}
+\item Upper plate:
+\begin{equation*}
+\rho_s = \frac{\varepsilon_o J_o}{\sigma_2} = \frac{\varepsilon_o (\sigma_2 - \sigma_1) V_o}{\sigma_2 d \ln (\sigma_2/\sigma_1)}\\
+\end{equation*}
+Lower plate:
+\begin{equation*}
+\rho_s = \frac{\varepsilon_o J_o}{\sigma_1} = \frac{\varepsilon_o (\sigma_2 - \sigma_1) V_o}{\sigma_1 d \ln (\sigma_2/\sigma_1)}
+\end{equation*}
+\item \begin{equation*}
+Q_\text{total} = \varepsilon_o J_o \left( \frac{1}{\sigma_1} - \frac{1}{\sigma_2} \right)
+\end{equation*}
+\end{enumerate}}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

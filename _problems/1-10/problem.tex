@@ -1,0 +1,76 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{Find the force between a charged circular loop of radius $b$ and uniform charge density $\rho_l$ and a point charge $Q$ located on the loop axis at a distance $h$ from the plane of the loop. What is the force when $h\gg b$ and when $h=0$? Plot the force as a function of $h$. (Hint: $\text{force}=\text{electric field}\times\text{charge}$)}
+
+\solution{Aligning the loop axis with the $z$ axis, the electric field created by the loop at a point $h$ on the $z$ axis of the loop can be found by recognizing that due to symmetry only the $E_z$ component of the electric field will exist.
+\begin{align*}
+	d\vect{E}_z&=d\vect{E}\frac{h}{\sqrt{h^2+b^2}}\\
+	\vect{E}&=\frac{1}{4\pi\epsilon_0}\int_0^{2\pi}\frac{\rho_lbd\phi}{h^2+b^2}\frac{h}{\sqrt{h^2+b^2}}\vect{a}_z\\
+	&=\frac{\rho_lbh}{2\epsilon_0(h^2+b^2)^{3/2}}\vect{a}_z
+\end{align*}
+The force is then given by $\vect{F}=q\vect{E}$
+\begin{align*}
+	\vect{F}&=\frac{Q\rho_lbh}{2\epsilon_0(h^2+b^2)^{3/2}}\vect{a}_z
+\end{align*}
+If $h\gg b$, then $(h^2+b^2)^{3/2}\rightarrow h^3$, so
+\begin{align*}
+	\vect{F}&=\frac{Q\rho_lb}{2\epsilon_0h^2}\vect{a}_z
+\end{align*}
+If $h=0$, then
+\begin{align*}
+	\vect{F}&=\frac{Q\rho_lh}{2\epsilon_0b^2}\vect{a}_z
+\end{align*}
+The below is a plot of the force as a function of $h$
+\begin{center}
+	\includegraphics[scale = 0.3]{\ppath problem_1_10_plot.png}
+\end{center}
+}
+\answer{
+For $h\gg b$,
+\begin{align*}
+	\vect{F}&=\frac{Q\rho_lb}{2\epsilon_0h^2}\vect{a}_z
+\end{align*}
+For $h=0$, then
+\begin{align*}
+	\vect{F}&=\frac{Q\rho_lh}{2\epsilon_0b^2}\vect{a}_z
+\end{align*}
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+PROBLEMS THAT NEED TO BE REVISED
+
+NOTE: these pertain to the "2021 problem sets" folder, where the problems are organized into problem sets differently from the "2020 problem sets".
+
+* PS02 Workbook 1-3 Part 3: The final answer for the dF has "a" in the denominator, which possibly should have canceled out
+
+* PS04 Problem 2-3: Solution for Ez may not be correct - need to redo the problem by hand and double-check the solution. Also, there is a duplicate "a" in the "answers" pdf
+
+* PS04 Workbook 2-5: The solution for electric field is missing a y and z coordinate multiplying their respective unit vectors
+
+* PS06 CQ 2-31: The last sentence in the problem statement should be changed to "Compared to the electric energy density in the dielectric, that in the air is..."
+
+* PS06, CQ 2-24: may need to clarify that the relative permittivities are constants (do not vary with r). Based on the answer it seems they should be constants but it's not entirely clear from the question 
+
+* PS06 Problem 4-7:  in the penultimate line, == should be = - (minus)
+and V0 should be V0^2
+
+* PS06 Problem 4-8 a): a minus is missing before the gradient of We and in
+subsequent expressions. In the last line, V0 should be squared
+
+* PS07 CQ 3-10: specify that the imperfect dielectric may be non-uniform
+
+* PS08 Workbook 5-9: For Step 4, the lower plate charge density should be negative. Also, in the last step, there is a missing factor of surface area
+
+* PS09 CQ 4-3 and CQ 4-4 are duplicates - possibly typo in the tex file
+
+* PS09: Fig. Q4.10 seems to be missing
+
+* PS09 Problem 6-18: reword the question. The question should ask "in which case the
+bar would contribute to the EMF along a closed path that includes the bar?
+
+* PS09 Workbook 7-6: remove the lines in Q6-17, leaving only the contours. An EMF
+is only defined for closed paths, strictly speaking
+
+* PS12 Workbook 10-3: it seems like there is a typo in part 3 (that propagates to subsequent parts) where they lose a sign on -dPhi/dt. In the end, it ends up contradicting Lenz' law. Alternatively they may have decided to make positive Phi into the page, but that would be inconsistent with the orientation of the contour. Needs to be checked
+

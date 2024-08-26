@@ -1,0 +1,57 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 6-11.
+\textbf{Goal:} A long wire carrying a current $I$ folds back with a semicircular bend of radius $b$ as in Fig.~Q6-38. Determine the magnetic flux density $\vec{B}$ at the center point $P$ of the bend.
+\begin{center}
+\begin{tikzpicture}
+\draw (0,1) -- (5,1);
+\draw (0,-1) -- (5,-1);
+\begin{scope}
+\clip (-1,-1) rectangle (0,1);
+\draw (0,0) circle(1);
+\end{scope}
+\node [right] at (0,0) {$P$};
+\fill (0,0) circle (0.05);
+\draw [->,thick] (2,1) -- (1.99,1);
+\draw [->,thick] (2,-1) -- (2.01,-1);
+\draw [->] (0,0) -- (-1,0) node[pos=0.5,above] {$b$};
+\node [above] at (2,1) {$I$};
+\node [below] at (2,-1) {$I$};
+\end{tikzpicture}\\
+Fig.~Q6-38
+\end{center}
+\textbf{Steps:} 
+\begin{enumerate}
+\item Determine the contribution of $B$ due to the two straight wires. Hint: exploit symmetry\\
+\solution{
+\begin{equation*}
+\vec{B} = \frac{\mu_o I}{2\pi b} \vec{a}_z
+\end{equation*}
+}
+
+\item Determine the contribution of $\vec{B}$ due to the semi-circle.\\
+\solution{
+\begin{equation*}
+\vec{B} = \frac{\mu_o I}{4 b} \vec{a}_z
+\end{equation*}
+}
+
+\item Determine the total $\vec{B}$ field at point $P$.\\
+\solution{
+\begin{equation*}
+\vec{B} = \frac{\mu_o I} {2 b} \left( \frac{1}{\pi} + \frac{1}{2} \right) \vec{a}_z
+\end{equation*}
+}
+
+\end{enumerate}
+\answer{\begin{equation*}
+\vec{B} = \frac{\mu_o I} {2 b} \left( \frac{1}{\pi} + \frac{1}{2} \right) \vec{a}_z
+\end{equation*}}
+\end{document}
+
+
+
+
+
+

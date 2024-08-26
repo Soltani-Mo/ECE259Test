@@ -1,0 +1,64 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.3-18] A charge $Q$ is distributed uniformly over an $L\times L$ square plate. Determine $V$ and $\vect{E}$ at a point on the axis perpendicular to the plane through its center.}
+
+\solution{
+Below is a diagram showing the sheet of charge. Please note that the length of the side is mislabelled, it should be $L$ rather than $L/2$.
+\begin{center}
+\includegraphics[scale = 1] {\ppath Q10.jpg}
+\end{center}
+To solve the problem we will consider a line of charge along $x$ and then integrate along $y$ to get the contribution across the whole sheet of charge. We begin with the potential due to the $x$ directed line of charge (see problem 3-16 from Cheng's book for this result)
+\begin{align*}
+V = \frac{\rho_l}{2\pi\varepsilon_0}\left\{ \ln \left[ \sqrt{(L/2)^2+y^2+z^2}+(L/2)\right]-\ln\left[\sqrt{y^2+z^2} \right]  \right\}.
+\end{align*}
+Now we can integrate this potential from a line of charge across the sheet. We will do this for half of the sheet ($0$ to $L/2$) and then just double the result for the other half of the sheet
+\begin{align*}
+V &= 2\frac{\rho_l}{2\pi\varepsilon_0}\int_0^{L/2}\left\{ \ln \left[ \sqrt{(L/2)^2+y^2+z^2}+(L/2)\right]-\ln\left[\sqrt{y^2+z^2} \right]  \right\}dy\\
+V &= \frac{Q}{\pi \varepsilon_0 L^2} \left\{ \frac{L}{2} \ln \frac{\sqrt{2 \left(L/2\right)^2 + z^2} + L/2}{ \sqrt{2(L/2)^2 + z^2} - L/2} - z\tan^{-1} \frac{(L/2)^2}{z \sqrt{2 (L/2)^2 + z^2} }  \right\}.
+\end{align*}
+Once we have the potential, we can solve for the field as
+\begin{align*}
+\vect{E} &= -\nabla V = \uvect{a}_z \frac{Q}{\pi\varepsilon_0 L^2} \tan^{-1} \frac{ \left(L/2\right)^2}{z\sqrt{2(L/2)^2 + z^2}}	\end{align*}.}
+\answer{
+\begin{align*}
+	V &= \frac{Q}{\pi \varepsilon_0 L^2} \left\{ \frac{L}{2} \ln \frac{\sqrt{2 \left(L/2\right)^2 + z^2} + L/2}{ \sqrt{2(L/2)^2 + z^2} - L/2} - z\tan^{-1} \frac{(L/2)^2}{z \sqrt{2 (L/2)^2 + z^2} }  \right\} \\
+	\vect{E} &= -\nabla V = \uvect{a}_z \frac{Q}{\pi\varepsilon_0 L^2} \tan^{-1} \frac{ \left(L/2\right)^2}{z\sqrt{2(L/2)^2 + z^2}}	\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

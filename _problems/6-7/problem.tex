@@ -1,0 +1,73 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+% Same as Workbook 6-4
+\problem{[Cheng P.6-11] A long wire carrying a current $I$ folds back with a semicircular bend of radius $b$ as in Fig. 6-38. Determine the magnetic flux density at the center point $P$ of the bend.
+\begin{center}
+\includegraphics[scale=0.6]{\ppath cheng6-11_prompt.png}
+\end{center}
+}
+
+\solution{This problem is the superposition of two problems:
+\begin{align*}
+\vect{B} = \vect{B}_1+\vect{B}_2,
+\end{align*}
+where 
+\begin{enumerate}
+\item $\vect{B}_1$ is the magnetic flux density at $P$ due to two semi-infinite wires carrying equal and opposite currents. 
+
+Assuming $\uvect{a}_z$ points out of the page:
+\begin{align*}
+\vect{B}_1 = \uvect{a}_z\frac{\mu_0I}{2\pi b}.
+\end{align*}
+\item $\vect{B}_2$ is the magnetic flux density at $P$ due to a half circle. Taking one half of the result in Eq. (6-38) for $z=0$
+\begin{align*}
+\vect{B}_2 = \uvect{a}_z \frac{\mu_0I}{4b}
+\end{align*}
+\end{enumerate}
+Therefore,
+\begin{align*}
+\vect{B} = \uvect{a}_z\frac{\mu_0I}{2b}\left( \frac{1}{\pi} +\frac{1}{2}\right).
+\end{align*}
+}
+
+\answer{\begin{align*}
+\vect{B} = \uvect{a}_z\frac{\mu_0I}{2b}\left( \frac{1}{\pi} +\frac{1}{2}\right)
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+\problem{An infinite sheet of surface charge density $\rho_s$ on the $xy$-plane has a hole of radius $a$ on it, 
+centered at the origin of the coordinate system. Find the electric field intensity at an arbitrary point on the positive $z$-axis.}
+
+\solution{We can find the total electric field by integrating the electric field due to each differential area on the infinite sheet, and recognizing that due to symmetry only the $E_z$ component of the electric field will exist. Denoting $r$ as the distance from the origin to a point on the $xy$-plane,
+\begin{align*}
+	d\vect{E}_z&=d\vect{E}\frac{z}{\sqrt{r^2+z^2}}\\
+	&=\frac{1}{4\pi\epsilon_0}\frac{\rho_sds}{r^2+z^2}\frac{z}{\sqrt{r^2+z^2}}
+\end{align*}
+The total electric field can then be found by integrating this expression over the location where the charge exists
+\begin{align*}
+\vect{E}_z&=\frac{z}{4\pi\epsilon_0}\int_0^{2\pi}\int_a^\infty\frac{\rho_srdrd\phi}{(r^2+z^2)^{3/2}}\vect{a}_z\\
+&=\frac{z\rho_s}{2\epsilon_0}\int_a^\infty\frac{rdr}{(r^2+z^2)^{3/2}}\vect{a}_z\\
+&=\frac{\rho_s}{2\epsilon_0}\frac{z}{\sqrt{a^2+z^2}}\vect{a}_z
+\end{align*}
+Alternatively, the total electric field can be found using superposition of the electric field due to a positively charged infinite sheet plus a negatively charged disk. The result will be the same.\\
+}
+\answer{
+\begin{equation*}
+\vect{E}_z=\frac{\rho_s}{2\epsilon_0}\frac{z}{\sqrt{a^2+z^2}}\vect{a}_z
+\end{equation*}
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

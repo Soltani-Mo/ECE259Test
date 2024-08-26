@@ -1,0 +1,74 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 5-9. 
+\textbf{Goal:} Two lossy dielectric media with permittivities and conductivities ($\varepsilon_1, \sigma_1$) and ($\varepsilon_2, \sigma_2$) are in contact. An electric field with a magnitude $E_1$ is incident from medium 1 upon the interface at an angle $\alpha_1$ measured from the common normal, as in Fig.~5-10. Find the electric field in medium 2 $E_2$ and the surface charge density. How would these change if the media were perfect dielectrics?
+\begin{center}
+\includegraphics[width=0.3\textwidth]{\wpath Cheng5-9.pdf}
+\end{center}
+\textbf{Steps:} 
+\begin{enumerate}
+\item State the boundary conditions for the E-field, D-field and current density across the boundary.\\
+\solution{
+\begin{eqnarray*}
+E_{1t} &=& E_{2t}\\
+J_{1n} &=& J_{2n}\\
+D_{1n} - D_{2n} &=& \rho_s
+\end{eqnarray*}
+}
+
+\item Find the magnitude and direction of $\vec{E}_2$ in medium 2.\\
+\solution{
+From the boundary conditions for E-field and current density:
+\begin{eqnarray*}
+E_2 \sin\alpha_2 &=& E_1\sin\alpha_1\\
+\sigma_2 E_2 \cos\alpha_2 &=& \sigma_1 E_1 \cos\alpha_1\\
+E_2 &=& E_1 \sqrt{\sin^2\alpha_1 + \left(\frac{\sigma_1}{\sigma_2} \cos\alpha_1\right)^2} \quad (A)\\
+\alpha_2 &=& \tan^{-1} \left( \frac{\sigma_2}{\sigma_1} \tan \alpha_1 \right) \quad \quad \quad (B)
+\end{eqnarray*}
+}
+
+\item Find the surface charge density at the interface.\\
+\solution{
+\begin{eqnarray*}
+\varepsilon_2 E_{2n} - \varepsilon_1 E_{1n} &=& \rho_s\\
+\rho_s &=& \left( \frac{\sigma_1}{\sigma_2}\varepsilon_2 - \varepsilon_1\right) E_{1n} = \left(\frac{\sigma_1}{\sigma_2}\varepsilon_2 - \varepsilon_1\right) E_1 \cos\alpha_1
+\end{eqnarray*}
+}
+
+\item Compare the results in parts (a) and (b) with the case in which both media are perfect dielectrics.\\
+\solution{
+If both media are perfect dielectrics, then $\sigma_1 = \sigma_2 = 0$ and Eq.~A becomes
+\begin{equation*}
+E_2 = E_1 \sqrt{\sin^2\alpha_1 + \left(\frac{\varepsilon_1}{\varepsilon_2} \cos\alpha_1\right)^2}
+\end{equation*}
+and Eq.~B becomes
+\begin{equation*}
+\alpha_2 = \tan^{-1} \left( \frac{\varepsilon_2}{\varepsilon_1} \tan \alpha_1 \right)
+\end{equation*}
+}
+
+\end{enumerate}
+\answer{
+\begin{eqnarray*}
+E_2 &=& E_1 \sqrt{\sin^2\alpha_1 + \left(\frac{\sigma_1}{\sigma_2} \cos\alpha_1\right)^2} \\
+\alpha_2 &=& \tan^{-1} \left( \frac{\sigma_2}{\sigma_1} \tan \alpha_1 \right)
+\end{eqnarray*}
+\begin{eqnarray*}
+\rho_s &=& \left(\frac{\sigma_1}{\sigma_2}\varepsilon_2 - \varepsilon_1\right) E_1 \cos\alpha_1
+\end{eqnarray*}
+For perfect dielectrics:\\
+\begin{equation*}
+E_2 = E_1 \sqrt{\sin^2\alpha_1 + \left(\frac{\varepsilon_1}{\varepsilon_2} \cos\alpha_1\right)^2}
+\end{equation*}
+\begin{equation*}
+\alpha_2 = \tan^{-1} \left( \frac{\varepsilon_2}{\varepsilon_1} \tan \alpha_1 \right)
+\end{equation*}
+}
+\end{document}
+
+
+
+
+
+

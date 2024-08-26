@@ -1,0 +1,71 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P6-39] Determine the mutual inductance between a very long, straight wire and a conducting circular loop, as shown in Fig. 6-49.
+\begin{center}
+\includegraphics[scale=0.7]{\ppath Cheng6-39_prompt.png}
+\end{center}
+}
+
+\solution{Using the diagram below we can find the mutual inductance.
+\begin{center}
+\includegraphics[scale=0.7]{\ppath Cheng6-39_diagram.png}
+\end{center}
+Assuming a current $I$, $\vect{B}$ from the wire at a point $P(r,\theta)$ is
+\begin{align*}
+\vect{B}_P = \uvect{a}_\phi \frac{\mu_0 I}{2\pi (d+r\cos \theta)}.
+\end{align*} 
+Therefore
+\begin{align*}
+\Lambda_{12} &= \frac{\mu_0 I}{2\pi}\int_0^b\int_0^{2\pi} \frac{r\text{d}r\text{d}\theta}{d+r\cos\theta}\\
+&= \frac{\mu_0 I}{2\pi}\int_0^b \frac{2\pi r\text{d}r}{\sqrt{d^2-r^2}}\\
+&= \mu_0 I (d-\sqrt{d^2-b^2}).
+\end{align*}
+The mutual inductance can now be found by simply dividing by the current $I$
+\begin{align*}
+L_{12} &= \Lambda_{12}/I\\
+&= \mu_0 (d-\sqrt{d^2-b^2}).
+\end{align*}
+}
+
+\answer{\begin{align*}
+L_{12}=\mu_o (d-\sqrt{(d^2-b^2)})
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

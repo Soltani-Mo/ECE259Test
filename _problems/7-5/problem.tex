@@ -1,0 +1,77 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{In a certain region, the magnetic vector potential is given as the following function in a cylindrical coordinate system: $\vec{A} = 2R^2\vec{a}_\phi\,\mathrm{T}\cdot\mathrm{m}$.%
+%\renewcommand{\theenumi}{\alph{enumi}}
+\begin{enumerate}[label=(\alph*)]
+	\item Find the magnetic flux density vector in this region.
+	\item Obtain the magnetic flux through a circular contour $1\,\mathrm{m}$ in radius that lies in the plane $z=0$ and is centered at the coordinate origin.
+	\item Check the results by evaluating the circulation of $\vec{A}$ along the contour.
+\end{enumerate}}
+
+\solution{
+\begin{enumerate}[label=(\alph*)]
+	\item Using $\vec{B} = \nabla\times\vec{A}$,
+		\begin{align*}
+			\vec{B} &= \frac{1}{R\,\sin\theta}\frac{\partial (A_\phi\,\sin\theta)}{\partial \theta}\vec{a}_R + \frac{1}{R}\left(-\frac{\partial (R A_\phi)}{\partial R}  \right)\vec{a}_\theta\\
+			&= \frac{2R^2\,\cos\theta}{R\,\sin\theta}\vec{a}_R - \frac{6R^2}{R}\vec{a}_\theta\\
+			&= 2R\,\cot\theta\,\vec{a}_R - 6R\,\vec{a}_\theta\,(\mathrm{T}).
+		\end{align*}
+	\item Flux through the surface enclosed by the given contour, for which $\theta = \pi/2$ and the unit normal vector is $-\vec{a}_\theta$:
+		\begin{align*}
+			\Phi_m &= \int_{0}^{2\pi} \int_{0}^{1} R\,\sin{\theta}\,dR\,d\phi\,(-6R)(-\vec{a}_\theta\cdot\vec{a}_\theta)\\
+			&= 6\cdot2\pi\cdot\left[\frac{R^3}{3}\right]_0^1\\
+			&= 4\pi\,(\mathrm{T}\cdot\mathrm{m^2}).
+		\end{align*}
+	\item Circulation of $\vect{A}$ along the contour:
+		\begin{align*}
+			\Phi_m &= \int_{0}^{2\pi} R\,\sin\theta\,d\phi\,2R^2\left(\vec{a}_\phi\cdot\vec{a}_\phi\right)\\
+			&= 2\cdot2\pi\\
+			&= 4\pi\,(\mathrm{T}\cdot\mathrm{m^2}).
+		\end{align*}
+\end{enumerate}
+}
+\answer{
+\begin{enumerate}[label=(\alph*)]
+\item $\vec{B} = 2R\,\cot\theta\,\vec{a}_R - 6R\,\vec{a}_\theta\,(\mathrm{T})$
+\item $\Phi_m = 4\pi\,(\mathrm{T}\cdot\mathrm{m^2})$
+\item Proof problem
+\end{enumerate}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

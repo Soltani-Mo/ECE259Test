@@ -1,0 +1,80 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.4-2] Prove that the scalar potential $V$ in Eq. (3-61) 
+\begin{align*}
+	V = \frac{1}{4\pi\epsilon_0}\int_{V'}\frac{\rho(\vec{R}')}{\abs{\vec{R}-\vec{R}'}}\,dv'
+\end{align*}
+satisfies Poisson's equation, Eq. (4-6)
+\begin{align*}
+	\nabla^2V = -\frac{\rho}{\epsilon_0}.
+\end{align*}}
+
+\solution{
+We need to prove that
+\begin{align*}
+	V = \frac{1}{4\pi\epsilon_0}\int_{V'}\frac{\rho(\vec{R}')}{\abs{\vec{R}-\vec{R}'}}\,dv'
+\end{align*}
+satisfies
+\begin{align*}
+	\nabla^2V = -\frac{\rho}{\epsilon_0}.
+\end{align*}
+Substituting the latter in the Poisson equation, and keeping in mind that the $\nabla^2$ operator applies to observation coordinates only, and therefore can be taken into the integral, we get
+\begin{align*}
+	\nabla^2V = \frac{1}{4\pi\epsilon_0}\int_{V'} \rho(\vec{R}')\, \nabla^2 \left(\frac{1}{\abs{\vec{R}-\vec{R}'}}\right)\,dv'.
+\end{align*}
+Since $\nabla^2(1/R) = 0$ for $R \neq 0$ but its volume integral over all space is $-4\pi$, we can infer that
+\begin{align*}
+	\nabla^2\left(\frac{1}{\abs{\vec{R}-\vec{R}'}}\right) = -4\pi\delta(\vec{R}-\vec{R}')
+\end{align*}
+so that
+\begin{align*}
+	\nabla^2V &= \frac{1}{4\pi\epsilon_0}\int_{V'} \rho(\vec{R}')\, (-4\pi)\delta(\vec{R}-\vec{R}')\,dv'\\
+	&= -\frac{1}{\epsilon_0}\int_{V'} \rho(\vec{R}')\, \delta(\vec{R}-\vec{R}')\,dv'.
+\end{align*}
+By the sifting property of the $\delta$ function, the integrand is nonzero only when $\vec{R}=\vec{R}'$, and we can write
+\begin{align*}
+	\nabla^2V &= -\frac{\rho(\vec{R})}{\epsilon_0},
+\end{align*}
+which is the desired result.
+\\
+}
+\answer{Proof Problem}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

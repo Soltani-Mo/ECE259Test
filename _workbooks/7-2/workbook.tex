@@ -1,0 +1,106 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+\begin{minipage}{0.6\columnwidth}
+%Cheng 6-6. 
+\textbf{Goal:} Figure~6-37 shows an infinitely long solenoid with air core having a radius $b$ and $n$ closely wound turns per unit length. The windings are slanted at an angle $\alpha$ and carry a current $I$. Determine the magnetic flux density both inside and outside the solenoid.
+\end{minipage}
+\begin{minipage}{0.4\columnwidth}
+\begin{center}
+\includegraphics[width=1.4\textwidth,angle=-90]{\wpath Cheng6-6.jpg}\\
+Fig.~6-37. A long solenoid with closely wound windings carrying a current $I$.
+\end{center}
+\end{minipage}
+\textbf{Steps:} 
+\begin{enumerate}
+\item Decompose the current $I$ into a component along $\vec{a}_z$ and a component along $\vec{a}_{\phi}$.\\
+%\vskip 50pt
+\solution{
+In the $\vec{a}_\phi$ direction
+\begin{equation*}
+I_\phi = nI\cos\alpha
+\end{equation*}
+In the $\vec{a}_z$ direction
+\begin{equation*}
+I_z = 2 \pi b n I \sin\alpha
+\end{equation*}
+}
+
+\item What is the contribution of the $\vec{a}_z$ component of the current to the B-field inside the solenoid?\\
+%\vskip 50pt
+\solution{
+zero.
+}
+
+\item What is the contribution of the $\vec{a}_z$ component of the current to the B-field outside the solenoid?\\
+%\vskip 100pt
+\solution{
+\begin{equation*}
+\vec{B}_1 = \vec{a}_\phi \mu_o \frac{bnI}{r} \sin\alpha
+\end{equation*}
+}
+
+\item What is the contribution of the $\vec{a}_{\phi}$ component of the current to the B-field inside the solenoid?\\
+%\vskip 100pt
+\solution{
+\begin{equation*}
+\vec{B}_2 = \vec{a}_z \mu_o n I \cos\alpha
+\end{equation*}
+}
+
+\item What is the contribution of the $\vec{a}_{\phi}$ component of the current to the B-field outside the solenoid?\\
+%\vskip 50pt
+\solution{
+zero.
+}
+
+\item What is the total B-field inside and outside the solenoid?\\
+\solution{
+Using superposition, add up all the fields above.
+\begin{equation*}
+\vec{B} = \vec{B}_1 + \vec{B}_2
+\end{equation*}
+}
+
+\end{enumerate}
+\answer{\begin{align*}
+\text{Inside:}\,\,\,\, \vect{B}=a_z\,\mu_o\,n I \cos\alpha\\
+\text{Outside:} \,\,\,\, \vect{B}=a_z\,\mu_o \frac{bnI}{r}\sin \alpha
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

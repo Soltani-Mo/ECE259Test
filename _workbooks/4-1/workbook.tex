@@ -1,0 +1,97 @@
+\def\showsolutions{true}
+\def\showworkbooks{true}
+
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 3-31. 
+\textbf{Goal:} Assume that the outer conductor of the cylindrical capacitor in Example 3-18 (page 124 Cheng) is grounded and that the inner conductor is maintained at a potential $V_o$. Find the  value of $a$ that minimizes the electric field field at the surface of the inner conductor $\vec{E}(a)$. Then find the electric field at the surface of the inner conductor $\vec{E}(a)$ and the capacitance for this value of $a$.\\
+\\
+\textbf{Steps:} 
+\begin{enumerate}
+\item For the capacitor in Example 3-18, obtain an expression for the electric field between the inner and outer conductors.
+
+\solution{
+\begin{equation*}
+\vec{E} = \vec{a}_r E_r = \vec{a}_r \frac{Q}{2\pi L r}
+\end{equation*}}
+
+\item Determine an expression for the voltage between the inner conductor and the outer conductor.
+
+\solution{
+\begin{equation*}
+V_{ab} = -\int_b^a \vec{E} \cdot d\vec{l} = \frac{Q}{2\pi\varepsilon L} \ln \frac{b}{a}
+\end{equation*}}
+
+\item Obtain an expression for the capacitance of this capacitor.
+
+\solution{
+\begin{equation*}
+C = \frac{Q}{V_{ab}} = \frac{2\pi\varepsilon L}{\ln (b/a)}
+\end{equation*}}
+
+\item Find the electric field at $r=a$, at the surface of the inner conductor.
+
+\solution{
+\begin{equation*}
+E(a) = \frac{V_o}{a \ln (b/a)}
+\end{equation*}}
+
+\item With the inner radius, $b$, of the outer conductor fixed, find $a$ so that $\vec{E}(a)$ is minimized.
+
+\solution{
+We maximum the expression $a \ln (b/a)$ by taking its derivative with respect to $a$ and setting it to zero, which yields
+\begin{eqnarray*}
+\ln \left( \frac{b}{a} \right) &=& 1\\
+a &=& \frac{b}{e}
+\end{eqnarray*}}
+
+\item Determine the capacitance per unit length under the conditions of the previous question.
+
+\solution{
+\begin{equation*}
+		C'=2 \pi \varepsilon\:\text{(C/m)}
+\end{equation*}}
+\end{enumerate}
+\answer{\begin{align*}
+a=\frac{b}{e}\\
+\vect{E}(a)=\frac{V_o}{a\ln (\frac{b}{a})}\\
+C^{'}=2\pi\varepsilon\,\,\text{C/m}
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,112 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 6-22. 
+\textbf{Goal:} A circular rod of magnetic material with permeability $\mu$ is inserted coaxially in the long solenoid of Fig.~6-4. The radius of the rod, $a$, is less than the inner radius, $b$, of the solenoid. The solenoid has $n$ turns per unit length and carries a current $I$. Find $\vec{H}$, $\vec{B}$, and $\vec{M}$ inside the solenoid, as well as current densities $\vec{J}_m$ and $\vec{J}_{m,s}$.
+\begin{center}
+\includegraphics[width=0.8\textwidth]{\wpath Cheng6-22.jpg}\\
+Fig.~6-4. A long solenoid with closely wound windings carrying a current $I$.
+\end{center}
+\textbf{Steps:} 
+\begin{enumerate}
+\item What is the $\vec{H}$-field inside the solenoid?\\
+\solution{
+%\vskip 100pt
+\begin{eqnarray*}
+\vec{H} &=& \vec{a}_z n I
+\end{eqnarray*}
+}
+
+\item What is the $\vec{B}$-field inside the solenoid?\\
+%\vskip 100pt
+\solution{
+\begin{eqnarray*}
+\vec{B} &=& \vec{a}_z\mu n I \quad \text{for} \quad r < a\\
+\vec{B} &=& \vec{a}_z\mu_o n I \quad \text{for} \quad a < r < b
+\end{eqnarray*}
+}
+
+\item What is the $\vec{M}$ inside the solenoid?\\
+%\vskip 100pt
+\solution{
+\begin{equation*}
+\vec{M} = \frac{\vec{B}}{\mu_o} - \vec{H}
+\end{equation*}
+For $r < a$,
+\begin{equation*}
+\vec{M} = \vec{a}_z \left( \frac{\mu}{\mu_o} - 1 \right) nI
+\end{equation*}
+For $a < r < b$,
+\begin{equation*}
+\vec{M} = 0
+\end{equation*}
+}
+
+\item Calculate the current densities $\vec{J}_m$ and $\vec{J}_{m,s}$ equivalent to magnetization.\\
+%\vskip 100pt
+\solution{
+\begin{equation*}
+\vec{J}_m = \nabla \times \vec{M} = 0
+\end{equation*}
+\begin{equation*}
+\vec{J}_{ms} = \vec{M} \times \vec{a}_n = (\vec{a}_z \times \vec{a}_r) \left(\frac{\mu}{\mu_o}-1\right) n I = \vec{a}_\phi \left( \frac{\mu}{\mu_o} -1 \right) n I
+\end{equation*}
+}
+\end{enumerate}
+\answer{
+\begin{eqnarray*}
+\vec{H} &=& \vec{a}_z n I
+\end{eqnarray*}
+\begin{eqnarray*}
+\vec{B} &=& \vec{a}_z\mu n I \quad \text{for} \quad r < a\\
+\vec{B} &=& \vec{a}_z\mu_o n I \quad \text{for} \quad a < r < b
+\end{eqnarray*}
+For $r < a$,
+\begin{equation*}
+\vec{M} = \vec{a}_z \left( \frac{\mu}{\mu_o} - 1 \right) nI
+\end{equation*}
+For $a < r < b$,
+\begin{equation*}
+\vec{M} = 0
+\end{equation*}
+\begin{equation*}
+\vec{J}_{ms} = \vec{a}_\phi \left( \frac{\mu}{\mu_o} -1 \right) n I
+\end{equation*}
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

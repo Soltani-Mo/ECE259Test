@@ -1,0 +1,88 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+% Same as Workbook 6-2
+\problem{[Cheng P.6-4] A current $I$ flows lengthwise in a very long, thin conducting sheet of width $w$, as shown in Fig. 6-35.
+\begin{enumerate}[label=(\alph*)]
+\item Assuming that the current flows into the paper, determine the magnetic flux density $\vect{B}_1$ at point $P_1(0,d)$.
+\item Use the result in part (a) to find the magnetic flux desnity $\vect{B}_2$ at point $P_2(2w/3,d)$.
+\end{enumerate}
+\begin{center}
+\includegraphics[scale= 0.6]{\ppath cheng6-4_prompt.png}
+\end{center}
+}
+
+\solution{\begin{center}
+\includegraphics[scale= 0.9]{\ppath cheng6-4_diagram.png}
+\end{center}
+\begin{enumerate}[label=(\alph*)]
+\item Using Eq. (6-33c) and the diagram above
+\begin{align*}
+d\vect{B}_{P1} &= \uvect{a}_x dB_x + \uvect{a}_ydB_y\\
+&= \uvect{a}_x dB_{P1}\sin \alpha + \uvect{a}_y dB_{P1}\cos \alpha\\
+dB_{P1} &= \frac{\mu_0 (I/w)dx'}{2\pi(x'^2+d^2)^{3/2}}\\
+\sin\alpha = \frac{d}{(x'^2+d^2)^{1/2}} \quad & \quad \cos\alpha = \frac{x'}{(x'^2+d^2)^{1/2}}
+\end{align*} 
+Therefore, $\vect{B}_{P1} = \uvect{a}_xB_x+\uvect{a}_yB_y$ where
+\begin{align*}
+B_x &= \frac{\mu_0Id}{2\pi w}\int_0^w\frac{dx'}{x'^2+d^2} = \frac{\mu_o I}{2\pi w}\tan^{-1}(\frac{w}{d})\\
+B_y &= \frac{\mu_0I}{2\pi w}\int_0^w\frac{x'dx'}{x'^2+d^2} = \frac{\mu_o I}{4\pi w}\ln(1+\frac{w}{d})
+\end{align*}
+\item To find $\vect{B}$ at $P_2(\frac{2}{3}w,d)$, we add vectorially the contributions of the current strips to the right and to the left of point $P_2'$ using the result in part (a).
+\begin{align*}
+\vect{B}_{P_2} &= \vect{B}_{2R}+\vect{B}_{2L}\\
+\vect{B}_{2R} &= \frac{\mu_0 I}{2\pi w}\left[ \uvect{a}_x \tan^{-1} \left(\frac{w}{3d}\right)+\uvect{a}_y \frac{1}{2}\ln \left(1+\frac{w^2}{9d^2}\right)\right]\\
+\vect{B}_{2L} &= \frac{\mu_0 I}{2\pi w}\left[ \uvect{a}_x \tan^{-1} \left(\frac{2w}{3d}\right) - \uvect{a}_y \frac{1}{2}\ln \left(1+\frac{4w^2}{9d^2}\right)\right]\\
+\vect{B}_{P_2}&=\frac{\mu_o I}{2\pi w}\left[\uvect{a}_x \left(\tan^{-1}\frac{w}{3d}+\tan^{-1}\frac{2w}{3d}\right)-\uvect{a}_y \ln \sqrt{\frac{1+(\frac{2w}{3d})^2}{1+(\frac{w}{3d})^2}}\right]
+\end{align*}
+\end{enumerate}
+}
+
+
+\answer{\begin{enumerate}[label=(\alph*)]
+\item \begin{align*}
+\vect{B}_{P_1}=\uvect{a}_x B_x+\uvect{a}_y B_y\,\,\,\,\,\,where\\
+B_x=\frac{\mu_o I}{2\pi w}\tan^{-1}(\frac{w}{d}),\\
+B_y=\frac{\mu_o I}{4\pi w}\ln(1+\frac{w}{d})
+\end{align*}
+\item \begin{align*}
+\vect{B}_{P_2}=\frac{\mu_o I}{2\pi w}\left[a_x (\tan^{-1}\frac{w}{3d}+\tan^{-1}\frac{2w}{3d})-a_y \ln \sqrt{\frac{1+(\frac{2w}{3d})^2}{1+(\frac{w}{3d})^2}}\right]
+\end{align*}
+\end{enumerate}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

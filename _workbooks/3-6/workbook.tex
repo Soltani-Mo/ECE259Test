@@ -1,0 +1,74 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%This is Question 2 from Set 5 in last year's problem set.
+\textbf{Goal:} An infinitely large dielectric slab of thickness $d=2a$, shown below, is polarized so that the polarization vector is $\vec{P} = P_o \frac{x^2}{a^2} \vec{a}_x$, where $P_o$ is  constant. The medium outside the slab is air. Find the voltage between the boundary surfaces of the slab.
+
+\begin{center}
+%\includegraphics[width=0.25\textwidth]{PS3_Workbook6.png}
+\tikz{\node at(0,0){\includegraphics{\wpath slab_P.pdf}};\node at(0,-2.25){\fontsize{2}{2}\scalebox{0.66}{\selectfont\textsf{Copyright \textcopyright{} 2011 Pearson Education, Inc. publishing as Prentice Hall, shamelessly copied by Neeraj}}};}
+\end{center}
+\textbf{Steps:} 
+\begin{enumerate}
+\item Compute the distribution of volume and surface bound charge of the slab.
+\solution{
+\begin{equation*}
+\rho_p = -\nabla \cdot \vec{P} = -\frac{2 P_o x}{a^2}, \rho_{p,s1} = \vec{a}_n \cdot \vec{P} = P_o = -\rho_{p,s2}
+\end{equation*}}
+
+\item Compute the electric field intensity vector everywhere.
+
+\solution{Due to the symmetry of the problem along $y$ and $z$ axes, only the $x$-component of the electric field vector can be nonzero. Also, there is no free electric charge in the problem and since the volume bound charge density is proportional to the volume free charge density, $\vec{D}$ should be zero within the slab to make the existence of nonzero $\rho_p$ possible. Hence,
+\begin{equation*}
+\vec{E} = -\frac{\vec{P}}{\varepsilon_o} = -\frac{P_o x^2}{\varepsilon_o a^2} \vec{a}_x\,,\; |x|<a.
+\end{equation*}
+Using the continuity of $\vec{D}$ at the two interfaces, it is found that the electric field in the vicinity of the boundaries of the slab should be zero (i.e. $\lim_{x\to a^{+}}\vec{E}(x)=\lim_{x\to -a^{-}}\vec{E}(x)=\vec{0}$), and since the divergence of the electric field vector outside of the slab is zero (owing to the absence of any electric charge), $\vec{E} = \vec{0}$ for $|x|>a$.}
+
+\item Compute the voltage between the boundary surfaces of the slab.
+
+\solution{
+A straight forward integration along the $x$ direction yields
+\begin{equation*}
+V = \frac{2}{3} \frac{P_o a}{\varepsilon_o}
+\end{equation*}}
+\end{enumerate}
+\answer{\begin{align*}
+V = \frac{2}{3} \frac{P_o a}{\varepsilon_o}
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

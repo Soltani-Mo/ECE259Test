@@ -1,0 +1,66 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.6-36] Refer to Example 6-16. Determine the inductance per unit length of air coaxial transmission line assuming that its outer conductor is not very thing but is of a thickness $d$. \\(Note: Find inductance from magnetic energy)}
+
+\solution{
+For $b\leq r\leq (b+d)$,
+\begin{align*}
+\vect{B}_3 &= \uvect{a}_\phi B_{3\phi}\\
+&= \uvect{a}_\phi\frac{\mu_0 I}{2\pi r}\left[ 1-\frac{\pi(r^2-b^2)}{\pi(b+d)^2-\pi b^2}\right]\\
+&= \uvect{a}_\phi\frac{\mu_0 I}{2\pi r}\left[\frac{(b+d)^2-r^2}{(b+d)^2-b^2}\right].
+\end{align*}
+Magnetic energy per unit length stored in the outer conductor is given by 
+\begin{align*}
+W_m'&= \frac{1}{2\mu_0}\int_b^{b+d} B_{3\phi}^2 2\pi r \text{d}r\\
+&= \frac{\mu_0 I^2}{4\pi}\left\{ \frac{(b+d)^4}{[(b+d)^2-b^2]^2}\ln \left(1+\frac{d}{b}\right) + \frac{b^2-3(b+d)^2}{4[(b+d)^2-b^2]} \right\}.
+\end{align*}
+We can determine the inductance from the stored magnetic energy per unit length using
+\begin{align*}
+L' &= \frac{2W_{m,tot}}{I^2}\\
+&= \frac{2}{I^2}\left( W_{m1}'+W_{m2}'+W_{m3}'\right)\\
+&= \frac{\mu_0}{2\pi}\left[ \frac{1}{4} + \ln \frac{b}{a}+ \frac{(b+d)^4}{[(b+d)^2-b^2]^2}\ln \left(1+\frac{d}{b}\right) + \frac{b^2-3(b+d)^2}{4[(b+d)^2-b^2]} \right] \text{(H/m)}.
+\end{align*}
+}
+
+\answer{\begin{align*}
+L^{'}=\frac{\mu_0}{2\pi}\left[ \frac{1}{4} + \ln \frac{b}{a} +\frac{(b+d)^4}{[(b+d)^2-b^2]^2}\ln \left(1+\frac{d}{b}\right) + \frac{b^2-3(b+d)^2}{4[(b+d)^2-b^2]} \right] \text{(H/m)}.
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

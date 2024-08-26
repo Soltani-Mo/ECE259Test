@@ -1,0 +1,103 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.6-34] A very long conductor in free space carrying a current $I$ is parallel to, and at a distance $d$ from, an infinite plane interface with a medium. 
+\begin{enumerate}[label=(\alph*)]
+\item Discuss of the normal and tangential components of $\vect{B}$ and $\vect{H}$ at the interface:
+\begin{enumerate}[label=(\roman*)]
+\item if the medium is infinitely conducting;
+\item if the medium is infinitely permeable.
+\end{enumerate}
+\item Find and compare the magnetic field intensities $\vect{H}$ at an arbitrary point in the free space for the two cases in part (a).
+\item Determine the surface current densities at the interface, if any, for the two cases. 
+\end{enumerate}
+}
+
+\solution{We will use the diagram below to solve the question.
+\begin{center}
+\includegraphics[scale=0.5]{\ppath Cheng6-34_diagram.png}
+\end{center}
+
+\begin{enumerate}[label=(\alph*)]
+\item 
+\begin{enumerate}[label=(\roman*)]
+\item If the medium is infinitely conducting (i.e. $\sigma_2 \rightarrow \infty$) then $\vect{B}=\vect{H}=0$. We also know from the boundary conditions that $B_n$ is continous so $B_{1n}=B_{2n}=0$. Likewise from the other boundary conditions, $\uvect{a}_y\times \vect{H}_1=\vect{J}_s \rightarrow -\uvect{a}_z H_1=\vect{J}_s$. There will also be an image current created as shown in the diagram $d$ below the plane. It is flowing out of the page.
+\item If the medium is infinitely permeable (i.e. $\mu_2 \rightarrow \infty$) then $\vect{H}_2=0$, however $\vect{B}_2$ is finite. There is no surface current here so $H_{1t}=H_{2t}=0$. $B_n$ is continuous so $B_{1n}=B_{2n}$. There will also be an image current created as shown in the diagram $d$ below the plane.  However, it is flowing into the page.
+\end{enumerate}
+\item 
+\begin{enumerate}[label=(\roman*)]
+\item The magnetic field intensity at point $P$ is composed of the field from the wire $\vect{H}_1$ superimposed with its image $(\vect{H}_2)_i$. It is given by $\vect{H}_P=\vect{H}_1+(\vect{H}_2)_i$, where 
+\begin{align*}
+\vect{H}_1 &= \frac{I}{2\pi} \left[ \uvect{a}_x \frac{y-d}{x^2+(y-d)^2}-\uvect{a}_y \frac{x}{x^2+(y-d)^2} \right],\\
+(\vect{H}_2)_i &= \frac{I}{2\pi} \left[ -\uvect{a}_x \frac{y+d}{x^2+(y+d)^2}+\uvect{a}_y \frac{x}{x^2+(y+d)^2} \right].
+\end{align*}
+\item The field at point $P$ is similar to the previous part but in this case the image current direction is reversed. As a result
+\begin{align*}
+\vect{H}_P&=\vect{H}_1+(\vect{H}_2)_{ii}\\
+\vect{H}_P&=\vect{H}_1-(\vect{H}_2)_{i}
+\end{align*}
+\end{enumerate}
+\item 
+\begin{enumerate}[label=(\roman*)]
+\item $\vect{J}_s=-\uvect{a}_z(\vect{H}_P)_x\vert_{y=0}=\uvect{a}_z\left( \frac{Id}{x^2+d^2}\right)$
+\item $\vect{J}_s = 0$
+\end{enumerate}
+\end{enumerate}
+}
+
+
+\answer{\begin{enumerate}[label=(\alph*)]
+\item Using the boundary conditions and the fact that an image is created from the plane. 
+\item 
+\begin{enumerate} [label=(\roman*)]
+\item $\vect{H}_P=\vect{H}_1+(\vect{H}_2)_i$, where 
+\begin{align*}
+\vect{H}_1 &= \frac{I}{2\pi} \left[ \uvect{a}_x \frac{y-d}{x^2+(y-d)^2}-\uvect{a}_y \frac{x}{x^2+(y-d)^2} \right],\\
+(\vect{H}_2)_i &= \frac{I}{2\pi} \left[ -\uvect{a}_x \frac{y+d}{x^2+(y+d)^2}+\uvect{a}_y \frac{x}{x^2+(y+d)^2} \right].
+\end{align*}
+\item $\vect{H}_P=\vect{H}_1-(\vect{H}_2)_i$
+\end{enumerate}
+\item 
+\begin{enumerate}[label=(\roman*)]
+\item $\vect{J}_s=\uvect{a}_z\left( \frac{Id}{x^2+d^2}\right)$
+\item $\vect{J}_s = 0$
+\end{enumerate}
+\end{enumerate}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+\problem{An infinitely long cylinder of radius $a$ in free space is charged with a volume charge density 
+\[
+\rho_u =\rho_0  \left(1 - \dfrac{r}{a} \right)
+\]
+for $0 \leq r \leq a$, where $\rho_0$ 
+is a constant and $r$ is the radial coordinate in the cylindrical coordinate system. Find the charge per unit length on 
+the cylinder.}
+
+\solution{
+\begin{align*}
+\rho_l &= \int_0^{2\pi}\int_0^a\rho_u\ rdrd\phi\\
+&=2\pi\rho_0\int_0^a\left(r-\frac{r^2}{a}\right)dr\\
+&=2\pi\rho_0\left(\frac{a^2}{2}-\frac{a^3}{3a}\right)dr\\
+&=\frac{\pi \rho_o a^2}{3}
+\end{align*}}
+\answer{
+\begin{equation*}
+\rho_l=\frac{\pi \rho_o a^2}{3}
+\end{equation*}
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

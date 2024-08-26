@@ -1,0 +1,81 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 5-19. 
+\textbf{Goal:} Find the resistance of two conducting spheres immersed in a lossy dielectric.\\
+\\
+\textbf{Steps:} 
+\begin{enumerate}
+\item Assume charges $+/- Q$ on the two spheres. What are the potentials on the spheres? 
+What approximations can be made, given that the distance between the spheres is much larger 
+than their radii? \\
+\solution{
+Let $a$ and $b$ be radius' of the two spheres, and $d$ be separation between these spheres. Let there be $+Q$ on sphere a and $-Q$ on sphere b.
+Scalar potential outside a uniformly charged sphere is given by $V = Q/(4 \pi \epsilon R)$ (this comes from Gauss' law). From this,
+\begin{align*}
+V_a &= \frac{Q}{4\pi \varepsilon} \left(\frac{1}{a} - \frac{1}{d-a} \right) \\
+V_b &= \frac{-Q}{4\pi \varepsilon} \left(\frac{1}{b} - \frac{1}{d-b} \right)
+\end{align*}
+}
+
+\item Find the potential difference between the spheres and hence, the capacitance $Q/V$.\\
+\solution{
+\begin{align*}
+C &= \frac{Q}{V} \\
+&= \frac{Q}{V_a - V_b} \\
+&= 4\pi \varepsilon \left( \frac{1}{\frac{1}{a} - \frac{1}{d-a} + \frac{1}{b} - \frac{1}{d-b}} \right)
+\end{align*}
+}
+
+\item From capacitance, find the resistance. \\
+\solution{
+\begin{align*}
+RC &= \varepsilon/\sigma \\
+R \left( \frac{4\pi \varepsilon }{\frac{1}{a} - \frac{1}{d-a} + \frac{1}{b} - \frac{1}{d-b}} \right) &= \varepsilon/\sigma\\
+R&= \frac{1}{4\pi \sigma}\left( {\frac{1}{a} - \frac{1}{d-a} + \frac{1}{b} - \frac{1}{d-b}} \right)\\
+&\approx \frac{1}{4\pi \sigma}\left( {\frac{1}{a} + \frac{1}{b} - \frac{2}{d}} \right)
+\end{align*}
+}
+
+\end{enumerate}
+\answer{\begin{align*}
+R&= \frac{1}{4\pi \sigma}\left( {\frac{1}{a} - \frac{1}{d-a} + \frac{1}{b} - \frac{1}{d-b}} \right)\\
+&\approx \frac{1}{4\pi \sigma}\left( {\frac{1}{a} + \frac{1}{b} - \frac{2}{d}} \right)
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

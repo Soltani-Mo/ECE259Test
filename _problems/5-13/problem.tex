@@ -1,0 +1,80 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.5-14] Refer to the flat conducting quarter-circular washer in Example 5-6 and Fig 5-8. Find the resistance between the curved sides.
+\begin{center}
+\includegraphics[scale= 0.6]{\ppath cheng5-14_prompt.png}
+\end{center}
+}
+
+\solution{
+%\begin{center}
+%\includegraphics[scale= 0.6]{\ppath 5-14.png}
+%\end{center}
+Starting with Poisson's equation
+\begin{align*}
+\nabla^2V = 0 \rightarrow \frac{1}{r}\frac{\partial}{\partial r}\left( r \frac{\partial V}{\partial r}\right) = 0.
+\end{align*}
+This has the solution
+\begin{align*}
+V(r) = c_1 \ln r + c_2.
+\end{align*}
+To solve for $c_1$ and $c_2$, we use the boundary conditions $V(a) = V_0$ and $V(b) = 0$. This yields 
+\begin{align*}
+V(r) = V_0 \frac{\ln (b/r)}{\ln (b/a)}.
+\end{align*}
+From this we can solve for the current $I$
+\begin{align*}
+\vect{E}(r) &= -\uvect{a}_r \frac{\partial V}{\partial r} = \uvect{a}_r\frac{V_0}{r\ln (b/a)}.\\
+\vect{J}(r) &= \sigma \vect{E}_r.\\
+I &= \int_S \vect{J}\cdot dS = \int_0^{\pi/2}\vect{J}\cdot (\uvect{a}_r hrd\phi) \\
+  &= \frac{\pi\sigma h V_0}{2\ln (b/a)}.
+\end{align*}
+Now with Ohm's law we can solve for the resistance $R$
+\begin{align*}
+R = \frac{V_0}{I} = \frac{2 \ln (b/a)}{\pi \sigma h}.
+\end{align*}
+}
+
+\answer{
+\begin{align*}
+R=\frac{2\ln(b/a)}{\pi\sigma h}
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

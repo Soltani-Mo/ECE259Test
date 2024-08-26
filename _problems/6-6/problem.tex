@@ -1,0 +1,49 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.6-10] A very long, thin conducting strip of width $w$ lies in the $xz$-plane between $x=\pm w/2$. A surface current $\vect{J}_s=\uvect{a}_zJ_{s0}$ flows in the strip. Find the magnetic flux density at an arbitrary point outside the strip.}
+
+\solution{
+The surface current $\vect{J} = \uvect{a}_zJ_{s0}$ extending from $x=-w/2$ to $x=w/2$ is shown in the diagram below.
+\begin{center}
+\includegraphics[scale = 0.8]{\ppath Cheng6-10_diagram_a.png}
+\end{center}
+At $P(x,y,z)$ the magnetic flux density due to an infinitely long strip of current of length $dx'$ is
+\begin{align*}
+d\vect{B} = \frac{\mu_0J_{s0}dx'}{2\pi r}\left( -\uvect{a}_x \frac{y}{r}+\uvect{a}_y \frac{x-x'}{r}\right) 
+\end{align*}
+The distance $r = \sqrt{(x-x')^2+y^2}$ is shown in the diagram below.
+\begin{center}
+\includegraphics[scale = 0.8]{\ppath Cheng6-10_diagram_b.png}
+\end{center}
+Therefore the flux density is given by
+\begin{align*}
+\vect{B} = \int d\vect{B} = \uvect{a}_x B_x + \uvect{a}_y B_y.
+\end{align*}
+The vector components are given by
+\begin{align*}
+B_x &= - \frac{\mu_0 J_{s0} y}{2\pi}\int_{-w/2}^{w/2} \frac{dx'}{(x-x')^2+y^2}\\
+&= - \frac{\mu_0 J_{s0}}{2\pi}\left[ \tan^{-1}\frac{x-w/2}{y}-\tan^{-1}\frac{x+w/2}{y} \right]\\
+B_y &= \frac{\mu_0 J_{s0} y}{2\pi}\int_{-w/2}^{w/2} \frac{(x-x')dx'}{(x-x')^2+y^2}\\
+&= \frac{\mu_0 J_{s0}}{4\pi} \ln\left( \frac{(x+w/2)^2+y^2}{(x-w/2)^2+y^2}\right).
+\end{align*}
+}
+\answer{\begin{align*}
+\vect{B} &= \uvect{a}_x B_x + \uvect{a}_y B_y,\,\,\,where\\
+B_x&=- \frac{\mu_0 J_{s0}}{2\pi}\left[ \tan^{-1}\frac{x-w/2}{y}+\tan^{-1}\frac{x+w/2}{y} \right],\\
+B_y&=\frac{\mu_0 J_{s0}}{4\pi} \ln\left( \frac{(x+w/2)^2+y^2}{(x-w/2)^2+y^2}\right)
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+

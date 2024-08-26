@@ -1,0 +1,84 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+% Same as Workbook 6-3
+\problem{[Cheng P.6-5] A current $I$ flows in a $w\times w$ square loop as in Fig. 6-36. Find the magnetic flux density at the off-center point $P(w/4,w/2)$.
+\begin{center}
+\includegraphics[scale= 0.6]{\ppath cheng6-5_prompt.png}
+\end{center}
+}
+
+\solution{
+We first find $\vect{B}_{P_1}$ at $P_1$ flush with one end of a wire carrying a current $I$ and making an angle $\alpha$ with the other end as shown below. 
+\begin{center}
+\includegraphics[scale= 0.9]{\ppath cheng6-5_diagram_a.png}
+\end{center}
+
+\begin{align*}
+\begin{split}
+d\vect{B}_{P_1} &= \frac{\mu_0 I}{4\pi R^2} \uvect{a}_z dz'\times \uvect{a}_R\\
+d\vect{B}_{P_1} &= \frac{\mu_0 I}{4\pi R^2} ( \uvect{a}_{\phi} \sin \theta d\theta)
+\end{split}
+\begin{split}
+z' &= \cot b, \; dz' = -b \csc^2 \theta d\theta\\
+R &= b \csc \theta, \; \uvect{a}_z \times \uvect{a}_R = \uvect{a}_\phi \sin\theta
+\end{split}
+\end{align*}
+\begin{align*}
+\vect{B}_{P_1} &= -\uvect{a}_\phi \frac{\mu_0 I}{4\pi b}\int_{\pi/2}^\alpha \sin \theta d\theta = \uvect{a}_\phi \frac{\mu_0 I}{4\pi b}\cos \theta 
+\end{align*}
+Now we can apply this result to the four-sided loop below.
+\begin{center}
+\includegraphics[scale= 0.9]{\ppath cheng6-5_diagram_b.png}
+\end{center}
+Here we have
+\begin{align*}
+\vect{B}_P=\uvect{a}_z\frac{\mu_0I}{4\pi}\left( \frac{1}{a}\cos\alpha_a + \frac{1}{b}\sin\alpha_a + \frac{1}{b}\cos\alpha_b+ \frac{1}{c}\sin\alpha_b + \frac{1}{c}\cos\alpha_c + \frac{1}{d}\sin\alpha_c + \frac{1}{d}\cos\alpha_d  + \frac{1}{a}\sin\alpha_d \right)
+\end{align*}
+For this problem $a=c=\frac{w}{2}$, $b=\frac{w}{4}$, and $d=\frac{3}{4}w$. Likewise $\alpha_a = \tan^{-1}2 = 63.2^{\circ}$, $\alpha_b = 90^{\circ}- 63.2^{\circ} = 26.6^{\circ}$, $\alpha_c = \tan^{-1}\frac{2}{3} = 33.7^{\circ}$, and $\alpha_d =56.3^{\circ}$. Finally,
+\begin{align*}
+\vect{B}_P=\uvect{a}_z\,\,3.44\frac{\mu_0 I}{\pi w}.
+\end{align*}
+}
+
+\answer{\begin{align*}
+\vect{B}_P=\uvect{a}_z\,\,3.44\frac{\mu_0 I}{\pi w}
+\end{align*}
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

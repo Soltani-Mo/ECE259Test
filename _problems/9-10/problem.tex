@@ -1,0 +1,83 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.7-5] A conducting circular loop of a radius 0.1 (m) is situated in the neighbourhood of a very long power line carrying a 60-(Hz) current, as shown in Fig. 6-49, with $d=0.15$ (m). An a-c milliammeter inserted in the loop reads 0.3 (mA). Assume the total impedance of the loop including the milliammeter to be 0.01 ($\Omega$).
+\begin{enumerate}[label=(\alph*)]
+\item Find the magnitude of the current in the power line.
+\item To what angle about the horizontal axis should the circular loop be rotated in order to reduce the milliammeter reading to 0.2 (mA)?
+\end{enumerate}
+\begin{center}
+\includegraphics[scale=0.5]{\ppath Cheng7-5_prompt.png}
+\end{center}
+}
+
+\solution{From Problem P.6-40 we have $\Phi_{12} = \mu_0I(\sin\omega t)(d-\sqrt{d^2-b^2})$.
+\begin{enumerate}[label=(\alph*)]
+\item The e.m.f in the wire is given by
+\begin{align*}
+V &= -\frac{d\Phi}{dt}\\
+&= -\mu_0I\omega (\cos\omega t)(d-\sqrt{d^2-b^2})\\
+&= V_m\cos\omega t.
+\end{align*}
+Using Ohm's law we can find the current in the power line $I$, which is inducing this e.m.f.
+\begin{align*}
+3\times 10^{-4}&=\frac{|V_m|}{\sqrt{2}R} = \frac{\mu_0I\omega(d-\sqrt{d^2-b^2})}{\sqrt{2}R}\\
+I &= \frac{\sqrt{2}R (3\times 10^{-4})}{\mu_0 \omega(d-\sqrt{d^2-b^2})}\\
+&= \frac{3\sqrt{2}\times 10^{-6}}{4\pi10^{-7}(2\pi 60)0.0382}\\
+&= 0.234 \;\text{(A)}.
+\end{align*}
+\item When we rotate about the horizontal axis, less of the loop's surface will be perpendicular to the magnetic flux density from the wire, so less current will be induced. We know the flux through the loop is $\Phi = \vect{B}\cdot d\vect{S}=|B||S|\cos\alpha$, where $\alpha$ is the angle between the surface normal and $\vect{B}$. We also know from part (a) that the current in the loop due to $\vect{B}$ from the long straight wire is 
+\begin{align*}
+I_{\text{loop}} = \frac{|-\mu_0I\omega (d-\sqrt{d^2-b^2})||\cos\alpha|}{\sqrt{2}R}
+\end{align*}
+where we have included the $\cos \alpha$ term for the angle made by rotating the loop. Finally, we can solve for $\alpha$
+\begin{align*}
+\frac{3\times 10^{-4}}{2\times 10^{-4}}&=\frac{\frac{|-\mu_0I\omega (d-\sqrt{d^2-b^2})||\cos 0^\circ|}{\sqrt{2}R}}{\frac{|-\mu_0I\omega (d-\sqrt{d^2-b^2})||\cos\alpha|}{\sqrt{2}R}}\\
+\frac{0.3}{0.2}&= \cos \alpha\\
+\alpha &= 48.2^\circ.
+\end{align*}
+\end{enumerate}
+}
+
+\answer{\begin{enumerate}[label=(\alph*)]
+\item $I=0.234 \;\text{(A)}.$
+\item $\alpha = 48.2^\circ.$
+\end{enumerate}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

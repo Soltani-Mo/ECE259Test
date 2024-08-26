@@ -1,0 +1,97 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.3-15] Three charges ($+q$, $-2q$, and $+q$) are arranged along the $z$-axis at $z=d/2$, $z=0$, and $z=-d/2$, respectively.
+\begin{enumerate}[label=(\alph*)]
+\item Determine $V$ and $\vect{E}$ at a distant point $P(R,\theta,\phi)$.
+\item Find the equations for equipotential surfaces and streamlines.
+\item Sketch a family of equipotential lines and streamlines.
+\end{enumerate}
+(Such an arrangement of three charges is called a \textit{\textbf{linear electrostatic quadrupole}}).
+}
+
+\solution{
+We will use the diagram below to solve this problem
+\begin{center}
+\includegraphics[scale = 1] {\ppath Q8.jpg}
+\end{center}
+
+\begin{align*}
+V&= \frac{q}{4\pi \varepsilon_0 R}\left( \frac{R}{R_1}+\frac{R}{R_2} + 2 \right)\\
+R_1^2&=R^2+(\frac{d}{2})^2-Rd\cos\theta\\
+\frac{R}{R_1} &\approxeq \left[ 1+(\frac{d}{2R})^2 -\frac{d}{R}\cos\theta\right]^{-0.5}\\
+&\approxeq  1+\frac{d}{2R}\cos\theta +\frac{d^2}{4R^2}\frac{3\cos^2\theta-1}{2}\\
+\frac{R}{R_2}&\approxeq  1-\frac{d}{2R}\cos\theta +\frac{d^2}{4R^2}\frac{3\cos^2\theta-1}{2}
+\end{align*}
+
+\begin{enumerate}[label=(\alph*)]
+\item \begin{align*}
+V &= \frac{qd^2}{16 \pi \varepsilon_0 R^3} \left( 3 \cos^2 \theta - 1 \right) \,, R^3 \gg d^3 \\
+\vect{E} &= -\nabla V\\
+\vect{E} &= \frac{3qd^2}{16 \pi \varepsilon_0 R^4} \left[ \uvect{a}_R \left( 3 \cos^2\theta - 1\right) + 	\uvect{a}_\theta \sin 2\theta \right]
+	\end{align*}
+\item Equipotential surfaces:
+\begin{align*}
+R^3 = \text {c}_T (3\cos^2 \theta-1)	
+\end{align*}
+Streamlines:
+\begin{align*}
+\frac{dR}{E_A} &= \frac{R\textrm{d}\theta}{E_{\theta}} \; or \; \frac{dR}{3\cos^2\theta-1} = \frac{R\textrm{d}\theta}{\sin 2\theta}\\	
+\frac{dR}{R}&=\frac{3}{2}\frac{\textrm{d}(\sin\theta)}{2\sin\theta}-\frac{\text{d}\theta}{\sin 2 \theta}\\
+R^2 &= \text{c}_E \sin^2\theta \cos\theta.
+\end{align*}
+\end{enumerate}}
+
+\answer{
+\begin{enumerate}[label=(\alph*)]
+\item \begin{align*}
+	V &= \frac{qd^2}{16 \pi \varepsilon_0 R^3} \left( 3 \cos^2 \theta - 1 \right) \,, R^3 \gg d^3 \\
+	\vect{E} &= \frac{3qd^2}{16 \pi \varepsilon_0 R^4} \left[ \uvect{a}_R \left( 3 \cos^2\theta - 1\right) + 	\uvect{a}_\theta \sin 2\theta \right]
+	\end{align*}
+\item Equipotential surfaces:
+	\begin{align*}
+R^3 = \text {c}_T (3\cos^2 \theta-1)		
+	\end{align*}
+	Streamlines:
+	\begin{align*}
+	R^2 &= \text{c}_E \sin^2\theta \cos\theta.
+	\end{align*}
+\end{enumerate}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

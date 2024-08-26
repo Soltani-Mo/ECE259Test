@@ -1,0 +1,82 @@
+\def\showsolutions{true}
+\def\showworkbooks{true}
+
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 3-33.
+\textbf{Goal:} A cylindrical capacitor of length $L$ consist of coaxial conducting surfaces of radii $r_i$ and $r_o$. Two dielectric media of different dielectric constants $\varepsilon_{r1}$ and $\varepsilon_{r2}$ fill the space between the conducting surfaces as shown in Fig.~3-42. Determine its capacitance.\\
+\\
+\textbf{Steps:} 
+\begin{enumerate}
+\item Is the electric fields in both of the dielectric same or different? Think about the boundary conditions.
+
+\solution{
+The boundary condition tangential E-fields are continuous across dielectric-dielectric boundaries. The E-fields are the same on both dielectric regions.}
+
+\item Using Gauss's Law, obtain an expression for the electric field.
+
+\solution{
+\begin{equation*}
+\pi r L \varepsilon_o \varepsilon_{r1} E_r + \pi r L \varepsilon_o \varepsilon_{r2} E_r = \rho_l L
+\end{equation*}
+Isolating for $E_r$ to obtain
+\begin{equation*}
+E_r = \frac{\rho_l}{\pi r \varepsilon_o (\varepsilon_{r1} + \varepsilon_{r2}) }
+\end{equation*}}
+
+\item Obtain an expression for the voltage between the two conductors.
+
+\solution{
+\begin{equation*}
+V = -\int_{r_o}^{r_i} E_r\,dr = \frac{\rho_l}{\pi \varepsilon_o (\varepsilon_{r1} + \varepsilon_{r2})} \ln \frac{r_o}{r_i}
+\end{equation*}}
+
+\item Obtain an expression for the capacitance.
+
+\solution{
+\begin{equation*}
+C = \frac{\rho_l L}{V} = \frac{\pi \varepsilon_o(\varepsilon_{r1} + \varepsilon_{r2}) L}{\ln (r_o/r_i)}
+\end{equation*}}
+
+\end{enumerate}
+\answer{\begin{align*}
+C = \frac{\pi \varepsilon_o(\varepsilon_{r1} + \varepsilon_{r2}) L}{\ln (r_o/r_i)}
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

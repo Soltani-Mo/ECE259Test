@@ -1,0 +1,71 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 6-43:
+\textbf{Goal:} The cross section of a long thin metal plate and a parallel wire is shown in the figure below. Equal and opposite current $I$ flow in the conductors. Find the force per unit length acting on both conductors.
+\begin{center}
+\includegraphics[scale=0.55]{\wpath Q6-43.png}
+\end{center}
+\textbf{Steps:} 
+\begin{enumerate}
+\item First determine the magnetic flux density $\vect{B}_{12}$ at an arbitrary point $(0,y)$ on the metal plate due the current $I$ which flows in the wire.%\\
+%\vskip 80 pt
+
+\solution{
+The magnetic field due to a single wire at point $(0,y)$ on the thin metal plate is
+\begin{align*}
+\vect{B}_{12} &= \frac{\mu_0 I}{2\pi r} \uvect{a}_{\phi} \,, \\
+\vect{B}_{12} &= \frac{\mu_0 I}{2\pi \sqrt{D^2 + y^2}} \left(\frac{y}{\sqrt{D^2 + y^2}} \uvect{a}_x + \frac{D}{\sqrt{D^2 + y^2}} \uvect{a}_y \right)
+\end{align*}}
+
+\item Next, divide the plate into small strips of differential width $dy$. Determine the current $dI$ which flows in the strip.%\\
+%\vskip 60pt
+
+\solution{
+\begin{align*}
+dI = \frac{I}{w} dy\,\uvect{a}_z \,.
+\end{align*}}
+
+\item Let $\vect{F}_{12}$ be the force per unit length exerted by the wire on the metal plate.  Using the result in part (1) and (2), determine the contribution $\vect{dF}_{12}$ to the force due to each differential strip.
+%\vskip 60pt
+
+\solution{
+\begin{align*}
+d\vect{F}_{12} &= \frac{\mu_0 I^2}{2\pi w} \left[ dy \uvect{a}_z  \times \left(\frac{y}{D^2 + y^2}\uvect{a}_x + \frac{D}{D^2 + y^2} \uvect{a}_y \right) \right] \\
+&= \frac{\mu_0 I^2}{2\pi w}  \left( \frac{y}{D^2 + y^2}\uvect{a}_y - \frac{D}{D^2 + y^2} \uvect{a}_x \right) dy
+\end{align*}}
+
+\item Integrate $d\vect{F}_{12}$, to compute the force per unit length exerted by the current carrying wire on the metal plate.
+%\vskip 80pt
+
+\solution{
+\begin{align*}
+\vect{F}_{12} = \uvect{a}_y \frac{\mu_0 I^2}{2\pi w} \int_{-w/2}^{w/2} \frac{y}{D^2 + y^2} dy - \uvect{a}_x \frac{\mu_0 I^2}{2\pi w} \int_{-w/2}^{w/2} \frac{D}{D^2 + y^2} dy
+&= -\uvect{a}_x \frac{\mu_0 I^2}{\pi w} \left[ \tan^{-1}\left(\frac{w}{2D} \right) \right]
+\end{align*}}
+
+
+\item What is the force per unit length exerted by the metal plate on the current carrying wire?
+%\vskip 50pt
+
+\solution{
+\begin{align*}
+\vect{F}_{21} &= -\vect{F}_{12}\\
+&= \uvect{a}_x \frac{\mu_0 I^2}{\pi w} \left[ \tan^{-1}\left(\frac{w}{2D} \right) \right]
+\end{align*}}
+
+\end{enumerate}
+\answer{\begin{align*}
+\vect{F}_{21} &= -\vect{F}_{12}\\
+&= \uvect{a}_x \frac{\mu_0 I^2}{\pi w} \left[ \tan^{-1}\left(\frac{w}{2D} \right) \right]
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+

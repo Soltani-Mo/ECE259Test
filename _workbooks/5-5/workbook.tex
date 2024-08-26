@@ -1,0 +1,113 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 5-17. 
+\textbf{Goal:} Find the resistance between the surfaces $R_1$ and $R_2$ of a truncated conical block defined by $R_1 \leq R \leq R_2$ and $0 \leq \theta \leq \theta_0$. The two spherical surfaces ($R=R_1$ and $R=R_2$) are perfect electric conductors (PECs), while the rest of the block has conductivity $\sigma$. You can neglect edge effects.\\
+\\
+\textbf{Steps:} 
+\begin{enumerate}
+\item Choose a coordinate system. \\
+\solution{Spherical}
+
+\item Assume potential $V_0$ on the one conductor and zero on the other. From  Laplace equation, find $V$ and then $E$. 
+
+\textit{Note: Alternatively, you can assume a charge $Q$ on the inner conductor and use Gauss' law to find the field it creates}\\
+\solution{
+Solving Laplace's equation assuming scalar potential of $V_0$ on inner surface and $0\ V$ on outer surface we get
+\begin{align*}
+\nabla^2 V &= 0 \\
+\frac{1}{R^2} \frac{\partial }{\partial R} \left(R^2 \frac{\partial V}{\partial R}\right) &= 0\\
+\end{align*}
+The solution to this equation is
+\begin{align*}
+V = -\frac{c_1}{R} + c_2
+\end{align*}
+Applying the boundary conditions ($V(R_1) = V_0$ and $V(R_2) = 0$) gives:
+\begin{align*}
+c_1 &= \frac{V_0}{\frac{1}{R_2} - \frac{1}{R_1} } \\
+c_2 &= \frac{1}{R_2} \frac{V_0}{\frac{1}{R_2} - \frac{1}{R_1} }
+\end{align*}
+}
+\solution{
+From scalar potential,
+\begin{align}
+\vect{E} &= - \nabla V \nonumber \\ 
+&= \left( \frac{V_0}{\frac{1}{R_1} - \frac{1}{R_2}} \right)\frac{1}{R^2} \uvect{a}_R\,. 
+\end{align}\\
+\\
+\textit{Alternatively, on a Gaussian surface of a cone with $0\le \theta \le \theta_0$ and radius $R$ we apply Gauss' law:
+\begin{align}
+	\int_0^{2\pi} \int_{0}^{\theta_0} \vect{E} \cdot \uvect{a}_R R^2 \sin\theta\,d\theta\,d\phi &= \frac{Q}{\varepsilon} \nonumber  \\
+	2 \pi R^2 E_R (1-\cos \theta)  &= \frac{Q}{\varepsilon} \nonumber \\
+	E_R &= \frac{Q}{2\pi \varepsilon R^2 (1- \cos \theta_0)} \,. 
+\end{align}
+The potential is given by:
+\begin{align}
+	V_0 &= -\int_{R_2}^{R_1} \frac{Q}{2\pi \varepsilon R^2 (1 - \cos \theta_0)} dR \nonumber \\
+	&= \frac{Q}{2\pi \varepsilon (1-\cos\theta_0)} \left(\frac{1}{R_1} - \frac{1}{R_2}\right)
+\end{align}
+Note: the electric field obtained from the Laplace equation and Gauss' law are equivalent.}}
+
+\item Having $\vect{E}$, find $\vect{J}$. Can you find the total current $I$ that this $\vect{J}$ creates? Choose the surface that you need to use to apply the formula: 
+$I = \iint_S \vect{J} \cdot \vect{dS}$. \\
+\solution{
+\begin{align*}
+\vect{J} &= \sigma \vect{E} \\
+J_R &= \sigma \left( \frac{V_0}{\frac{1}{R_1} - \frac{1}{R_2}} \right)\frac{1}{R^2}
+\end{align*}
+Using conic surface, we can compute the total current I:
+\begin{align*}
+I &= \int_0^{2\pi} \int_0^{\theta_0} J_R R^2 \sin \theta\,d\theta\,d\phi \\
+&= \sigma \left( \frac{V_0}{\frac{1}{R_1} - \frac{1}{R_2}} \right) 2 \pi (1 - \cos \theta_0)
+\end{align*}
+}
+
+\item Having $\vect{E}$, find the voltage between the conductors. Then, $R=V/I$. 
+\solution{
+\begin{align*}
+R &= \frac{V_0}{I} \\
+&= \frac{\frac{1}{R_1} - \frac{1}{R_2}}{ 2 \pi \sigma  (1 - \cos \theta_0)}
+\end{align*}
+}
+
+\end{enumerate}
+\answer{\begin{align*}
+R = \frac{\frac{1}{R_1} - \frac{1}{R_2}}{ 2 \pi \sigma  (1 - \cos \theta_0)}
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

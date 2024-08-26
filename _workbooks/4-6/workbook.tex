@@ -1,0 +1,88 @@
+\def\showsolutions{true}
+\def\showworkbooks{true}
+
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+\textbf{Goal:} Determine the capacitance of an isolated conducting sphere of radius $b$ that is coated with a dielectric layer of uniform thickness $d$. The dielectric has an electric susceptibility $\chi_e$.\\
+\\
+\textbf{Steps:} 
+\begin{enumerate}
+\item What is the electric field inside the dielectric due to charge $+Q$ on the surface of the conducting sphere?
+
+\solution{
+For $b<R<b+d$:
+\begin{align*}
+\vect{E}_1 = \uvect{a}_r \frac{Q}{4\pi \varepsilon_0 (1 + \chi_e) R^2} \,.
+\end{align*}}
+
+\item What is the electric field in air due to charge $+Q$ on the conductor?\\
+
+\solution{
+For $R>b+d$:
+\begin{align*}
+\vect{E}_2 = \uvect{a}_r \frac{Q}{4\pi \varepsilon_0 R^2} \,.
+\end{align*}}
+
+\item What is the potential on the outer surface of the dielectric ($r = b+d$)? What is the potential on the conductor?
+
+\solution{
+Potential on the outer surface of the dielectric is
+\begin{align*}
+V_2 &= -\int_{\infty}^{b+d} E_2 dR \\
+&= \frac{Q}{4\pi \varepsilon_0  (b+d)} \,.
+\end{align*}
+Potential on the inner surface of the dielectric is
+\begin{align*}
+V_1 &= -\int_{b+d}^{b} E_1 dR + V_2\\
+&= \frac{Q}{4\pi \epsilon_0 (1 + \chi_e) } \left( \frac{1}{b} + \frac{\chi_e}{b+d} \right) \,.
+\end{align*}}
+
+\item Compute the capacitance of the spherical conductor.
+
+\solution{
+\begin{align*}
+C &= \frac{Q}{V} \\
+&= \frac{4 \pi \epsilon_0 ( 1 + \chi_e) b (b+d) }{b(1+\chi_e) + d}
+\end{align*}}
+\end{enumerate}
+\answer{\begin{align*}
+C = \frac{4 \pi \epsilon_0 ( 1 + \chi_e) b (b+d) }{b(1+\chi_e) + d}
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

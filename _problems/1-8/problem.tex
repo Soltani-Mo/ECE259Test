@@ -1,0 +1,68 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+\problem{For a sphere of radius $R=a$, with a volume charge density: $\rho_v=\rho_0R/ a$ 
+(where $R$ is the radial coordinate of the spherical coordinate system), use Gauss’ law in the differential form to compute the electric field intensity everywhere.}
+
+\solution{Due to symmetry, the only component of the electric field will be $E_R$
+	\begin{align*}
+		\nabla\cdot E &=\frac{\rho_v}{\epsilon_0}\\
+		\frac{1}{R^2}\frac{d(R^2E_R)}{dR} &=\frac{\rho_0R}{\epsilon_0a}\\
+		R^2E_R(R)&=
+		\begin{cases}
+			\int_0^R\frac{\rho_0R'^3}{\epsilon_0a}dR', &R<a\\[0.25em]
+			\int_0^a\frac{\rho_0R'^3}{\epsilon_0a}dR', &R>a\\
+		\end{cases}\\
+		E_R(R) &=
+		\begin{cases}
+			\frac{\rho_0 R^2}{4\varepsilon_0 a}\,, & R< a \\[0.25em]
+			\frac{\rho_0 a^3}{4\varepsilon_0 R^2} \,, & R> a
+		\end{cases}
+	\end{align*}
+}
+\answer{
+\begin{align*}
+E_R(R) &=
+		\begin{cases}
+			\frac{\rho_0 R^2}{4\varepsilon_0 a}\,, & R< a \\[0.25em]
+			\frac{\rho_0 a^3}{4\varepsilon_0 R^2} \,, & R> a
+		\end{cases}
+\end{align*}
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

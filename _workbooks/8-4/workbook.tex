@@ -1,0 +1,153 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 6-28: 
+\textbf{Goal:} Consider the magnetic circuit shown in the figure below. A current of 3 A flows through 200 turns of wire on the center leg. Assuming the core has constant cross-sectional area of $10^{-3}\m^2$ and a relative permeability of 5000, compute the magnetic flux density vector and the magnetic field intensity vector in each leg of the core and in the air gap.
+\begin{center}
+\includegraphics[scale = 0.5]{\wpath Cheng6-28.png}
+\end{center}
+\textbf{Steps:} 
+\begin{enumerate}
+\item In order to solve this problem, first derive an equivalent circuit model for the magnetic circuit. Calculate the equivalent reluctance for each segment of the circuit (segments are labelled in the figure above).
+\begin{enumerate}
+\item Segment A: \\
+\solution{
+\begin{align*}
+R_A &= \frac{l_c}{\mu_0 \mu_r S} \\
+&= \frac{0.24 + 0.2 + 0.2}{5000 \mu_0 10^{-3}} \\
+&= 1.019 \cdot 10^5\;\text{(H$^{-1}$)} \,.
+\end{align*}
+}
+
+\item Segment B: \\
+\solution{
+\begin{align*}
+R_B &= \frac{l_c}{\mu_0 \mu_r S} \\
+&= \frac{0.24 + 0.2 + 0.2}{5000 \mu_0 10^{-3}} \\
+&= 1.019 \cdot 10^5\;\text{(H$^{-1}$)} \,.
+\end{align*}
+}
+
+\item Segment C: \\
+\solution{
+\begin{align*}
+R_C &= \frac{l_c}{\mu_0 \mu_r S} \\
+&= \frac{0.119}{5000 \mu_0 10^{-3}} \\
+&= 1.894 \cdot 10^4\;\text{(H$^{-1}$)}\,.
+\end{align*}
+}
+
+\item Segment D: \\
+\solution{
+\begin{align*}
+R_D &= \frac{l_c}{\mu_0 \mu_r S} \\
+&= \frac{0.119}{5000 \mu_0 10^{-3}} \\
+&= 1.894 \cdot 10^4\;\text{(H$^{-1}$)}\,.
+\end{align*}
+}
+
+\item Segment E: \\
+\solution{
+\begin{align*}
+R_D &= \frac{l_c}{\mu_0 \mu_r S} \\
+&= \frac{0.002}{\mu_0 10^{-3}} \\
+&= 1.5915 \cdot 10^6\;\text{(H$^{-1}$)}\,.
+\end{align*}
+}
+
+\end{enumerate}
+
+\item Next, compute the mmf due to  the current $I = 3\,\text{A}$ flowing in the 200-turn coil. \\
+\solution{
+\begin{align*}
+V_m &= N I \\
+&= 600\;\text{(A)}\,.
+\end{align*}
+}
+
+\item Using the quantities derived above, draw an equivalent circuit model. Recall that reluctance and mmf are analogous to resistance and emf in an electric circuit, respectively.\\
+\solution{
+\begin{center}
+\includegraphics[scale=0.5]{\wpath Cheng6-28_sol1.png}
+\end{center}
+Note, the polarity of mmf source is obtained by applying the right hand rule.
+}
+
+\item Solve the circuit to determine the magnetic flux $\Phi$ in each segment. Magnetic flux $\Phi$ is analogous to current in an electric circuit. \\
+\solution{
+\begin{align*}
+\Phi_A = \Phi_B &= \frac{1}{2}\frac{V_m}{\dfrac{1}{2}R_A + 2 R_C + R_E} \\
+&= 0.179 \;\text{(mWb)}\\
+\Phi_C = \Phi_D = \Phi_E &= \frac{V_m}{\dfrac{1}{2}R_A + 2 R_C + R_E} \\
+&= 0.357 \;\text{(mWb)} \,. 
+\end{align*}
+}
+
+\item Using the result of part 4., find the magnetic flux density in each segment of the magnetic circuit.
+\solution{
+\begin{align*}
+B &= \frac{\Phi}{S} \\
+B_A = B_B &= 0.179 \;\text{(T)}\\
+B_C = B_E = B_D &= 0.357\;\text{(T)}\,. 
+\end{align*}
+}
+
+\item Using the result of part 5., find the magnetic field intensity in each segment of the magnetic circuit.
+\solution{
+\begin{align*}
+H &= \frac{1}{\mu_0 \mu_r} B \\
+H_A = H_B &= \frac{1}{5000 \mu_0} B_A\\
+&= 28.5 \;\text{(A/m)}\\
+H_C = H_D &= \frac{1}{5000 \mu_0} B_C \\
+&=57.0 \;\text{(A/m)}\\
+H_E &= \frac{1}{\mu_0} B_E \\
+&= 2.85 \cdot 10^5 \;\text{(A/m)} \,.
+\end{align*}
+}
+
+\end{enumerate}
+\answer{\begin{align*}
+B_A = B_B &= 0.179 \;\text{(T)}\\
+B_C = B_E = B_D &= 0.357\;\text{(T)}\\
+H_A = H_B &=28.5 \;\text{(A/m)}\\
+H_C = H_D &=57.0 \;\text{(A/m)}\\
+H_E &=2.85 \times 10^5 \;\text{(A/m)}
+\end{align*}}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

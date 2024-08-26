@@ -1,0 +1,121 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 7-3
+\textbf{Goal:} A rectangular loop of width $w$ and height $h$ is situated near a very long wire carrying a current $i_1(t)$, as shown in the figure below. Assume $i_1$ to be a step function as shown in the right panel of the figure below. Find the current $i_2(t)$ induced in the rectangular loop as a function of the mutual inductance $L_{12}$ between the two circuits, the self-inductance $L_{22}$ of the square loop, and the resistance $R$ (note: you don't have to calculate $L_{12}$ and $L{_22}$).
+\begin{center}
+%\includegraphics[width=0.3\textwidth]{./Cheng7-3a.png}
+%\includegraphics[width=0.4\textwidth]{./Cheng7-3b.png}\\
+%\textbf{Figure 7-11}. A rectangular loop near a long current-carrying wire.
+\begin{tikzpicture}[scale=1.5]
+
+	\draw [->] (1,0) -- (1,2) node [left] {$i_1(t)$};
+	\draw (1,2) -- (1,4);
+	
+	\draw [->] (2,2) node [left] {$i_2(t)$} -- (2,3) -- (2.6,3) -- (2.7,3.2) -- (2.9,2.8) -- (3.1,3.2) node [above] {$R$} -- (3.3,2.8) -- (3.5,3.2) -- (3.6,3) -- (4,3) -- (4,1) -- (2,1) -- (2,2);
+
+	\draw [<->,dashed] (1,0.5) -- (2,0.5) node[midway,below] {$d$};
+	\draw [<->,dashed] (2,0.5) -- (4,0.5) node[midway,below] {$w$};
+	\draw [<->,dashed] (4.5,1) -- (4.5,3) node[midway,right] {$h$};		
+	
+	
+	\draw [->] (6,1) -- (9,1) node [below] {$t$};
+	\draw [->] (7,0.5) -- (7,2.5) node [left] {$i_1(t)$};	
+	\draw [very thick] (6,1) -- (7,1) -- (7,2) node [left] {$I_1$} -- (9,2);
+\end{tikzpicture}
+
+\end{center}
+\textbf{Steps:} 
+\begin{enumerate}
+\item Write the magnetic flux $\Phi_2$ through the rectangular loop caused by currents $i_1(t)$ and $i_2(t)$. Express the flux as a function of $L_{12}$ and $L_{22}$.
+
+\solution{
+\begin{eqnarray*}
+\Phi_2 &=& L_{12} i_1(t) + L_{22} i_2(t)
+\end{eqnarray*}}
+
+\item Use Faraday's law to show that $i_2(t)$ satisfies the differential equation
+\begin{equation*}
+R i_2(t) + L_{22} \frac{d i_2}{dt} = - L_{12} \frac{d i_1}{dt}
+\end{equation*}
+\\
+
+\solution{
+Defining the points ABCD as shown:
+\begin{center}
+\includegraphics[width=0.3\textwidth]{\wpath workbook2_solution_1.png}
+\end{center}
+Faraday's law on $C_2$
+\begin{eqnarray*}
+\oint_{C_2} \vec{E}\cdot d\vec{l} &=& -\frac{d}{dt} \Phi_2(t) = - L_{12}\frac{di_1}{dt} - L_{22} \frac{di_2}{dt}\\
+&=&\int_{BCDA} \vec{E}\cdot d\vec{l} + \int_{A \rightarrow B} \vec{E} \cdot d\vec{l} = 0 - \underbrace{\int_B^A \vec{E} \cdot d\vec{l}}_{\text{Voltage across R}} = R i_2(t)
+\end{eqnarray*}
+Hence,
+\begin{equation*}
+R i_2(t) = - L_{12} \frac{d i_1}{dt} - L_{22} \frac{d i_2}{dt}
+\end{equation*}}
+
+\item Solve the differential equation to find $i_2(t)$ (you can use the Laplace transform method).
+
+\solution{
+The $i_1(t)$ is given by
+\begin{equation*}
+i_1(t) = I_1 U(t)
+\end{equation*}
+where $U(t)$ is the unit-step function. Taking the Laplace transform of
+\begin{equation*}
+R i_2(t)  + L_{22} \frac{d i_2}{dt} = - L_{12} \frac{d i_1}{dt}
+\end{equation*}
+to get
+\begin{eqnarray*}
+RI_2(s) &+& s L_{22} I_2(s) = -L_{12} I_1\\
+I_2(s) &=& \frac{ L_{12} I_1 }{s L_{22} + R} = -\frac{L_{12} I_1}{L_{22}} \frac{1}{s + \frac{R}{L_{22}} }
+\end{eqnarray*}
+Taking the inverse Laplace transform of $I_2(s)$ to get
+\begin{equation*}
+i_2(t) = -\frac{L_{12} I_1}{L_{22}}\,\e^{-\frac{R}{L_{22}} t} \quad \text{for} \quad t \ge 0
+\end{equation*}}
+
+\end{enumerate}
+\answer{
+\begin{equation*}
+i_2(t) = -\frac{L_{12} I_1}{L_{22}}\,\e^{-\frac{R}{L_{22}} t} \quad \text{for} \quad t \ge 0
+\end{equation*}
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

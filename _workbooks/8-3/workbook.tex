@@ -1,0 +1,82 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%\notaros{5-16}
+\textbf{Goal:} \textit{Magnetic-magnetic boundary conditions.} Assume that the plane $z=0$ separates medium $1$ ($z > 0$) and medium 2 ($z < 0$), with relative permeabilities $\mu_{r1} = 600$ and $\mu_{r2} = 250$, respectively. The magnetic field intensity vector in medium $1$ near the boundary (for $z = 0^+$) is $\vec{H}_1 = (5\vec{a}_x - 3\vec{a}_y + 2\vec{a}_z)$\,A/m. Find the magnetic field intensity in medium 2 near the boundary (for $z = 0^-$) if the surface current is either $\vec{J}_s = 0$ or $\vec{J}_s = 3 \vec{a}_y$.\\
+\\
+\textbf{Steps:} 
+\begin{enumerate}
+\item State the boundary conditions for the normal and tangential magnetic fields across the boundary.\\
+\solution{
+\begin{eqnarray*}
+B_{1n} &=& B_{2n}\\
+\mu_1 H_{1n} &=& \mu_2 H_{2n}\\
+\vec{a}_{n2} \times (\vec{H}_1 - \vec{H}_2) &=& \vec{J}_s
+\end{eqnarray*}
+}
+
+\item Calculate the magnetic field intensity vector $\vec{H}_2$ in medium $2$ near the boundary (for $z = 0^-$) if no conduction current exists at the interface ($\vec{J}_s = 0$).\\
+\solution{
+Since $\vec{J}_s$, then the tangential fields are continuous across the boundary. The normal component is scaled by the ratio of the two permeabilities.
+\begin{equation*}
+H_{2n} = \frac{\mu_1}{\mu_2} H_{1n} = 4.8\,\text{A/m}
+\end{equation*}
+Hence,
+\begin{equation*}
+\vec{H}_2 = 5\vec{a}_x - 3\vec{a}_y + 4.8\vec{a}_z \quad \text{A/m for }\quad \vec{J_s} = 0
+\end{equation*}
+}
+
+\item Calculate the magnetic field intensity vector, $\vec{H}_2$, in medium $2$ near the boundary (for $z = 0^-$) if there is a surface current density $\vec{J}_s = 3 \vec{a}_y$ at the interface.\\
+\solution{
+Since $\vec{J}_s$ is in the $y$ direction, it effects the tangential H-field in the $x$-direction only, by a value of $3$. The rest of the component values stays the same as before. Hence,
+\begin{equation*}
+\vec{H}_2 = 2 \vec{a}_x - 3\vec{a}_y + 4.8\vec{a}_z \quad \text{A/m}
+\end{equation*}
+}
+
+\end{enumerate}
+\answer{\begin{equation*}
+\vec{H}_2 = 5\vec{a}_x - 3\vec{a}_y + 4.8\vec{a}_z \quad \text{A/m for }\quad \vec{J_s} = 0
+\end{equation*}
+\begin{equation*}
+\vec{H}_2 = 2 \vec{a}_x - 3\vec{a}_y + 4.8\vec{a}_z \quad \text{A/m for}\quad \vec{J_s} = 3 \vec{a}_y
+\end{equation*}
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

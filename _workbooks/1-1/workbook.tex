@@ -1,0 +1,96 @@
+
+\documentclass[../../header.tex]{subfiles}
+
+%
+
+\begin{document}
+\problem{Three point charges $Q=-1\ \text{nC}$ are placed at three vertices $(a,0,0)$, $(0,a,0)$ and $(0,0,a)$ of a cube with $a=1\ \text{m}$. Find the electric field intensity vector at (a) the coordinate origin $(0,0,0)$ and (b) the point on the $z$-axis $(0,0,100\ \text{m})$.}
+
+
+\textbf{Steps:}
+	\begin{enumerate}
+		\item Choose a coordinate system\\
+		\solution{Cartesian}
+		
+		\item Find the electric field at the origin due to a point charge at each of the three vertices.\\
+		\solution{
+		\begin{align*}
+			\vect{E}_{(a,0,0)}&=\dfrac{-1\times10^{-9}}{4\pi\varepsilon_0}(-\uvect{a}_x)=9\uvect{a}_x \text{N/C}\\
+			\vect{E}_{(0,a,0)}&=\dfrac{-1\times10^{-9}}{4\pi\varepsilon_0}(-\uvect{a}_y)=9\uvect{a}_y \text{N/C}\\
+			\vect{E}_{(0,0,a)}&=\dfrac{-1\times10^{-9}}{4\pi\varepsilon_0}(-\uvect{a}_z)=9\uvect{a}_z \text{N/C}
+		\end{align*}
+		}
+		
+		\item Use superposition to find the total electric field at the origin.\\
+		\solution{
+		\begin{align*}
+			\vect{E}&=\vect{E}_{(a,0,0)}+\vect{E}_{(0,a,0)}+\vect{E}_{(0,0,a)}\\
+			&=9(\uvect{a}_x+\uvect{a}_y+\uvect{a}_z) \text{N/C}\\
+			&=9\sqrt{3}\uvect{a}_R \text{N/C}
+		\end{align*}
+		where $\uvect{a}_R=\dfrac{1}{\sqrt{3}}(\uvect{a}_x+\uvect{a}_y+\uvect{a}_z)$.
+		}
+		
+		\item Replace the three separate charges with one equivalent charge because they are so far away.\\
+		\solution{
+			\begin{align*}
+				Q_{tot}=-3\ \text{nC}
+			\end{align*}
+		}
+		
+		\item Find the electric field due to the equivalent charge\\
+		\solution{
+			\begin{align*}
+				\vect{E}&=\dfrac{-3\times10^{-9}}{4\pi\varepsilon_0(100)^2}\uvect{a}_x\\
+				&=2.7\uvect{a}_z \text{mN/C}
+			\end{align*}
+		}
+	
+	\end{enumerate}
+	\answer{\begin{enumerate}[label=(\alph*)]
+	\item \begin{align*}
+			\vect{E}=9\sqrt{3}\uvect{a}_R \text{N/C}
+		\end{align*}
+		where $\uvect{a}_R=\dfrac{1}{\sqrt{3}}(\uvect{a}_x+\uvect{a}_y+\uvect{a}_z)$
+	\item \begin{align*}
+				\vect{E}&=\dfrac{-3\times10^{-9}}{4\pi\varepsilon_0(100)^2}\uvect{a}_x\\
+				&=2.7\uvect{a}_z \text{mN/C}
+			\end{align*}	
+	\end{enumerate}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

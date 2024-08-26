@@ -1,0 +1,115 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 7-10:
+\textbf{Goal:} A hollow cylindrical magnet with inner radius $a$ and outer radius $b$ rotates about its axis at an angular frequency $\omega$. The magnet has a uniform axial magnetization $\vect{M} = \uvect{a}_z M_0$. Sliding brush contacts are provided at the inner and outer surface as shown in Fig. 7-12 (shown below). Assuming that $\mu_r = 5000$ and $\sigma = 10^7$~[S/m] for  the magnet, find magnetic field intensity $\vect{H}$, magnetic flux density $\vect{B}$, open-circuit voltage $V_0$, and short-circuit current $I$.
+\begin{center}
+\includegraphics[scale = 0.6]{\wpath Cheng7-14.png}
+\end{center}
+\textbf{Goal:} 
+\begin{enumerate}
+\item Calculate the magnetic field intensity $\vect{H}$ from the magnetization vector $\vect{M}$.
+%\vskip 40pt
+
+\solution{
+\begin{align*}
+\mu_r &= 1 + \chi_m \\
+\chi_m &= 4999\,. \\
+\vect{H} &= \frac{\vect{M}}{\chi_m} = \uvect{a}_z \frac{M_0}{4999}\,.
+\end{align*}}
+
+\item Determine the magnetic flux density vector $\vect{B}$.
+
+\solution{
+\begin{align*}
+\vect{B} = \uvect{a}_z \frac{5000}{4999} \mu_0 M_0\,.
+\end{align*}}
+
+\item Motion of the magnet will induce motional emf ${\cal V}_m$ in the loop. Find the velocity of magnet $\vect{u}$.
+
+\solution{
+\begin{align*}
+\vect{u} = \uvect{a}_{\phi} \omega r\,.
+\end{align*}}
+
+\item Find the motional emf ${\cal V}$ induced in the loop.
+
+\solution{
+\begin{align*}
+{\cal V} &= \oint \left( \vect{u} \times \vect{B} \right) \cdot dl \\
+&= \int_b^{a} \left( \uvect{a}_{\phi} \omega r \times \uvect{a}_z B \right) \cdot \left(\uvect{a}_r\,dr \right) \\
+&= - \frac{2500}{4999} \mu_0 M_0 \omega \left(b^2 - a^2 \right) \,.
+\end{align*}}
+
+\item What is the voltage $V_0$ that appears between the two terminals of the circuit if they are left open?
+%\vskip 40pt
+
+\solution{
+\begin{align*}
+V_0 &= {\cal V} \,.
+\end{align*}}
+
+\item Now consider the case where the terminals of the circuit are short-circuited. In this case, the induced emf ${\cal V}$ must equal $IR$ where $R$ is the resistance of the magnet for a current $I$ flowing in the radial direction. Determine the current density $J$ and radial electric field $E$ in the magnet. 
+%\vskip 40pt
+
+\solution{
+\begin{align*}
+J &= \frac{I}{2\pi r h}\,. \\
+E &= \sigma^{-1} J \\
+&= \frac{I}{2\pi r h \sigma}\,.
+\end{align*}}
+
+\item Determine $I$ from the electric field computed in part 6. % satisfies $-\int \vect{E}\cdot d\vect{l} = {\cal V}$.\\
+%\vskip 40pt
+
+\solution{
+\begin{align*}
+-\int_b^a E\,dr &= {\cal V} \\
+\frac{I}{2\pi h \sigma} \ln (b/a) &= {\cal V}\\
+I &=  {\cal V} \frac{2 \pi h \sigma}{\ln (b/a)}\,.
+\end{align*}}
+
+\end{enumerate}
+\answer{\begin{align*}
+\vect{H} &=  \uvect{a}_z \frac{M_0}{4999}\,\\
+\vect{B} = \uvect{a}_z \frac{5000}{4999} \mu_0 M_0\,\\
+V_0 &= - \frac{2500}{4999} \mu_0 M_0 \omega \left(b^2 - a^2 \right) \,\\
+I &=  V_0 \frac{2 \pi h \sigma}{\ln (b/a)}
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

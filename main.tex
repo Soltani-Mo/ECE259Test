@@ -1,0 +1,712 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  FLAGS TO CONTROL WHAT IS PRINTED
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Print the statement of each question/workbook/problem or not (typically "true" for generating the problem set, "false" for generating solutions)
+\def\showproblems{true}
+
+% Print the final answer of each question/workbook/problem or not (typically "false" for generating the problem set, "true" for generating solutions)
+\def\showanswers{true}
+
+% Print the solution of eachquestion/workbook/problem or not (typically "false" for generating the problem set, "true" for generating solutions)
+\def\showsolutions{true}
+
+
+% Print workbooks (usually "true")
+\def\showworkbooks{true}
+
+% Set the problem set number
+% \def\problemsetnumber{13}
+
+\documentclass[
+	twoside=true,						% oneside/twoside
+	captions=nooneline,			% do not care about two-lined captions
+	listof=totoc,						% include lists into register
+	bibliography=totoc,			% include bibliography into register
+	listof=numbered,					% numerate register
+	bibliography=totocnumbered,		% numerate bibliography
+	numbers=noenddot,				% no point at the end of a structure
+	parskip=half,						% paragraph spacing: "half" 
+	cleardoublepage=empty,	% completely empty page
+	fontsize=11pt
+	]{scrartcl}
+	
+\usepackage{etex}					% extended tex
+\usepackage{etoolbox}			% provides boolean an such (for solution switch)
+
+\usepackage{subfiles}		% mainfile needs subfile package here
+
+% PAGE SETUP
+\usepackage[letterpaper,includeheadfoot,heightrounded,
+left = 2.5cm,
+right = 2cm,
+top = 1.25cm,
+bottom = 1.5cm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyfoot[EL]{\thepage}
+\fancyfoot[OR]{\thepage}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% CAPTIONS
+\usepackage[format=plain,indention=0cm,labelfont=sf,bf,labelsep=quad,justification=centering]{caption}
+\usepackage{subfigure}	% use subcaptions with own labels
+
+%% REFERENCES AND LINKS %%
+\usepackage[
+	pdftex,
+	hyperfootnotes=false,
+	pdfpagelabels=true,
+	plainpages=false, 					% false: so that there are no equal page numbers
+	backref=page,							% reference in bibliography
+	pagebackref=false,					% --> change to 'true' for debug
+	bookmarksnumbered=true,		% integrate chapter numbers
+	bookmarksopen=true,				% open bookmarks when clicked on
+	pdfstartview=FitH,					% optionally zoom to viewer size		
+	colorlinks=true,
+	linkcolor=black,						% --> change to 'red' for debug
+	citecolor=black,
+	urlcolor=black
+		]{hyperref}
+\usepackage[all]{hypcap}		% target is upper edge for all floating links, not caption
+
+% ENCODING
+\usepackage[american]{babel}	
+\usepackage{cmap}							% make PDF searchable in Acrobat Reader
+\usepackage[T1]{fontenc}			
+\usepackage[utf8]{inputenc}
+
+% FONTS
+\usepackage[scaled=0.92]{helvet} 	% Helvetica titles (92% is suitable with Times)
+\usepackage{times} 						% Times font
+\usepackage{textcomp}					% vertical mu (\textmu) for units, include after fontenc!
+\usepackage{xcolor}
+
+% MATH
+\usepackage{amsmath,amssymb,bm}
+\usepackage{tabularx,multicol,multirow,longtable,array,booktabs}
+%\usepackage{wasysym}	 % smiley/frownie
+%\usepackage{array} 
+
+% ADDITIONAL STUFF (FIGURES, TABLES, ENUMERATIONS ETC.)
+\usepackage{placeins}					% provides \FloatBarrier command
+\usepackage{cite}
+\usepackage{enumerate,enumitem}
+%\usepackage{ifthen}
+\usepackage[pdftex]{graphicx}			% <- these together allow eps graphics (but 
+%\def\pdfshellescape{1}
+\graphicspath{{graphics/}}
+%\usepackage{epstopdf}							% <- the compilation takes longer than with pdf files)
+\usepackage{tikz} 					
+	\usetikzlibrary{arrows,shapes,positioning,calc,fadings,patterns,decorations,decorations,decorations.pathreplacing,decorations.pathmorphing}
+%\usepackage[figuresright]{rotating}	% use 'figuresright' to overrule twoside, figure bottoms always right-sided
+
+%\pagestyle{scrheadings} 
+
+% GLOBAL CONSTANTS
+\newcommand{\eqsep}{1em}
+\newcommand{\seqsep}{0.5em}
+\newcommand{\hpt}{\hspace*{1pt}}
+
+% MATH STUFF
+%\usepackage{ulem}
+%\newcommand{\duline}[1]{\uuline{\vphantom{g}#1}}
+\newcommand{\e}{\mathrm{e}}				% use upright e for Euler's number
+\newcommand{\bs}[1]{\textbf{#1}}
+\newcommand{\abs}[1]{\left|#1\right|}
+%\newcommand{\bnabla}{\bm{\nabla}}
+\renewcommand\Re{\operatorname{Re}}
+\renewcommand\Im{\operatorname{Im}}
+
+\title{ECE259 Homework Problems}
+\author{P. Triverio, C. Sarris}
+\date{}
+
+\ifcsname tpath\endcsname%
+  \else%
+    \def\tpath{}
+  \fi%
+
+\setlength{\fboxsep}{10pt}
+
+% DOC SETTINGS
+\addtokomafont{section}{\normalfont\LARGE\bfseries\sffamily}
+\addtokomafont{subsection}{\normalfont\Large\bfseries\sffamily}
+\addtokomafont{subsubsection}{\normalfont\large\bfseries\sffamily}
+\newcommand{\itemi}[1]{\textbf{\textsf{#1}}}
+
+%\newcommand{\bibsection}{\subsection{References}}
+\newcommand{\figref}[1]{Fig.~\ref{#1}}
+\newcommand{\Eqref}[1]{Eqn.~\eqref{#1}}
+\newcommand{\tabref}[1]{Tab.~\ref{#1}}
+\newcommand{\notaros}[1]{\textbf{Notaros Question #1}}
+
+\definecolor{shadecolor}{gray}{.91}
+\renewcommand{\boxed}[1]{\colorbox{shadecolor}{\normalcolor\relax$\displaystyle#1$}}
+
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\uvect}[1]{\mathbf{#1}}
+
+%\renewcommand{\labelitemi}{$\blacksquare$}
+	%\renewcommand{\labelenumi}{\textsf{\textbf{\theenumi.}}}
+	%\newcommand{\enumi}[1]{\bfseries\textsf{#1}}
+	
+	\newcommand\mm{\ensuremath{\,\text{mm}}}
+	\newcommand\cm{\ensuremath{\,\text{cm}}}
+	\newcommand\m{\ensuremath{\,\text{m}}}
+	\newcommand\km{\ensuremath{\,\text{km}}}
+	
+	\newcommand\pC{\ensuremath{\,\text{pC}}}
+	\newcommand\nC{\ensuremath{\,\text{nC}}}
+	\newcommand\uC{\ensuremath{\,\text{\textmu{}C}}}
+	
+	\renewcommand\d{\ensuremath{d}}
+	%\renewcommand{\d}{\ensuremath{\partial}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{varwidth}
+\newcommand\hide[1]{\phantom{\varwidth{\linewidth}#1\endvarwidth}}
+
+	\ifcsname showproblems\endcsname\else\def\showproblems{true}\fi%
+	\newbool{showproblems}
+	\setbool{showproblems}{\showproblems}
+
+	\ifcsname showsolutions\endcsname\else\def\showsolutions{true}\fi%
+	\newbool{showsolutions}
+	\setbool{showsolutions}{\showsolutions}
+	
+\ifcsname showanswers\endcsname\else\def\showanswers{true}\fi%
+	\newbool{showanswers}
+	\setbool{showanswers}{\showanswers}
+	
+	\newcommand\Solution{\textit{Solution:}{~}}
+	\newcommand\Answer{\textit{Answer:}{~}}
+	\newcommand{\problem}[1]{\ifbool{showproblems}{#1}{}}
+	\newcommand{\solution}[1]{\ifbool{showsolutions}{{\color{blue}\Solution #1}}{}}
+	\newcommand{\answer}[1]{\ifbool{showanswers}{{\color{blue}\Answer #1}}{}}
+	
+	%\newcommand{\smallsolution}[1]{\ifbool{showsolutions}{\textcolor{blue}{#1}}{}}
+	%\newcommand{\marksolution}[1]{\ifbool{showsolutions}{\textcolor{blue}{\underline{#1}}}{#1}}
+	%\newcommand{\switchsolution}[2]{\ifbool{showsolutions}{{\color{blue} #1}}{#2}}
+	%\newcommand{\blanksolution}[1]{\ifbool{showsolutions}{{\color{blue}\Solution #1}}{\hide{\Solution #1}}}
+	
+	\ifcsname showworkbooks\endcsname\else\def\showworkbooks{true}\fi%
+	\newbool{showworkbooks}
+	\setbool{showworkbooks}{\showworkbooks}
+	
+	\ifcsname ppath\endcsname\else\def\ppath{}\fi%
+	\ifcsname cpath\endcsname\else\def\cpath{}\fi%
+	\ifcsname npath\endcsname\else\def\npath{}\fi%
+	\ifcsname wpath\endcsname\else\def\wpath{}\fi%
+	\ifcsname snum\endcsname\else\def\snum{}\fi%
+	\ifcsname pnum\endcsname\else\def\pnum{}\fi%
+	
+	\newcommand\includeproblem[2]{
+		\def\ppath{\tpath _problems/#1-#2/}
+		\def\snum{#1}
+		\def\pnum{#2}
+%		\begin{itemize}[label=$\blacksquare$]
+%			\item\itemi{Problem \snum-\pnum}  \hfill \textcolor{gray}{[P\snum-\pnum]} \\[-1.9em]
+%		\subfile{\ppath problem.tex}
+%		\end{itemize}
+			\subsubsection*{Problem P\snum-\pnum}
+			\subfile{\ppath problem.tex}
+	}
+	
+	\newcommand\includequestion[2]{
+	\def\npath{\tpath _questions/#1-#2/}
+	\def\cpath{\tpath _questions/#1-#2/}
+	\def\snum{#1}
+	\def\pnum{#2}
+%	\begin{itemize}[label=$\blacksquare$]
+%		\item\itemi{Conceptual question \snum-\pnum} \hfill \textcolor{gray}{[Q\snum-\pnum]}  \\[-1.9em]
+%	\subfile{\npath problem.tex}
+%	\end{itemize}
+	\subsubsection*{Conceptual question C\snum-\pnum}
+	\subfile{\npath problem.tex}
+	}
+	
+%	\newcommand\includeworkbook[2]{
+%	\def\wpath{\tpath _workbooks/#1-#2/}
+%	\def\snum{#1}
+%	\def\pnum{#2}
+%	\ifbool{showworkbooks}{
+%	\begin{itemize}[label=$\blacksquare$]
+%		\item\itemi{Workbook \snum-\pnum} \hfill \textcolor{gray}{[W\snum-\pnum]}  \\[-1.9em]
+%	\subfile{\wpath workbook.tex}
+%	\end{itemize}
+%}{}}
+
+	\newcommand\includeworkbook[2]{
+	\def\wpath{\tpath _workbooks/#1-#2/}
+	\def\snum{#1}
+	\def\pnum{#2}
+%	\begin{itemize}[label=$\blacksquare$]
+%		\item\itemi{Workbook \snum-\pnum} \hfill \textcolor{gray}{[W\snum-\pnum]}  \\[-1.9em]
+%		\subfile{\wpath workbook.tex}
+%	\end{itemize}
+	\subsubsection*{Workbook W\snum-\pnum}
+	\subfile{\wpath workbook.tex}
+	}
+	
+\newcommand\subsectionWorkbooks{\ifbool{showworkbooks}{\subsection{Workbooks}}{}}
+	
+	
+	\begin{document}
+		
+		\maketitle	
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\section{Coulomb's law, electric field, discrete charge distributions}
+		
+		\subsection{Conceptual Questions}
+		    \includequestion{1}{1}
+		    \includequestion{1}{2}
+		     \includequestion{1}{4}
+			\includequestion{1}{5}		    
+		    \clearpage
+		    	
+		%\subsectionWorkbooks
+		\subsection{Workbooks}	
+			\includeworkbook{1}{1}
+			\clearpage				    	
+		
+%		\subsection{Problems}
+%		    \includeproblem{1}{1}   % This is the same problem as workbook 1-1
+%			\clearpage
+			
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\section{Electric field from continuous charge distributions}
+		
+%		\subsection{Conceptual Questions}
+%
+%		    	\clearpage
+		    	
+		\subsectionWorkbooks
+			\includeworkbook{1}{2}
+			\includeworkbook{1}{3}
+			\clearpage			    	
+		
+		\subsection{Problems}
+		   	\includeproblem{1}{2}
+			\includeproblem{1}{3}
+			\includeproblem{1}{4}
+			\includeproblem{1}{5}
+			\includeproblem{1}{6}
+			\includeproblem{1}{10} %Cheng 3-7
+			\includeproblem{1}{11} %Cheng 3-8
+			\includeproblem{1}{12} %Cheng 3-9
+		    	\clearpage
+		
+
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\section{Gauss' law}
+		
+		\subsection{Conceptual Questions}
+		    	\includequestion{1}{12}
+		    	\includequestion{1}{13}
+		    	\includequestion{1}{14}
+		    	\includequestion{1}{15}
+		    	\includequestion{1}{16}
+		    	\includequestion{1}{17}
+		    	\includequestion{1}{18}
+		    	\includequestion{1}{19}
+		    	\clearpage
+		    	
+		\subsectionWorkbooks
+			\includeworkbook{1}{4}
+			\clearpage			    	
+		
+		\subsection{Problems}
+		    	\includeproblem{1}{7}
+		    	\includeproblem{1}{8}
+		    	\includeproblem{1}{13} %Cheng 3-10
+		    	\includeproblem{1}{14} %Cheng 3-11
+		    	\includeproblem{1}{15} %Cheng 3-12
+		    	\clearpage
+		
+
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\section{Potential, voltage, work, \& perfect conductors}
+		
+		\subsection{Conceptual Questions}
+		    \includequestion{1}{6}
+		    \includequestion{1}{8}
+		    \includequestion{1}{9}
+		    \includequestion{1}{10}
+		    \includequestion{1}{11}
+		    \includequestion{1}{20}
+		    \includequestion{1}{21}
+		    \includequestion{1}{22}
+		    \includequestion{1}{23}
+		    \includequestion{1}{24}
+		    \clearpage
+		
+		\subsectionWorkbooks
+			\includeworkbook{2}{1} %requires problem 2-3
+			\includeworkbook{2}{2}
+			\includeworkbook{2}{3}
+			\includeworkbook{2}{4}
+			\includeworkbook{2}{5}
+			\includeworkbook{2}{6}
+			\includeworkbook{3}{1}
+			\clearpage
+		
+		\subsection{Problems}
+			\includeproblem{2}{1}
+			\includeproblem{2}{2}
+			\includeproblem{2}{3}
+			\includeproblem{2}{4}
+			\includeproblem{2}{5}
+			\includeproblem{2}{7} %Cheng 3-13
+			\includeproblem{2}{8} %Cheng 3-15
+			\includeproblem{2}{9} %Cheng 3-17
+			\includeproblem{2}{10} %Cheng 3-18
+			\includeproblem{3}{1}
+			\clearpage
+		
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\section{Dielectrics \& generalized Gauss' law}
+		
+		\subsection{Conceptual Questions}
+			\includequestion{2}{3}
+			\includequestion{2}{4}
+			\includequestion{2}{5}
+			\includequestion{2}{8}
+			\clearpage
+		
+		\subsectionWorkbooks
+			\includeworkbook{3}{2}
+			\includeworkbook{3}{3}
+			\includeworkbook{3}{4} %Cheng 3-28
+			\includeworkbook{3}{5} %Cheng 3-29
+			\includeworkbook{3}{6}
+			\clearpage
+		
+		\subsection{Problems}
+			\includeproblem{3}{2}
+			\includeproblem{3}{3}
+			\includeproblem{3}{4} %Cheng 3-22
+			\includeproblem{3}{5} %Cheng 3-26
+			\includeproblem{3}{6} %Cheng 3-27
+			\clearpage
+		
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\section{Capacitors \& electric energy}
+		
+		\subsection{Conceptual Questions}
+			\includequestion{2}{10}
+			\includequestion{2}{11}
+			\includequestion{2}{12}
+			\includequestion{2}{13}
+			\includequestion{2}{14}
+			\includequestion{2}{15} %requires question 2-11
+			\includequestion{2}{16}
+			\includequestion{2}{17} %requires question 2-16
+			\includequestion{2}{18}
+			\includequestion{2}{19} %requires question 2-16
+			\includequestion{2}{20}
+			\includequestion{2}{21} %requires question 2-20
+			\includequestion{2}{22}
+			\includequestion{2}{23}
+			\includequestion{2}{24} %requires question 2-24
+			\includequestion{2}{25}
+			\includequestion{2}{26}
+			\includequestion{2}{27}
+			\includequestion{2}{28} %requires question 2-27
+			\includequestion{2}{29}
+			\includequestion{2}{30}
+			\includequestion{2}{31}
+			\clearpage
+		
+		\subsectionWorkbooks
+			\includeworkbook{4}{1} %Cheng 3-31
+			\includeworkbook{4}{2} %Cheng 3-32
+			\includeworkbook{4}{3} %Cheng 3-33
+			\includeworkbook{4}{4}
+			\includeworkbook{4}{5}
+			\includeworkbook{4}{6}
+			\clearpage
+		
+		\subsection{Problems}
+			\includeproblem{4}{1} %Cheng 3-30
+			\includeproblem{4}{2} %Cheng 3-37
+			\includeproblem{4}{3} %Cheng 3-40
+			\includeproblem{4}{4} %Cheng 3-41
+			\includeproblem{4}{5} %Cheng 3-43
+			\includeproblem{4}{6} %Cheng 3-44
+			\includeproblem{4}{7} %Cheng 3-47
+			\includeproblem{4}{8} %Cheng 3-48
+			\clearpage
+		
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\section{Poisson equation, method of images, \& electric currents} %including Poisson and Laplace equations
+		
+		\subsection{Conceptual Questions}
+			\includequestion{1}{29}
+			\includequestion{1}{30}
+			\includequestion{2}{9}
+			\includequestion{3}{1}
+			\includequestion{3}{3}
+			\includequestion{3}{4}
+			\includequestion{3}{5} %requires question 3-4
+			\includequestion{3}{6}
+			\includequestion{3}{7}
+			\includequestion{3}{8}
+			\includequestion{3}{10}
+			\includequestion{3}{11}
+			\includequestion{3}{12}
+			\includequestion{3}{13} %requires question 3-12
+			\includequestion{3}{14} %requires question 3-12
+			\clearpage
+		
+		\subsectionWorkbooks
+			\includeworkbook{5}{1} %Cheng 4-5
+			\includeworkbook{5}{2} %Cheng 4-6
+			\includeworkbook{5}{3} %Cheng 5-6 and 5-7
+			\includeworkbook{5}{8} %Cheng 5-9
+			\clearpage
+		
+		\subsection{Problems}
+			\includeproblem{5}{1} %Cheng 4-1
+			\includeproblem{5}{2} %Cheng 4-2
+			\includeproblem{5}{3} %Cheng 4-3
+			\includeproblem{5}{4} %Cheng 4-4
+			\includeproblem{5}{7} %Cheng 4-7
+			\includeproblem{5}{8} %Cheng 5-1
+			\clearpage
+		
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\section{Resistance, Ohm's Law, Magnetic Forces, \& Vector Potential}
+		
+		\subsection{Conceptual Questions}
+			\includequestion{4}{1}
+			\includequestion{4}{2}
+			\includequestion{4}{24} %magnetic vector potential
+			\includequestion{4}{25} %magnetic vector potential
+			\clearpage
+		
+		\subsectionWorkbooks
+			\includeworkbook{5}{4} %Cheng 5-15
+			\includeworkbook{5}{5} %Cheng 5-17
+			\includeworkbook{5}{6} %Cheng 5-19
+			\includeworkbook{5}{7} %Cheng 5-13
+			\includeworkbook{5}{9} %Cheng 5-10
+			\includeworkbook{6}{1} %Cheng 6-2
+			\clearpage
+		
+		\subsection{Problems}
+			\includeproblem{5}{11} %Cheng 5-8
+			\includeproblem{5}{13} %Cheng 5-14
+			\includeproblem{6}{1} %Cheng 6-1
+			\includeproblem{7}{4} %Cheng 6-17, magnetic vector potential
+			\includeproblem{7}{5} %Notaros 4.27, magnetic vector potential
+			\clearpage
+		
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\section{Biot-Savart law, Amp\`{e}re's law, and magnetization}
+		
+		\subsection{Conceptual Questions}
+			\includequestion{4}{3}
+			\includequestion{4}{4}
+			\includequestion{4}{5}
+			\includequestion{4}{6}
+			\includequestion{4}{7}
+			\includequestion{4}{8}
+			\includequestion{4}{9}
+			\includequestion{4}{10}
+			\includequestion{4}{11}
+			\includequestion{4}{12}
+			\includequestion{4}{13}
+			\includequestion{4}{14} %requires question 4-13
+			\includequestion{4}{15}
+			\includequestion{4}{16}
+			\includequestion{4}{17}
+			\includequestion{4}{18}
+			\includequestion{4}{19}
+			\includequestion{4}{20}
+			\includequestion{4}{22}
+			\includequestion{4}{23}
+			\includequestion{5}{1}
+			\includequestion{5}{2} %requires question 5-1
+			\includequestion{5}{3}
+			\includequestion{5}{4} %requires question 5-1 and 5-2
+			\clearpage
+		
+		\subsectionWorkbooks
+			\includeworkbook{6}{2} %Cheng 6-4
+			\includeworkbook{6}{3} %Cheng 6-5
+			\includeworkbook{6}{4} %Cheng 6-11
+			\includeworkbook{6}{5} %Cheng 6-12
+			\includeworkbook{7}{1} %Cheng 6-22
+			\includeworkbook{7}{2} %Cheng 6-6
+			\includeworkbook{7}{3}
+			\includeworkbook{7}{4} %Cheng 6-3
+			\includeworkbook{7}{5} %Cheng 6-26
+			\includeworkbook{7}{6} %Cheng 6-15
+			\clearpage
+		
+		\subsection{Problems}
+			\includeproblem{6}{5} %Cheng 6-7
+			\includeproblem{6}{6} %Cheng 6-10
+			\includeproblem{6}{9} %Cheng 6-13
+			\includeproblem{7}{1}
+			\includeproblem{7}{2}
+			\includeproblem{7}{3} %Cheng 6-14
+			\clearpage
+		
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\section{Generalized Amp\`{e}re's law, magnetic materials \& magnetic circuits}
+		
+		\subsection{Conceptual Questions}
+			\includequestion{5}{7}
+			\includequestion{5}{8}
+			\includequestion{5}{9}
+			\includequestion{5}{10} %requires question 5-9
+			\includequestion{5}{11}
+			\includequestion{5}{14}
+			\includequestion{5}{15} %requires question 5-14
+			\includequestion{5}{16} %requires question 5-14
+			\includequestion{5}{17}
+			\includequestion{5}{18}
+			\includequestion{5}{21}
+			\clearpage
+		
+		\subsectionWorkbooks
+			\includeworkbook{8}{1} %Notaros 5-3
+			\includeworkbook{8}{2} %Notaros 5-6
+			\includeworkbook{8}{3} %Notaros 5-16
+			\includeworkbook{8}{4} %Cheng 6-28
+			\includeworkbook{8}{5} %Cheng 6-21
+			\includeworkbook{8}{6} %Cheng 6-27
+			\clearpage
+		
+		\subsection{Problems}
+			\includeproblem{8}{1}
+			\includeproblem{8}{2} %Cheng 6-32
+			\includeproblem{8}{3} %Cheng 6-34
+			\clearpage
+		
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\section{Induction \& magnetic energy}
+		
+		\subsection{Conceptual Questions}
+			\includequestion{7}{6}
+			\includequestion{7}{7}
+			\includequestion{7}{8}
+			\includequestion{7}{11}
+			\includequestion{7}{12} %requires question 7-11
+			\includequestion{7}{13} %requires question 7-11
+			\includequestion{7}{16}
+			\includequestion{7}{17}
+			\includequestion{7}{18} %requires question 7-17
+			\includequestion{7}{29}
+			\includequestion{7}{31}
+			\includequestion{7}{32}
+			\clearpage
+		
+		\subsectionWorkbooks
+			\includeworkbook{9}{3} %Cheng 6-38
+			\includeworkbook{9}{4} %Cheng 6-43
+			\includeworkbook{9}{5} %Cheng 6-46
+			\includeworkbook{9}{6} %Cheng 6-47
+			\clearpage
+		
+		\subsection{Problems}
+			\includeproblem{9}{1} %Cheng 6-36
+			\includeproblem{9}{2} %Cheng 6-37
+			\includeproblem{9}{3} %Cheng 6-39
+			\includeproblem{9}{4} %Cheng 6-40
+			\includeproblem{9}{5} %Cheng 6-42
+			\includeproblem{9}{6} %Cheng 6-44
+			\includeproblem{9}{7} %Cheng 6-45
+			\includeproblem{9}{8} %Cheng 6-49
+			\clearpage
+		
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\section{Faraday's law, transformer emf, transformers, \& motional emf}
+		
+		\subsection{Conceptual Questions}
+			\includequestion{6}{11}
+			\includequestion{6}{12} %requires question 6-11
+			\includequestion{6}{13}
+			\includequestion{6}{14} %requires question 6-13
+			\includequestion{6}{15} %requires question 6-13
+			\includequestion{6}{16}
+			\includequestion{6}{17}
+			\includequestion{6}{18}
+			\includequestion{6}{19}
+			\includequestion{6}{20}
+			\includequestion{6}{21}
+			\includequestion{6}{22}
+			\includequestion{6}{23} %requires question 6-21
+			\includequestion{6}{24} %requires question 6-21
+			\includequestion{6}{25}
+			\includequestion{6}{26}
+			\includequestion{6}{27}
+			\includequestion{6}{28} %requires 6-27
+			\includequestion{6}{29} %requires 6-27
+			\includequestion{6}{30}
+			\clearpage
+		
+		\subsectionWorkbooks
+			\includeworkbook{9}{1} %Cheng 7-2
+			\includeworkbook{9}{2} %Cheng 7-3
+			\includeworkbook{10}{1} %Notaros 6-9
+			\includeworkbook{10}{2} %Notaros 6-13
+			\includeworkbook{10}{3} %Notaros 6-16
+			\includeworkbook{10}{4} %Cheng 7-6
+			\includeworkbook{10}{5} %Cheng 7-9
+			\clearpage
+		
+		\subsection{Problems}
+			\includeproblem{9}{9} %Cheng 7-4
+			\includeproblem{9}{10} %Cheng 7-5
+			\includeproblem{10}{2}
+			\clearpage
+		
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\section{Total emf, Amp\`{e}re-Maxwell law, displacement current, \& Maxwell's equations}
+		
+		\subsection{Conceptual Questions}
+			\includequestion{8}{1}
+			\includequestion{8}{2}
+			\includequestion{8}{3}
+			\includequestion{8}{4}
+			\includequestion{8}{5}
+			\includequestion{8}{6}
+			\includequestion{8}{7} %requires question 8-6
+			\includequestion{8}{8}
+			\includequestion{8}{9}
+			\includequestion{8}{10}
+			\clearpage
+		
+		\subsectionWorkbooks
+			\includeworkbook{10}{6} %Cheng 7-10
+			\clearpage
+		
+		\subsection{Problems}
+			\includeproblem{10}{1} %Cheng 7-7
+			\includeproblem{10}{3}
+			\includeproblem{10}{4}
+			\clearpage
+		
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		
+	\end{document} 

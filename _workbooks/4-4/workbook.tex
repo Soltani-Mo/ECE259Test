@@ -1,0 +1,76 @@
+\def\showsolutions{true}
+\def\showworkbooks{true}
+
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+\textbf{Goal:} A capacitor consists of two coaxial metallic cylindrical surfaces of a length $L = 30\mm$ and radii $r_1 = 5\mm$ and $r_2 = 7\mm$. The dielectric material between the surfaces has a relative permittivity $\varepsilon_{r} = 2 + (4/r)$, where $r$ is measured in mm. Determine the capacitance.\\
+\\
+\textbf{Steps:} 
+
+\begin{enumerate}
+\item Use Gauss' law to compute the electric field inside the dielectric due to charge $+Q$ on the inner conductor and $-Q$ on the outer conductor.
+
+\solution{
+\begin{align*}
+\vect{E} &= \uvect{a}_r \frac{Q}{2\pi \varepsilon r L} \\
+&= \vect{a}_r \frac{Q}{4\pi \varepsilon_0 (r + 2) L}
+\end{align*}}
+
+\item Compute potential difference between the two conductors.
+
+\solution{
+\begin{align*}
+V &= - \int_{r_o}^{r_i} \vect{E} \cdot d\vect{r} \\
+&= \frac{Q}{4\pi \varepsilon_0 L} \ln (r+2) \biggl |^{7}_{5} \\
+&= \frac{Q}{4 \pi \varepsilon_0 L} \ln \left (\frac{9}{7}\right) \,.
+\end{align*}}
+
+\item What is the capacitance of this cylindrical capacitor?
+
+\solution{
+\begin{align*}
+C &= \frac{Q}{V} \\
+&= \frac{4 \pi \varepsilon_0 L}{\ln \left( \frac{9}{7} \right)} \\
+&= 1500 \varepsilon_0 \\
+&= 13.26\,\text{\textmu{}F}\,.
+\end{align*}}
+\end{enumerate}
+\answer{C=13.26\,$\mu$F}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

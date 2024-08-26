@@ -1,0 +1,62 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 4-6.
+\textbf{Goal:} Assume that the space between the inner and outer conductors of a long coaxial cylindrical structure is filled with an electron cloud having a volume density of charge $\rho = A / r$ for $\alpha < r < b$, where $\alpha$ and $b$ are the radius of the inner and outer conductor, respectively. The inner conductor is maintained at potential $V_0$ and the outer conductor is grounded.  Find $V(\alpha < r < b)$ by solving Poisson's equation.\\
+\\
+\textbf{Steps:} 
+\begin{enumerate}
+\item Choose coordinate system. \\
+\solution{ Cylindrical }
+
+\item Carefully state {\em Poisson} equation in the given space (note: there is charge density, in fact changing with $r$). \\
+\solution{
+\begin{align*}
+\nabla^2 V &= -\frac{A}{\varepsilon r} \\
+\frac{1}{r} \frac{\partial }{\partial r}\left( r \frac{\partial V}{ \partial r} \right) &= - \frac{A}{\varepsilon r}
+\end{align*}}
+
+\item State the boundary conditions for the potential.  \\
+\solution{
+\begin{align*}
+V &= V_0 \quad \text{at $r = \alpha$} \\
+V &= 0 \quad \text{at $r=b$}
+\end{align*}}
+
+\item Solve the differential equation, subject to boundary conditions. \\
+%\vskip 150pt 
+\solution{
+\begin{align*}
+V = -\frac{A r}{\varepsilon} + c_1 \ln r + c_2
+\end{align*}
+Applying the boundary conditions gives
+\begin{align*}
+V_0 &= -\frac{A}{\varepsilon} \alpha + c_1 \ln \alpha + c_2 \quad \text{at $r = \alpha $} \\
+0 &= -\frac{A}{\varepsilon}b + c_1 \ln b + c_2 \quad \text{at $r = b$} \,.
+\end{align*}
+\begin{align*}
+c_1 &= \frac{\frac{A}{\varepsilon} (b-\alpha) - V_0}{\ln (b/\alpha) } \\
+c_2 &= \frac{V_0 \ln b + \frac{A}{\varepsilon} \left( \alpha \ln b - b \ln \alpha \right)}{\ln (b/\alpha)}
+\end{align*}}
+
+\item Verification step: Determine the electric field and verify that indeed it points in the direction of  decreasing potential. \\
+\solution{
+\begin{align*}
+\vect{E} &= -\nabla V\\
+&= -\frac{\partial V}{\partial r} \uvect{a}_r\\
+&= \left [\frac{A}{\varepsilon} - \frac{c_1}{r} \right] \uvect{a}_{r} \\
+&= \left[\frac{A}{\varepsilon} - {\frac{\frac{A}{\varepsilon} (b-\alpha) - V_0}{\ln (b/\alpha) r }} \right] \uvect{a}_r\,.
+\end{align*}
+The electric field $\vect{E}$ is equal to $-\frac{\partial V}{\partial r} \uvect{a}_r$. Since the outer conductor is grounded, the rate of change of potential with respect to the radial coordinate is negative; and the electric field points in $\uvect{a}_r$ direction. Hence, the electric field points in the direction of decreasing potential.}
+
+\end{enumerate}
+\answer{\begin{align*}
+V = -\frac{A r}{\varepsilon} + c_1 \ln r + c_2\\
+c_1 &= \frac{\frac{A}{\varepsilon} (b-\alpha) - V_0}{\ln (b/\alpha) } \\
+c_2 &= \frac{V_0 \ln b + \frac{A}{\varepsilon} \left( \alpha \ln b - b \ln \alpha \right)}{\ln (b/\alpha)}
+\end{align*}}
+\end{document}
+
+
+
+ 

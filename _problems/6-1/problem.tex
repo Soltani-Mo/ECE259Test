@@ -1,0 +1,87 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.6-1] A positive point charge $q$ of mass $m$ is injected with a velocity $\textbf{u}_0=\textbf{a}_yu_0$ into the $y>0$ region where a uniform magnetic field $\textbf{B}=\textbf{a}_xB_0$ exists. Obtain the equation of motion of the charge, and describe the path that the charge follows.}
+
+\solution{The force on the point charge due to its velocity and the magnetic field will be $\textbf{F}=m\textbf{a}=q\textbf{u}\times\textbf{B}$. This gives two coupled differential equations
+	\begin{align*}
+		\begin{cases} 
+			\frac{du_y}{dt}&=\ \ \ \omega_ou_z\\
+			\frac{du_z}{dt}&=-\omega_ou_y
+		\end{cases}
+	\end{align*}
+	These equations can be combined to get
+	\begin{align*}
+		\frac{d^2u_z}{dt^2}&=-\omega_0^2u_z\\
+		u_z&=A\cos(\omega_0t)+B\sin(\omega_0t)
+	\end{align*}
+Applying the boundary condition that at $t=0$, $u_z=0$ gives $A=0$ so
+	\begin{align*}
+		u_z=B\sin(\omega_0t). 
+	\end{align*}
+Substituting this into the second of the coupled differential equations,
+	\begin{align*}
+		u_y=-B\cos(\omega_0t)
+	\end{align*}
+Applying the boundary condition that at $t=0$, $u_y=u_0$ gives $B=-u_0$ so
+	\begin{align*}
+		\begin{cases} 
+			u_y&=\ \ \ u_0\cos(\omega_0t)\\
+			u_z&=-u_0\sin(\omega_0t)
+		\end{cases}
+	\end{align*}
+Integrating these equations and applying the boundary condition that at $t=0$, $y=z=0$ gives the equations of motion for the charge
+	\begin{align*}
+		\begin{cases} 
+			y&=\frac{u_0}{\omega_0}\sin(\omega_0t)\\
+			z&=\frac{u_0}{\omega_0}\cos(\omega_0t)-\frac{u_0}{\omega_0}
+		\end{cases}
+	\end{align*}
+These equations can be combined into a single equation of motion
+	\begin{align*}
+		y^2+\Big(z+\frac{u_0}{\omega_0}\Big)^2=\Big(\frac{u_0}{\omega_0}\Big)^2
+	\end{align*}
+which is the equation of a circle in the $yz$ plane of radius $u_0/\omega_0$ centred at $y=0$, $z=-u_0/\omega_0$.}
+\answer{
+\begin{align*}
+		y^2+\Big(z+\frac{u_0}{\omega_0}\Big)^2=\Big(\frac{u_0}{\omega_0}\Big)^2
+	\end{align*}
+	}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,112 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%This is Question from Cheng 3-29.
+\textbf{Goal:} Refer to Example 3-16 in Cheng (page 119). Assuming the same $r_i$ and $r_o$ and requiring the maximum electric field intensities in the insulting materials not exceed $25\%$ of their dielectric strengths, determine the voltage rating of the coaxial cable a) if $r_p = 1.75 r_i$, b) if $r_p = 1.35 r_i$, and c) Plot the variations of $E_r$ and $V$ versus $r$ for both part a) and part b).\\
+\\
+\textbf{Steps:} 
+\begin{enumerate}
+\item Determine an expression for the electric field in the coaxial cable if rubber is used as insulation.
+
+\solution{
+\begin{equation*}
+%E = \frac{\rho_l}{2\pi\varepsilon_o}\left(\frac{1}{3.2 r_i} \right) = (0.25) (25 \times 10^6) 
+\frac{\rho_l}{2\pi\varepsilon_o}\left(\frac{1}{3.2 r_i} \right)
+\end{equation*}}
+
+\item Determine an expression for the electric field in the coaxial cable if polystyrene is used as insulation.
+
+\solution{
+\begin{equation*}
+\frac{\rho_l}{2\pi\varepsilon_o}\left(\frac{1}{2.6 r_i} \right)
+\end{equation*}}
+
+\item Determine an expression for the voltage rating of the cable for $r_p = k r_i$, where $k$ is a constant.
+
+\solution{
+\begin{eqnarray*}
+&&-\int_{r_o}^{r_p} E_p\,dr - \int_{r_p}^{r_i} E_r\,dr\\
+&=& \frac{\rho_l}{2\pi\varepsilon_o} \left( \frac{1}{\varepsilon_{r_p}} \ln \frac{r_o}{r_p} + \frac{1}{\varepsilon_{r_r}} \ln \frac{r_p}{r_i} \right)\\
+&=& \frac{\rho_l}{2\pi\varepsilon_o} \left( \frac{1}{\varepsilon_{r_p}} \ln \frac{r_o}{k r_i} + \frac{1}{\varepsilon_{r_r}} \ln k \right)\\
+\end{eqnarray*}}
+
+\item For $r_p = 1.75 r_i$, determine the voltage rating of the cable.
+
+\solution{
+First, we $\rho_l$ via
+\begin{equation*}
+\frac{\rho_l}{2\pi\varepsilon_o}\left(\frac{1}{3.2 r_i} \right) = (0.25) (25 \times 10^6) 
+\end{equation*}
+Voltage rating = $19.3$\,kV}
+
+\item For $r_p = 1.35 r_i$, determine the voltage rating of the cable.
+
+\solution{Voltage rating = $20.803$\,kV}
+
+\item Sketch the voltages inside the cable as a function of $r$.
+
+\solution{\newline
+{Cheng 3-29 (a)}\begin{center}%[htb!]
+\centering
+%\begin{tikzpicture}
+	%\draw (-4,0)+(-3.5,-2)rectangle+(3.5,2)+(0,0)node{Cheng3-29a\_Efield.pdf missing};
+	%\draw (4,0)+(-3.5,-2)rectangle+(3.5,2)+(0,0)node{Cheng3-29a\_voltage.pdf missing};
+%\end{tikzpicture}%\\
+\includegraphics[width=0.4\textwidth,clip=true, trim=15mm 70mm 15mm 70mm]{\wpath Cheng3-29a_Efield.pdf}
+\includegraphics[width=0.4\textwidth,clip=true, trim=15mm 70mm 15mm 70mm]{\wpath Cheng3-29a_voltage.pdf}
+%\caption
+\end{center}
+{Cheng 3-29 (b)}
+\begin{center}%[htb!]
+\centering
+\includegraphics[width=0.4\textwidth,clip=true, trim=15mm 70mm 15mm 70mm]{\wpath Cheng3-29b_Efield.pdf}
+\includegraphics[width=0.4\textwidth,clip=true, trim=15mm 70mm 15mm 70mm]{\wpath Cheng3-29b_voltage.pdf}
+%\begin{tikzpicture}
+	%\draw (-4,0)+(-3.5,-2)rectangle+(3.5,2)+(0,0)node{Cheng3-29b\_Efield.pdf missing};
+	%\draw (4,0)+(-3.5,-2)rectangle+(3.5,2)+(0,0)node{Cheng3-29b\_voltage.pdf missing};
+%\end{tikzpicture}
+%\caption
+\end{center}}
+\end{enumerate}
+\answer{\begin{enumerate}[label=(\alph*)]
+\item \text{Voltage rating}=19.3\,kV
+\item \text{Voltage rating}=20.803\,kV
+\item Plots
+\end{enumerate}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

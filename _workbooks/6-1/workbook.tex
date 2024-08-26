@@ -1,0 +1,118 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 6-2: 
+\textbf{Goal:} An electron is injected with a velocity $\vect{u}_0 = \uvect{a}_y u_0$ into a region where both an electric field $\vect{E}$ and a magnetic field $\vect{B}$ exist. Find the velocity of the electron for all time $\vec{u}(t)$.\\
+\\
+\textbf{Steps:} 
+\begin{enumerate}
+\item Calculate total force exerted by the vector field on the electron as a function of time if $\vect{E} = \uvect{a}_z E_0$ and $\vect{B} = \uvect{a}_x B_0$. Note that the contribution of $\vect{B}$ to the force changes with time.
+
+\solution{
+\begin{align*}
+\vect{F}(t) &= q \left(\vect{E} + \vect{u}(t) \times \vect{B} \right) \\
+&= q \left( \uvect{a}_z E_0 - \uvect{a}_z u_y(t)  B_0  + \uvect{a}_y u_z(t) B_0\right)
+\end{align*}
+}
+
+\item Use $\vect{F} = m\vect{a} = m\dfrac{d\vect{u}}{dt}$ to compute the velocity of the electron. 
+
+\solution{
+\begin{align*}
+&\vect{F} = m \vect{a} \\
+&\frac{q}{m} \left( \uvect{a}_z E_0 - \uvect{a}_z u_y(t)  B_0  + \uvect{a}_y u_z(t) B_0\right) = \frac{d \vect{u}}{ dt} \Rightarrow
+\begin{cases}
+\frac{d {u}_x}{ dt} = 0 \\
+\frac{d {u}_y}{ dt} = \frac{q}{m}u_z(t) B_0 \\
+\frac{d {u}_z}{ dt} = \frac{q}{m} (E_0 - u_y(t) B_0)\\
+\end{cases}
+\end{align*}
+Solving the coupled differential equation for three components gives:
+\begin{align*}
+&u_x(t) = 0\\
+& u_y(t) = \left(u_0 - \frac{E_0}{B_0} \right) \cos \left( \frac{q}{m} B_0 t\right) + \frac{E_0}{B_0} \\
+&u_z(t) = \left(\frac{E_0}{B_0} - u_0 \right) \sin \left(\frac{q}{m} B_0 t \right)
+\end{align*}
+}
+
+\item Discuss the effect of relative magnitudes of $E_0$ and $B_0$ on the electron path.
+
+\solution{
+If, $\dfrac{E_0}{B_0}$ equals $u_0$ there electron is stationary. If $\dfrac{E_0}{B_0} << u_0$, then the motion is almost circular. If $\dfrac{E_0}{B_0} >> u_0$, then the electron moves back-and-forth in x-direction while moving along y-direction.
+}
+
+\item Now, calculate total force exerted by the vector field on the electron as a function of time if $\vect{E} = -\uvect{a}_z E_0$ and $\vect{B} = - \uvect{a}_z B_0$.
+
+\solution{
+\begin{align*}
+\vect{F}(t) &= q \left(\vect{E} + \vect{u}(t) \times \vect{B} \right) \\
+&= q \left( -\uvect{a}_z E_0 + \uvect{a}_y u_x(t)  B_0  - \uvect{a}_x u_y(t) B_0\right)
+\end{align*}
+}
+
+\item Use $\vect{F} = m\vect{a} = m\dfrac{d\vect{u}}{dt}$ to compute the velocity of the electron.
+
+\solution{
+\begin{align*}
+&\vect{F} = m \vect{a} \\
+&\frac{q}{m} \left( -\uvect{a}_z E_0 + \uvect{a}_y u_x(t)  B_0  - \uvect{a}_x u_y(t) B_0\right) = \frac{d \vect{u}}{ dt} \Rightarrow
+\begin{cases}
+\frac{d {u}_x}{ dt} = -\frac{q}{m}u_y B_0 \\
+\frac{d {u}_y}{ dt} = \frac{q}{m}u_x(t) B_0 \\
+\frac{d {u}_z}{ dt} = -\frac{q}{m} E_0\\
+\end{cases}
+\end{align*}
+Solving the coupled differential gives
+\begin{align*}
+&u_x(t) =-u_0 \sin \left(  \frac{q}{m} B_0 t\right)\\
+& u_y(t) = u_0 \cos \left( \frac{q}{m} B_0 t\right) \\
+&u_z(t) =  -\frac{q}{m} E_0 t\,.
+\end{align*}
+}
+
+\item Describe the motion of the electron based on your answer in part (5). What effect does the relative magnitudes of $E_0$ and $B_0$ have on the electron path? 
+
+\solution{Helical motion.}
+\end{enumerate}
+\answer{\begin{align*}
+&u_x(t) =-u_0 \sin \left(  \frac{q}{m} B_0 t\right)\\
+& u_y(t) = u_0 \cos \left( \frac{q}{m} B_0 t\right) \\
+&u_z(t) =  -\frac{q}{m} E_0 t\,.
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

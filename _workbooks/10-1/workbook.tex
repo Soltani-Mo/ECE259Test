@@ -1,0 +1,87 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Notaros example 6-9
+\textbf{Goal:} \textit{Rectangular contour near an infinite line current.} An infinitely long straight wire carries a slowly time-varying current density of intensity $i(t)$. A rectangular contour of side lengths $a$ and $b$ lies in the same plane with the wire, with two sides parallel to it, as shown in Fig.~6.12. The distance between the wire and the closer parallel side of the contour is $c$. Determine the emf induced in the contour.
+\begin{center}
+\includegraphics[width=0.3\textwidth]{\wpath NotarosExample6-9.png}\\
+\textbf{Figure 6.12} Evaluation of the emf in a rectangular contour in the vicinity of an infinitely long wire with a slowly time-varying current.
+\end{center}
+\textbf{Steps:} 
+\begin{enumerate}
+\item State the integral form of Faraday's law.
+%\vskip 80pt
+
+\solution{
+\begin{equation*}
+\oint_C \vec{E} \cdot d\vec{l} = -\frac{\partial \Phi}{\partial t},
+\end{equation*}
+where $\Phi$ is the total magnetic flux through a surface with contour $C$.}
+
+\item What is the $\vec{B}$-field everywhere due to $i(t)$?
+%\vskip 100pt
+
+\solution{
+The $B$-field is into the page.
+\begin{equation*}
+B(x, t) = \frac{\mu_o i(t)}{2 \pi x}
+\end{equation*}}
+
+\item What is $\Phi(t)$, the magnetic flux through the loop?
+%\vskip 200pt
+
+\solution{
+We integrate over the area of the loop.
+\begin{equation*}
+\Phi(t) = \int_c^{c+a} B(x,t) b\,dx = \frac{\mu_o i(t) b}{2\pi} \int_c^{c+a} \frac{dx}{x} = \frac{\mu_o i(t) b}{2 \pi} \ln \frac{ c+a }{c}
+\end{equation*}}
+
+\item What is the emf induced in the loop?
+%\vskip 100pt
+
+\solution{
+\begin{equation*}
+e_{ind}(t) = -\frac{d \Phi}{dt} = -\frac{\mu_o b}{2\pi} \ln \frac{c+a}{c} \frac{di}{dt}
+\end{equation*}}
+
+\end{enumerate}
+\answer{\begin{equation*}
+e_{ind}(t) = -\frac{\mu_o b}{2\pi} \ln \frac{c+a}{c} \frac{di}{dt}
+\end{equation*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

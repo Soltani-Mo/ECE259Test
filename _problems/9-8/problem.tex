@@ -1,0 +1,60 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.6-49] Assuming that the circular loop in Problem P.6-45 is rotated about its horizontal axis by an angle $\alpha$, find the torque exerted on the circular loop.}
+
+\solution{Resolve the circular loop into many small loops, each with a magnetic dipole moment $d\vect{m} = I_2 d\vect{S}$, $d\vect{\tau} = d\vect{m}\times\vect{B}$. Integrating these small loops
+\begin{align*}
+\vect{T} &= \int d\vect{\tau}\\
+&= I_2 \int d\vect{S}\times\vect{B}\\
+&= -\uvect{a}_x I_2 \sin\alpha \int B dS\\
+&= -\uvect{a}_x \mu_0I_1I_2\left(d-\sqrt{d^2-b^2} \right)\sin\alpha
+\end{align*}
+where the last line is the result from Problem P.6-39.
+
+This torque is in the direction of aligning the flux produced by $I_2$ in the loop with that of $\vect{B}$ due to $I_1$ in the straight wire.
+}
+
+
+\answer{\begin{align*}
+\vect{T}=-a_x\,\mu_o I_1 I_2 (d-\sqrt{d^2-b^2})\sin\alpha
+\end{align*}}
+This torque is in the direction of aligning the flux produced by $I_2$ in the loop with that of $\vect{B}$ due to $I_1$ in the straight wire.
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

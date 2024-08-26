@@ -1,0 +1,75 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{For the three charges in the figure below, calculate the electric potential at points defined by (a) $(0,0,2\m)$ and (b) $(1\m, 1\m, 1\m)$, respectively. The charges are $Q_1 = 1\uC$, $Q_2 = -2\uC$, $Q_3 = 2\uC$.
+\begin{center}
+\includegraphics[scale = 0.6] {\ppath Q3.jpg}
+\end{center}}
+
+\solution{
+For this problem we will make use of the formula for voltage from a given point charge
+\begin{align*}
+V = \frac{Q}{4\pi\varepsilon_0 R},
+\end{align*}
+where $Q$ is the point charge value and $R$ is the distance from the point charge to the observation point. We can then use superposition to add up the individual voltage contributions at each observation location.
+
+\begin{enumerate}[label=(\alph*)]\setlength{\parskip}{1pt}
+\item The observation location is on the $z$-axis at $(0,0,2m)$. The individual voltages are
+\begin{align*}
+V_1 &= \frac{Q_1}{4\pi\varepsilon_0 R_1} = \frac{1\mu C}{4\pi\varepsilon_0 \sqrt{(0-1)^2+(0-0)^2+(2-0)^2}}\\
+V_2 &= \frac{Q_2}{4\pi\varepsilon_0 R_1} = \frac{-2\mu C}{4\pi\varepsilon_0 \sqrt{(0-0)^2+(0-1)^2+(2-0)^2}}\\
+V_3 &= \frac{Q_3}{4\pi\varepsilon_0 R_1} = \frac{2\mu C}{4\pi\varepsilon_0 \sqrt{(0-0)^2+(0-0)^2+(2-1)^2}},
+\end{align*}
+which when added together yield $V=V_1+V_2+V_3=13.95$\,kV
+\item Similar to part (a), we will calculate each individual voltage and add them together. This time the observation location is at $(1m,1m,1m)$, which will change $R$. As before, the individual voltages are
+\begin{align*}
+V_1 &= \frac{Q_1}{4\pi\varepsilon_0 R_1} = \frac{1\mu C}{4\pi\varepsilon_0 \sqrt{(1-1)^2+(1-0)^2+(1-0)^2}}\\
+V_2 &= \frac{Q_2}{4\pi\varepsilon_0 R_1} = \frac{-2\mu C}{4\pi\varepsilon_0 \sqrt{(1-0)^2+(1-1)^2+(1-0)^2}}\\
+V_3 &= \frac{Q_3}{4\pi\varepsilon_0 R_1} = \frac{2\mu C}{4\pi\varepsilon_0 \sqrt{(1-0)^2+(1-0)^2+(1-1)^2}},
+\end{align*}
+which when added together yield $V=V_1+V_2+V_3=6.35$\,kV
+\end{enumerate}}
+\answer{
+\begin{enumerate}[label=(\alph*)]\setlength{\parskip}{1pt}
+\item $13.95$\,kV
+\item $6.35$\,kV
+\end{enumerate}}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

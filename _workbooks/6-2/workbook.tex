@@ -1,0 +1,71 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 6-4: 
+\textbf{Goal:} A current $I$ flows lengthwise in a very long, thin conducting sheet of width $w$, as shown below. Assuming that the current flows into the paper, determine the magnetic flux density $\vect{B}$ at points $P_1(0,d)$ and $P_2(2w/3,d)$.
+\begin{center}
+\includegraphics[scale = 0.4]{\wpath workbook4.png}
+\end{center}
+\textbf{Steps:} 
+\begin{enumerate}
+
+\item The problem can be solved with superposition. What is the differential current element? \\
+\solution{
+\begin{align*}
+d\vect{I}' =  \frac{I}{w} d\vect{l}' = - \frac{I}{w} dx' dz' \uvect{a}_z
+\end{align*}
+}
+
+\item Determine the observation vector $\vect{R}$\\
+\solution{
+\begin{align*}
+\vect{R} = d \vect{a}_y
+\end{align*}
+}
+
+\item Determine the source vector $\vect{R}'$\\
+\solution{
+\begin{align*}
+\vect{R}' = x' \uvect{a}_x + z' \uvect{a}_z
+\end{align*}
+}
+
+\item What is the differential magnetic flux density $d\vect{B}$\\
+\solution{
+\begin{align*}
+d\vect{B} &= \frac{\mu_0 I}{4\pi w}  d\vect{l}' \times (\vect{R} - \vect{R}') \\
+&= \frac{\mu_0 I}{4\pi w}  \frac{d \, dz' dx' \uvect{a}_x + x' dz' dx' \uvect{a}_y}{(d^2 + x'^2 + z'^2)^{3/2}}\\
+\end{align*}
+}
+
+\item Solve the superposition integral.\\
+\solution{
+\begin{align*}
+\vect{B} &= \frac{\mu_0 I}{4\pi w} \int_0^w \int_{-\infty}^{\infty} \frac{d \, dz' {d}x' \uvect{a}_x + x' dz' dx' \uvect{a}_y}{(d^2 + x'^2 + z'^2)^{3/2}} \\
+&=\frac{\mu_0 I}{4\pi w}  \int_0^w \left( d  \uvect{a}_x + x'  \uvect{a}_y \right)\left(\int_{-\infty}^{\infty} \frac{dz}{(d^2 + x'^2 + z'^2)^{3/2}} \right)dx' \\
+&= \frac{\mu_0 I}{2\pi w}  \int_0^w \left( d  \uvect{a}_x + x'  \uvect{a}_y \right) \left( \frac{1}{d^2 + x'^2}\right) dx' \\
+&= \frac{\mu_0 I}{2\pi w} \tan^{-1} \left(\frac{w}{d} \right) \uvect{a}_x + \frac{\mu_0 I}{4\pi w} \ln \left(1 + \frac{w^2}{d^2} \right) \uvect{a}_y
+\end{align*}
+}
+
+\item Use the answer of part (5) to find magnetic flux density $\vect{B}_2$ at point $P_2(2w/3, d)$.\\
+\solution{
+Magnetic flux density due to current strip to the right (R) and to left are given by (L)
+\begin{align*}
+&\vect{B}_{L} = \frac{\mu_0 I}{2\pi w} \tan^{-1} \left(\frac{2w}{3d} \right) \uvect{a}_x - \frac{\mu_0 I}{4\pi w} \ln \left(1 + \frac{4w^2}{9d^2} \right) \uvect{a}_y \\
+&\vect{B}_{R} = \frac{\mu_0 I}{2\pi w} \tan^{-1} \left(\frac{w}{3d} \right) \uvect{a}_x + \frac{\mu_0 I}{4\pi w} \ln \left(1 + \frac{w^2}{9d^2} \right) \uvect{a}_y \\
+&\vect{B} = \vect{B}_L + \vect{B}_R
+\end{align*}
+}
+\end{enumerate}
+
+\answer{
+\begin{align*}
+\vect{B_1} &=\frac{\mu_0 I}{2\pi w} \tan^{-1} \left(\frac{w}{d} \right) \uvect{a}_x + \frac{\mu_0 I}{4\pi w} \ln \left(1 + \frac{w^2}{d^2} \right) \uvect{a}_y\\
+&\vect{B}_{L} = \frac{\mu_0 I}{2\pi w} \tan^{-1} \left(\frac{2w}{3d} \right) \uvect{a}_x - \frac{\mu_0 I}{4\pi w} \ln \left(1 + \frac{4w^2}{9d^2} \right) \uvect{a}_y \\
+&\vect{B}_{R} = \frac{\mu_0 I}{2\pi w} \tan^{-1} \left(\frac{w}{3d} \right) \uvect{a}_x + \frac{\mu_0 I}{4\pi w} \ln \left(1 + \frac{w^2}{9d^2} \right) \uvect{a}_y \\
+&\vect{B_2} = \vect{B}_L + \vect{B}_R
+\end{align*}}
+
+\end{document}
+

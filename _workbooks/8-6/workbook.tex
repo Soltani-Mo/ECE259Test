@@ -1,0 +1,107 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 6-27: 
+\textbf{Goal:} A toroidal iron core of relative permeability 3000 has a mean radius $R = 80$ (mm) and a circular cross section with radius $b = 25$(mm). An air gap $l_g = 3$(mm) exists, and a current $I$ flows in a 500-turn winding to produce a magnetic flux of $10^{-5}$ Wb. The geometry of the toroidal core is shown below. Neglecting flux leakage and using mean path length, find the reluctance, magnetic field intensity and magnetic flux density for both the air gap and the iron core, and the required current $I$. 
+\begin{center}
+\includegraphics[scale=0.5]{\wpath Cheng6-27.png}
+\end{center}
+\textbf{Steps:} 
+\begin{enumerate}
+\item What is magnetic flux across the toroidal iron core and in the air gap?\\
+\solution{
+\begin{align*}
+\Phi_c = \Phi_g = 10^{-5}\;\text{(Wb)}.
+\end{align*}
+}
+
+\item What is the magnetic flux density $\vect{B}_c$ in the core? What is the magnetic flux density $\vect{B}_g$ in the air gap?\\
+\solution{
+\begin{align*}
+\vect{B}_g = \vect{B}_c &= \uvect{a}_{\phi} \Phi_c / S \\
+\vect{B}_c &= \uvect{a}_{\phi} 10^{-5} / (\pi 0.025^2) \\
+&= \uvect{a}_{\phi} 5.09 \cdot 10^{-3} \;\text{(T)}.
+\end{align*}
+}
+
+\item What is the magnetic field intensity $\vect{H}_c$ in the core? What is the magnetic field intensity vector $\vect{H}_g$ in the air gap?\\
+\solution{
+\begin{align*}
+\vect{H}_g &= \frac{1}{\mu_0} \vect{B}_g \\
+&=4.05 \cdot 10^{3} \;\text{(A/m)} \\
+\vect{H}_c &= \frac{1}{\mu_0 \mu_r } \vect{B}_c \\
+&= 1.35 \;\text{(A/m)} \\
+\end{align*}
+}
+
+\item Find the reluctance of the air gap $R_g$ and the reluctance of the core $R_c$.\\
+\solution{
+\begin{align*}
+R_g &= \frac{l_g}{\mu_0 \mu_r S} \\
+&= \frac{0.003}{ \mu_0 (\pi 0.025^2)}  \\
+&=1.216 \cdot 10^{6} \;\text{(H$^{-1}$)}\,. \\
+R_c &= \frac{l_c}{\mu_0 \mu_r S} \\
+&= \frac{2\pi (0.08) - 0.003}{3000 \mu_0 (\pi 0.025^2)} \\
+&= 6.75 \cdot 10^{4}\;\text{(H$^{-1}$)} \,.
+\end{align*}
+}
+
+\item What is the required current $I$ that will generate flux $\Phi$ across the circuit?\\
+\solution{
+\begin{align*}
+N I &= \Phi \left( R_c + R_g \right) \\
+I &= \frac{1}{500} 10^{-5} \left( 6.75 \cdot 10^{4} + 1.216 \cdot 10^{6} \right) \\
+&= 25.67\;\text{(mA)}\,.
+\end{align*}
+}
+\end{enumerate}
+
+\answer{
+\begin{align*}
+R_g &=1.216 \cdot 10^{6} \;\text{(H$^{-1}$)}\,. \\
+R_c &= 6.75 \cdot 10^{4}\;\text{(H$^{-1}$)} \\
+\vect{B}_g &= \vect{B}_c \\
+\vect{B}_c &= \uvect{a}_{\phi} 5.09 \cdot 10^{-3} \;\text{(T)}\\
+\vect{H}_g &= 4.05 \cdot 10^{3} \;\text{(A/m)} \\
+\vect{H}_c &= 1.35 \;\text{(A/m)} \\
+I &= 25.67\,\text{(mA)}
+\end{align*}}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

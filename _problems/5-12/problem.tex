@@ -1,0 +1,89 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+% Same as Workbook 5-8
+\problem{[Cheng P.5-9] Two lossy dielectric media with permittivities and conductivities ($\varepsilon_1,\sigma_1$) and ($\varepsilon_2,\sigma_2$) are in contact. An electric field with a magnitude $E_1$ is incident from medium 1 upon the interface at an angle $\alpha_1$ measured from the common normal, as in Fig. 5-10.
+\begin{center}
+\includegraphics[scale= 0.5]{\ppath cheng5-9_prompt.png}
+\end{center}
+\begin{enumerate}[label=(\alph*)]
+\item Find the magnitude and direction of $\vect{E}_2$ in medium 2.
+\item Find the surface charge density at the interface.
+\item Compare the results in parts (a) and (b) with the case in which both media are perfect dielectrics.
+\end{enumerate}
+
+}
+
+\solution{
+%\begin{center}
+%\includegraphics[scale= 0.9]{\ppath cheng5-9.pdf}
+%\end{center}
+\begin{enumerate}[label=(\alph*)]
+\item 
+\begin{align*}
+\text{Eq. (3-118): } E_{1t} &= E_{2t} \rightarrow E_2 \sin \alpha_2 = E_1 \sin \alpha_1.\\
+\text{Eq. (3-118): } J_{1n} &= J_{2n} \rightarrow \sigma_1 E_{1n} = \sigma_2 E_{2n} \rightarrow \sigma_2 E_2 \cos \alpha_2 = \sigma_1 E_1 \cos \alpha_1.\\
+\end{align*}
+Therefore,
+\begin{align*}
+E_2 &= E_1 \sqrt{\sin^2 \alpha_1 + (\frac{\sigma_1}{\sigma_2}\cos \alpha_1)^2}.\\
+\tan \alpha_2 &= \frac{\sigma_2}{\sigma_1}\tan \alpha_1 \rightarrow \alpha_2 = \tan^{-1}(\frac{\sigma_2}{\sigma_1}\tan \alpha_1).
+\end{align*}
+\item
+\begin{align*}
+\text{Eq. (3-121b): } &D_{2n} - D_{1n} = \rho_s \rightarrow \varepsilon_2 E_{2n}-\varepsilon_1 E_{1n} = \rho_s\\
+& \rho_s = (\frac{\sigma_1}{\sigma_2}\varepsilon_2 - \varepsilon_1)E_{1n} = (\frac{\sigma_1}{\sigma_2}\varepsilon_2 - \varepsilon_1) E_1 \cos \alpha_1.
+\end{align*}
+\item If both media are perfect dielectrics, $\sigma_1=\sigma_2=0$. $\alpha_2 = \tan^{-1}(\frac{\sigma_2}{\sigma_1}\tan \alpha_1)$ reverts to Eq (1-129), while $E_2 = E_1 \sqrt{\sin^2 \alpha_1 + (\frac{\sigma_1}{\sigma_2}\cos \alpha_1)^2}$ reverts to Eq. (3-130) and $\rho_s = 0$.
+\end{enumerate}
+}
+
+\answer{\begin{enumerate}[label=(\alph*)]
+\item \begin{align*}
+\alpha_2=\tan^{-1}(\frac{\sigma_2}{\sigma_1}\tan\alpha_1)
+\end{align*}
+\item \begin{align*}
+\rho_s=(\frac{\sigma_1}{\sigma_2}\varepsilon_2-\varepsilon_1)E_1\cos\alpha_1
+\end{align*}
+\item \begin{align*}
+\sigma_1=\sigma_2\,\,and\,\,\rho_s=0
+\end{align*}
+\end{enumerate}}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

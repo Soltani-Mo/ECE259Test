@@ -1,0 +1,70 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.4-4] Verify that 
+\begin{align*}
+V_1 = C_1/R \quad \text{and} \quad V_2 = C_2z/(x^2 + y^2 + z^2)^{3/2},
+\end{align*}
+where $C_1$ and $C_2$ are arbitrary constants, are solutions of Laplace's equation.
+}
+
+\solution{
+First, we need to verify that $V_1 = C_1/R$ satisfies the Laplace equation. In spherical coordinates, the Laplacian of $V_1$ is
+\begin{align*}
+	\nabla^2V_1 &= \frac{1}{R^2}\frac{\partial}{\partial R}\left(R^2\frac{\partial}{\partial R}\left(\frac{C_1}{R} \right) \right)\\
+	&= \frac{-C_1}{R^2}\frac{\partial}{\partial R}\left(R^2\frac{1}{R^2} \right)\\
+	&= \frac{-C_1}{R^2}\frac{\partial}{\partial R}\left(1 \right) = 0\\
+	\implies \nabla^2V_1 &= 0
+\end{align*}
+which is the Laplace equation, as desired.
+
+Next, we need to verify that $V_2 = C_2z/(x^2 + y^2 + z^2)^{3/2}$ satisfies the Laplace equation. Converting to spherical coordinates and taking the Laplacian of $V_2$,
+\begin{align*}
+	\nabla^2V_2 &= C_2\left[ \frac{1}{R^2}\frac{\partial}{\partial R}\left(R^2\frac{\partial}{\partial R}\left(\frac{R\,\cos\theta}{R^3} \right) \right) + \frac{1}{R^2\,\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta \frac{\partial}{\partial\theta} \left(\frac{R\,\cos\theta}{R^3}\right) \right)  \right]\\
+	&= C_2\left[ \frac{\cos\theta}{R^2}\frac{\partial}{\partial R}\left(R^2\frac{\partial}{\partial R}\left(\frac{1}{R^2} \right) \right) - \frac{1}{R^4\,\sin\theta}\frac{\partial}{\partial\theta}\left(\sin^2\theta \right)  \right]\\
+	&= C_2\left[ \frac{-2\,\cos\theta}{R^2}\frac{\partial}{\partial R}\left(\frac{1}{R} \right) - \frac{2\,\sin\theta\,\cos\theta}{R^4\,\sin\theta} \right]\\
+	&= C_2\left[ \frac{2\,\cos\theta}{R^4} - \frac{2\,\cos\theta}{R^4} \right] = 0\\
+	\implies \nabla^2V_2 &= 0
+\end{align*}
+which is the Laplace equation, as desired.
+}
+
+\answer{Proof problem}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{Assuming the electric field intensity is $\vec{E}_x=100x\vec{a}_x\ (V/m)$, find the total electric charge contained inside
+	\begin{enumerate} [label=(\alph*)]
+		\item a cubical volume $100\ mm$ on a side centered symmetrically about the origin.
+		\item a cylindrical volume around the $z$-axis having a radius $50\ mm$ and a height $100\ mm$ centered at the origin.
+	\end{enumerate}
+}
+
+\solution{The charge density in the region of space where the electric field exists can be found by Gauss' Law
+	\begin{align*}
+		\rho_v&=\varepsilon_0\nabla\cdot E\\
+		&=\varepsilon_0\frac{dE_x}{dx}\\
+		&=100\varepsilon_0
+	\end{align*}
+	The total charge in contained within an area of space can be found by integrating this charge density over the volume of space
+	\begin{enumerate} [label=(\alph*)]
+		\item
+		\begin{align*}
+			Q&=\int_{-.05}^{.05}\int_{-.05}^{.05}\int_{-.05}^{.05}100\varepsilon_0dxdydz\\
+			&=8.85\times10^{-13}\,C
+		\end{align*}
+		\item
+		\begin{align*}
+			Q&=\int_{-.05}^{.05}\int_0^{2\pi}\int_0^{.05}100\varepsilon_0 rdrd\phi dz \\
+			&=6.95\times10^{-13}\,C
+		\end{align*}
+	\end{enumerate}
+}
+\answer{
+\begin{enumerate}[label=(\alph*)]
+\item
+\begin{align*}
+			Q&=8.85\times10^{-13}\,C
+		\end{align*}
+		\item
+		\begin{align*}
+			Q&=6.95\times10^{-13}\,C
+		\end{align*}
+	\end{enumerate}
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

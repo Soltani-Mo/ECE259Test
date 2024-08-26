@@ -1,0 +1,103 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 5-6/5-7. 
+\textbf{Goal:} Lightning strikes a lossy dielectric sphere $\epsilon=1.2 \epsilon_0$, $\sigma=10$ S/m, of radius 0.1 m, at time $t=0$, uniformly depositing charge 1 mC. 
+For all $t$, determine the electric field intensity and current density inside and outside the sphere, and the time it takes for the charge density to diminish to $1\%$ of its initial value. Also find the electrostatic energy stored in the space outside the sphere. Does this energy change with time?\\
+\\
+\textbf{Steps:} 
+\begin{enumerate}
+\item Apply Gauss law to find the electric field. What surface are you going to choose ? What
+symmetries exist in this problem ? \\
+\solution{
+Volume charge density is
+\begin{align*}
+\rho_0 &= Q/(4/3 \pi R^3) \\
+&= 0.239\;\text{(C/m$^3$)}
+\end{align*}
+Use spherical Gaussian surface to find electric field.
+Electric field inside the sphere ($R<0.1\m$)
+\begin{align*}
+\nabla \cdot \vect{E} &= \rho(t) / \varepsilon \\
+\int \int \vect{E} \cdot d\vect{S} &= (4/3) \pi R^3 \rho(t) / \varepsilon \\
+E_r &=  \frac{R}{3 \varepsilon}  \rho(t)\,.
+\end{align*}
+But, $\rho(t) = \rho_0\,\e^{-\sigma/\varepsilon}$.
+Hence,
+\begin{align*}
+E_r &=  \frac{R}{3 \varepsilon} \rho_0\,\e^{-\sigma/\varepsilon t} \,,\\
+&= 7.498 \cdot 10^9 R\,\e^{-9.41\cdot 10^{11} t}
+\end{align*}
+Electric field outside the sphere ($R > 0.1\m$):
+\begin{align*}
+\int \int \vect{E} \cdot d\vect{S} &= Q / \varepsilon \\
+E_r &=  \frac{1}{4 \pi \varepsilon R^2 }  Q \,,\\
+&= \frac{8.99\cdot 10^6 }{ R^2}\,.
+\end{align*}
+}
+
+\item Having $\vect{E}$, find $\vect{J}$ inside the sphere ($R < 0.1\m$) \\
+\solution{
+\begin{align*}
+\vect{J} &= \sigma \vect{E} \\
+&= \sigma \frac{R}{3 \varepsilon} \rho_0\,\e^{-\sigma/\varepsilon t} \uvect{a}_R \,,\\
+&=  7.498 \cdot 10^{10} R\,\e^{-9.41\cdot 10^{11} t} \uvect{a}_R\,.
+\end{align*}
+Outside the sphere ($R>0.1\m$)
+\begin{align*}
+\vect{J} = 0\,.
+\end{align*}
+}
+ 
+
+\item Apply continuity equation to find $\rho$ from $\vect{J}$. How is this decay of the charge density compatible with charge conservation ? \\ 
+\solution{
+\begin{align*}
+\nabla \cdot \vect{J} &= - \frac{\partial \rho}{\partial t} \\
+\frac{1}{R^2} \left( \frac{\partial }{\partial R} \left(7.498\cdot10^{10} R^3 \e^{-9.41\cdot 10^{11} t} \right) \right) &= - \frac{\partial \rho}{\partial t} \\
+0.239 \e^{-9.41 \cdot 10^{11}t}\;\text{(C/m)}&= \rho(t)\,.
+\end{align*}
+}
+
+\item  Calculate the electrostatic energy inside and outside the sphere as a function of time. First, find $w_e = \dfrac{1}{2} \epsilon |\vect{E}|^2$ inside and outside the sphere. \\
+\solution{
+Inside the sphere $R < 0.1\m$
+\begin{align*}
+w_e = \frac{1}{2} \varepsilon (7.498 \cdot 10^9)^2 \e^{(-2)(9.41\cdot10^{11} t)} R^2 \,.
+\end{align*}
+Outside the sphere $R>0.1\m$
+\begin{align*}
+w_e = \frac{1}{2} \varepsilon_0 \left( \frac{8.99 \cdot 10^6}{R^2} \right)^2
+\end{align*}
+}
+
+\item Then, integrate the two $w_e$'s in their respective volumes. Does each energy change with time ? Does (or can) the total energy change with time? \\
+\solution{
+Energy inside the sphere:
+\begin{align*}
+W_e &= \int_0^{2\pi} \int_0^{\pi} \int_0^{0.1} \frac{1}{2} \varepsilon (7.498 \cdot 10^9)^2 \e^{(-2)(9.41\cdot10^{11} t)} R^4 \sin \theta dR d\theta d \phi \\
+&= 7.506 \e^{(-2)(9.41\cdot10^{11} t)}\;\text{(kJ)}\,.
+\end{align*}
+Energy outside the sphere:
+\begin{align*}
+W_e &= \int_0^{2\pi} \int_0^{\pi} \int_{0.1}^{\infty}   \frac{1}{2} \varepsilon_0 \left( \frac{8.99 \cdot 10^6}{R^2} \right) ^2 R^2 \sin \theta dR d\theta d\phi \\
+&= 45.06\;\text{(kJ)}
+\end{align*}
+Energy outside the sphere is constant. Energy inside the sphere changes with time (this energy is lost as heat).
+}
+\end{enumerate}
+\answer{\begin{enumerate}[label=(\alph*)]
+\item \begin{align*}
+E_{\text{inside}}=7.498\,\times\,10^{9}R\,e^{-9.41\,\times\,10^{11}t}\\
+E_{\text{outside}}=\frac{8.99\,\times\,10^6}{R^2}
+\end{align*}
+\item \begin{align*}
+J_{\text{inside}}=a_R\,\,7.498\,\times\,10^{10}R\,e^{-9.41\,\times\,10^{11}t}\\
+J_{\text{outside}}=0
+\end{align*}
+\item \begin{align*}
+W_e = 45.06\,kJ
+\end{align*}
+\end{enumerate}}
+\end{document}
+

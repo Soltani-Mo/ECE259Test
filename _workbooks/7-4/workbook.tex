@@ -1,0 +1,121 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 6-3: 
+\textbf{Goal:} A current $I$ flows in the inner conductor of an infinitely long coaxial line and returns via the outer conductor. The radius of the inner conductor is $a$, and the inner and outer radius of the outer conductor are $b$ and $c$, respectively. Find the magnetic flux density $\vect{B}$ and plot is as a function of $r$ for $0 < r < c$.\\
+\\
+\textbf{Steps:} 
+\begin{enumerate}
+\item Determine an Amperian path for this structure.\\
+%\vskip 20pt
+\solution{
+A circle of variable radius $r$.
+}
+
+\item What is the current density inside each conductor? Assume that the current is uniformly distributed inside each conductor.\\
+%\vskip 20pt
+\solution{
+\begin{align*}
+\vect{J}_1 &= \frac{I}{\pi a^2} \uvect{a}_z \,. \\
+\vect{J}_2 &= \frac{-I}{\pi \left( c^2 - b^2\right) } \uvect{a}_z
+\end{align*}
+}
+
+\item Apply Ampere's law to find the magnetic flux density $\vect{B}$ inside the inner conductor ($0<r<a$).\\
+%\vskip 60pt
+\solution{
+\begin{align*}
+\oint \vect{B} \cdot d\vect{l} &= \mu \int_0^{2\pi} \int_{0}^{r} \vect{J}_1 dS \\
+2\pi r B_\phi  &= \mu \frac{I}{\pi a^2} \pi r^2 \\
+\vect{B} &= \uvect{a}_\phi \frac{\mu r I}{2\pi a^2} 
+\end{align*}
+}
+
+\item Apply Ampere's law to find $\vect{B}$ in the region between the two conductors ($a<r<b$).\\
+%\vskip 80pt
+\solution{
+\begin{align*}
+\oint \vect{B} \cdot d\vect{l} &= \mu I \\
+\vect{B} &= \uvect{a}_\phi \frac{\mu I}{2\pi r} 
+\end{align*}
+}
+
+\item Apply Ampere's law to find $\vect{B}$ in the outer conductor ($b<r<c$).\\
+%\vskip 80pt
+\solution{
+\begin{align*}
+\oint \vect{B} \cdot d\vect{l} &= \mu \left(I + \int_0^{2\pi} \int_b^r \vect{J}_2 r dr d\theta \right) \\
+\vect{B} &= \uvect{a}_\phi \frac{\mu I}{2\pi r}\frac{c^2 - r^2}{c^2 - b^2}
+\end{align*}
+}
+
+\item Use Ampere's law to compute $\vect{B}$ in the region outside the coaxial line ($r>c$).\\
+%\vskip 40pt can be 
+\solution{
+\begin{align*}
+\oint \vect{B} \cdot d\vect{l} &= 0\\
+B_\phi  &= 0 \\
+\end{align*}
+There is no magnetic field outside the cable because there is zero net current enclosed by the Amperean loop.
+}
+
+\item Plot $\abs{\vect{B}}$ versus $r$ for all $0<r<c$. \\
+\solution{
+\includegraphics[scale = .7]{\wpath workbook4.png}
+}
+
+\end{enumerate}
+
+\answer{\begin{enumerate}[label=(\alph*)]
+\item \text{For} 0<r<a
+\begin{align*}
+\vect{B} &= \uvect{a}_\phi \frac{\mu r I}{2\pi a^2} 
+\end{align*}
+\item \text{For} b<r<c
+\begin{align*}
+\vect{B} &= \uvect{a}_\phi \frac{\mu I}{2\pi r}\frac{c^2 - r^2}{c^2 - b^2} 
+\end{align*}
+\item \text{For} r>c
+\begin{align*}
+B_\phi  &= 0
+\end{align*}
+\end{enumerate}
+}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,89 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 6-21: 
+\textbf{Goal:} A very large slab of material of thickness $d$ lies perpendicularly to a uniform magnetic field of intensity $\vect{H}_0 = \uvect{a}_z H_0$. Find the magnetic field intensity inside the dielectric slab if it has a permeability $\mu$ or if it is a permanent magnet having a magnetization vector $\vect{M}_i = \uvect{a}_z M_i$.\\
+\\
+\textbf{Steps:} 
+\begin{enumerate}
+\item State the magnetostatic boundary conditions for tangential and normal components at the interface between the dielectric slab and air.\\
+\solution{
+\begin{align*}
+\uvect{a}_n \cdot \vect{B}_1 &= \uvect{a}_n \cdot \vect{B}_2\, \\
+\uvect{a}_n \times \left( \vect{H}_1 - \vect{H}_2 \right) &= \vect{J}_s \,.
+\end{align*}
+Here, $\vect{J}_s$ is 0.
+}
+
+\item What is the magnetic field intensity $\vect{H}$ inside the dielectric slab if the slab material has permeability  $\mu$? \\
+\solution{
+Tangential Component:
+\begin{align*}
+\uvect{a}_n \times \left( \vect{H}_1 - \vect{H}_2 \right) = \vect{J}_s \\
+\uvect{a}_n \times \left( 0 - \vect{H}_2 \right) = 0 \\
+\uvect{a}_n \times \vect{H}_2 = 0\,.
+\end{align*}
+Normal component of the field:
+\begin{align*}
+\uvect{a}_n \cdot  \vect{B}_1 &= \uvect{a}_n \cdot \vect{B_2} \\
+\uvect{a}_z B_{1n} &= \uvect{a}_z B_{2n} \\
+\mu_0 H_{0} &= \mu H_{2n} \\
+H_{2n} &= \frac{\mu_0}{\mu} H_{0} \,.
+\end{align*}
+$\therefore \vect{H}_2 = \frac{\mu_0}{\mu} H_0 \uvect{a}_z$
+}
+
+\item What is the magnetic field intensity $\vect{H}$ inside the magnetic slab if the slab is a permanent magnet having a magnetization vector $\vect{M}_i = \uvect{a}_z M_i$? \\
+\solution{
+Tangential component $\uvect{a}_n \times \vect{H}_2 = 0$. 
+Normal component:
+\begin{align*}
+\uvect{a}_z B_{1n} &= \uvect{a}_z B_{2n} \\
+\uvect{a}_z \mu_0 H_{0} &= \uvect{a}_z  \mu_0 \left(H_{2n} + {M}_i  \right) \\
+H_{2n} &= H_0 - M_i
+\end{align*}
+$\therefore$ The magnetic field intensity inside the slab is $\vect{H}_2 = \left( H_0 - M_i \right) \uvect{a}_z$.
+}
+
+\end{enumerate}
+\answer{\begin{align*}
+\vect{H}_2 = \frac{\mu_0}{\mu} H_0 \uvect{a}_z \quad \text{Dielectric slab}\\
+\vect{H}_2 = \left( H_0 - M_i \right) \uvect{a}_z \quad \vect{M_i}=a_z M_i
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

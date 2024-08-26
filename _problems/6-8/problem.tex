@@ -1,0 +1,93 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+% Same as Workbook 6-5
+\problem{[Cheng P.6-12] Two identical coaxial coils, each of $N$ turns and radius $b$, are separated by a distance $d$, as depicted in Fig. 6-39. A current $I$ flows in each coil in the same direction. 
+\begin{enumerate}[label=(\alph*)]
+\item Find the magnetic flux density $\vect{B}=\uvect{a}_x B_x$ at a point midway between the coils. 
+\item Show that $dB_x/dx$ vanishes at the midpoint.
+\item Find the relation between $b$ and $d$ such that $d^2B_x/dx^2$ also vanishes at the midpoint. 
+\end{enumerate}
+Such a pair of coils are used to obtain an approximately uniform magnetic field in the midpoint region. They are known as \textbf{\textit{Helmholtz coils}}.
+\begin{center}
+\includegraphics[scale= 0.7]{\ppath cheng6-12_prompt.png}
+\end{center}
+}
+
+\solution{
+\begin{center}
+\includegraphics[scale= 0.9]{\ppath cheng6-12_diagram.png}
+\end{center}
+Using Eq. (6-38) and the diagram above
+\begin{align*}
+B_x = \frac{N\mu_0Ib^2}{2}\left\{ \frac{1}{[(d/2+x)^2 + b^2]^{3/2}}-\frac{1}{[(d/2-x)^2 + b^2]^{3/2}} \right\}.
+\end{align*}
+\begin{enumerate}[label=(\alph*)]
+\item At $x=0$,
+\begin{align*}
+B_x = \frac{N\mu_0Ib^2}{[(d/2)^2+b]^{3/2}}.
+\end{align*}
+\item 
+\begin{align*}
+\frac{dB_x}{dx} = \frac{N\mu_0Ib^2}{2}\left\{ -\frac{3(d/2+x)}{[(d/2+x)^2 + b^2]^{5/2}}+\frac{3(d/2-x)}{[(d/2-x)^2 + b^2]^{5/2}} \right\}.
+\end{align*}
+At the midpoint $x=0$, $\frac{dB_x}{dx}=0$.
+\item
+\begin{align*}
+\begin{split}
+\frac{dB_x^2}{dx^2} =& -\frac{3N\mu_0Ib^2}{2}\left\{ \frac{1}{[(d/2+x)^2 + b^2]^{5/2}} + \frac{1}{[(d/2-x)^2 + b^2]^{5/2}} \right. \\ & \left. - \frac{5(d/2+x)^2}{[(d/2+x)^2 + b^2]^{7/2}} - \frac{5(d/2-x)^2}{[(d/2-x)^2 + b^2]^{7/2}} \right\}.
+\end{split}
+\end{align*}
+At $x=0$,
+\begin{align*}
+\frac{dB_x^2}{dx^2} = -3N\mu_0Ib^2 \left\{ \frac{b^2-4(d/2)^2}{[(d/2)^2+b^2]^{7/2}} \right\}.
+\end{align*}
+This equals $0$ if $b=d$.
+\end{enumerate}
+}
+
+\answer{\begin{enumerate}[label=(\alph*)]
+\item \begin{align*}
+B_x = \frac{N\mu_0Ib^2}{[(d/2)^2+b]^{3/2}}
+\end{align*}
+\item Proof problem
+\item Proof problem, $b=d$
+\end{enumerate}
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

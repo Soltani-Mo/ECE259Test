@@ -1,0 +1,106 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{\textit{Nonuniformly magnetized ferrormagnetic disk.} A thin ferrormagnetic disk of radius $a$ and thickness $d$ ($d \ll a$) in air has a nonuniform magnetization, given by $\vec{M} =  M_o (r/a)^2 \vec{a}_z$ (Fig.~Q5.37), where $M_o$ is a constant. 
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{\ppath Q5-5.png}
+\end{center}
+
+Calculate 
+\begin{enumerate}[label=(\alph*)]
+\item the distribution of magnetization currents of the disk, and
+\item the magnetic flux density vector along the $z$-axis.
+\end{enumerate}
+}
+
+\solution{
+\begin{enumerate}[label=(\alph*)]
+\item We know the volume magnetization current density is given by 
+\begin{align*}
+\vect{J}_m = \nabla \times \vect{M}.
+\end{align*}
+Our problem has cylindrical symmetry so using that result in cylindrical coordinates we arrive at 
+\begin{align*}
+\vect{J}_m = -\frac{\partial M_z(r)}{\partial r}\uvect{a}_\phi = -\frac{2M_0r}{a^2}\uvect{a}_\phi.
+\end{align*}
+There is also a magnetization current density flowing circumferentially along the disk outside surface given by 
+\begin{align*}
+\vect{J}_{ms}= M(a^-)\uvect{a}_z\times \uvect{a}_r = M_0 \uvect{a}_r.
+\end{align*}
+This configuration is shown in the diagram below.
+\begin{center}
+\includegraphics[scale=1]{\ppath Q1_diagram.png}
+\end{center}
+\item To evaluate the magnetic field we subdivide the disk in Fig 5.37 into elementary hollow disks of radii $r$ ($0\leq r\leq a$), width $dr$, and thickness (height) $d$, as shown in the diagram above. As $d<<a$, each such disk can be replaced by an equivalent current loop (wire) of radius $r$ and current intensity 
+\begin{align*}
+\text{d}I_m(r) = J_m(r)d \text{d}r
+\end{align*} 
+(cross section of the hollow disk through which the current of density $\vect{J}_{m}$ flows is a rectangle of side lengths $d$ and d$r$, and surface area $d$ d$r$). The magnetic flux density vector for this loop at an arbitrary point on the $z$-axis is given by
+\begin{align*}
+\text{d}\vect{B} = \frac{\mu_0\text{d}I_m(r)r^2}{2R^3}\uvect{a}_z = -\frac{\mu_0M_0dr^3\text{d}r}{a^2R^3}\uvect{a}_z; \quad R = \sqrt{r^2+z^2},
+\end{align*}
+and the resultant field $\vect{B}$ is found by the superposition of d$\vect{B}$ to sum the contributions of all equivalent loops over the volume of the thin disk in the diagram above. This is done by integrating the expression above.
+\begin{align*}
+\text{d}\vect{B} &=  -\frac{\mu_0M_0dr^3\text{d}r}{a^2R^3}\uvect{a}_z; \quad R\text{d}R = r\text{d}r\\
+\vect{B} &= -\frac{\mu_0M_0d}{a^2} \int_{r=0}^a r^2\frac{dR}{R^2} \uvect{a}_z\\
+&= -\frac{\mu_0M_0d}{a^2} \int_{r=0}^a (R^2-z^2)\frac{dR}{R^2} \uvect{a}_z\\
+&= -\frac{\mu_0M_0d}{a^2} \left( \int_{r=0}^a dR - z^2\int_{r=0}^a\frac{dR}{R^2} \right) \uvect{a}_z\\
+&= -\frac{\mu_0M_0d}{a^2} \left( \sqrt{a^2+z^2}-\vert z\vert +\frac{z^2}{\sqrt{a^2+z^2}} -\frac{z^2}{\vert z\vert} \right) \uvect{a}_z
+\end{align*}
+Finally, we add the $\vect{B}$ field due to the equivalent circular loop with radius $a$ and current $I_m(a)=\vect{J}_{ms}d=M_0d$, representing the surface current in part (a) flowing circumferentially. This field is given by 
+\begin{align*}
+\vect{B} = \frac{\mu_0 M_0 da^2}{2(z^2+a^2)^{3/2}}\uvect{a}_z.
+\end{align*}
+Adding them together we get,
+\begin{align*}
+\vect{B}_{\text{tot}}=-\frac{\mu_0M_0d}{a^2} \left[ \sqrt{a^2+z^2}-\vert z\vert +\frac{z^2}{\sqrt{a^2+z^2}} -\frac{z^2}{\vert z\vert} -\frac{a^4}{2(z^2+a^2)^{3/2}} \right] \uvect{a}_z.
+\end{align*}
+\end{enumerate}
+}
+
+
+\answer{
+\begin{enumerate}[label=(\alph*)]
+\item Volume magnetization current density $\vect{J}_m = -\frac{2M_0r}{a^2}\uvect{a}_\phi$ and surface magnetization current density flowing circumferentially $\vect{J}_{ms} = M_0 \uvect{a}_r$.
+\item $\vect{B}_{\text{tot}}=-\frac{\mu_0M_0d}{a^2} \left[ \sqrt{a^2+z^2}-\vert z\vert +\frac{z^2}{\sqrt{a^2+z^2}} -\frac{z^2}{\vert z\vert} -\frac{a^4}{2(z^2+a^2)^{3/2}} \right] \uvect{a}_z$
+\end{enumerate}
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

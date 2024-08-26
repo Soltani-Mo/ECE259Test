@@ -1,0 +1,65 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.3-27] What are the boundary conditions that must be satisfied by the electric potential at an interface between two perfect dielectrics with dielectric constants $\varepsilon_{r1}$ and $\varepsilon_{r2}$?}
+
+\solution{
+First, we know that the electrostatic potential $V$ is continuous across a boundary. To see this, let's find the voltage difference between $a$ and $b$, two points on either side of the boundary a length $\Delta$ apart, in the presence of a constant $\vect{E}$.
+\begin{align*}
+V_{ab} &= -\int_a^b \vect{E}\cdot dl\\
+V_{ab} &= -{E}_0(b-a)\\
+V_{ab} &= -{E}_0(\Delta).
+\end{align*}
+Now if we let $\Delta \rightarrow 0$, then $V_{ab}\rightarrow 0$. So if we have a voltage $V_1$ on one side of the boundary and $V_2$ on the other we can say
+\begin{align*}
+V_1 &= V_2,
+\end{align*}
+Futhermore, we know from our electric field boundary conditions we can say 
+\begin{align*}
+\varepsilon_1 \vect{E}_{n1}&=\varepsilon_2\vect{E}_{n2}\\  \vect{E} &= -\nabla V\\
+\varepsilon_1 \frac{\partial V_1}{ \partial n} &= \varepsilon_2 \frac{\partial V_2}{ \partial n}.  
+\end{align*}}
+\answer{
+\begin{align*}
+\varepsilon_1 \frac{\partial V_1}{ \partial n} &= \varepsilon_2 \frac{\partial V_2}{ \partial n}  \\[0.25em]
+V_1 &= V_2
+\end{align*}}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,115 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 6-26: 
+\textbf{Goal:} A ferromagnetic sphere of radius $b$ is magnetized uniformly with magnetization $\vect{M} = \uvect{a}_z M_0$. Find the current densities $\vect{J}_m$,  $\vect{J}_{ms}$, and flux density $\vec{B}$.\\
+\\
+\textbf{Steps:} 
+\begin{enumerate}
+\item Show that the equivalent magnetization volume current density $\vect{J}_m$ is 0.\\
+%\vskip 60pt
+\solution{
+\begin{align*}
+\vect{J}_m &= \vect{\nabla} \times \vect{M} \\
+&= \vect{0}\,.
+\end{align*}
+}
+
+\item Determine the equivalent surface current density $\vect{J}_{ms}$ over the sphere.\\
+%\vskip 60pt
+\solution{
+\begin{align*}
+\vect{J_{m,s}} &= \vect{M} \times \uvect{a}_n \\
+&= M_0 \uvect{a}_z \times \uvect{a}_R' \\
+&= M_0 \left( \uvect{a}_R' \cos \theta' - \uvect{a}_\theta' \sin \theta' \right) \times \uvect{a}_R' \\
+&= M_0 \sin \theta' \uvect{a}_{\phi}'
+\end{align*}
+}
+
+\item Next, apply Biot-Savart law to determine the magnetic flux density $\vect{B}$ due to the $\vect{J}_{ms}$ at the center of the sphere.\\
+\begin{enumerate}
+\item What is the observation position vector $\vect{R}$?\\
+%\vskip 30pt
+\solution{
+\begin{align*}
+\vect{R} = 0\,.
+\end{align*}
+}
+
+\item What is the source position vector $\vect{R}'$? \\
+%\vskip 30pt
+\solution{
+\begin{align*}
+\vect{R}' &= b\, \uvect{a}_R' \\
+&= b \left( \sin \theta' \cos \phi' \uvect{a}_x + \sin \theta' \sin \phi' \uvect{a}_y\right)  \,.
+\end{align*}
+}
+
+\item What is the differential magnetic flux density d$\vect{B}$?  \\
+% \vskip 100pt
+\solution{
+\begin{align*}
+d\vect{B} &= \frac{\mu_0}{4 \pi} \frac{\vect{J} d{S} \times \left( \vect{R} - \vect{R}'\right)}{\abs{\vect{R} - \vect{R}'}^3}\\
+&= \frac{\mu_0}{4 \pi} \frac{ \vect{J}_{m,s}  b^2 \sin \theta' d\theta' d\phi'  \times \left(  - b \uvect{a}_R  \right)}{b^3}\\
+&= \frac{\mu_0}{4 \pi} \frac{ M_0  b^2 \sin^2 \theta' d\theta' d\phi' \uvect{a}_{\phi}' \times \left(  - b \uvect{a}_R ' \right)}{b^3}\\
+&= \frac{\mu_0}{4 \pi}  M_0  \sin^2 \theta' d\theta' d\phi'\uvect{a}_{\phi}' \times \left(  - \uvect{a}_R ' \right)\\
+&= \frac{\mu_0}{4 \pi}  M_0  \sin^2 \theta' d\theta' d\phi' \left( \sin\theta' \uvect{a}_z - \cos \phi' \cos \theta' \uvect{a}_x - \sin \phi' \cos \theta' \uvect{a}_y \right)\\
+\end{align*}
+}
+
+%\vskip 30pt
+\item Integrate.\\
+%\vskip 90pt
+\solution{
+\begin{align*}
+\vect{B} &= \frac{\mu_0}{4 \pi}  M_0 \int_0^\pi \int_0^{2\pi}   \sin^2 \theta' \left( \sin\theta' \uvect{a}_z - \cos \phi' \cos \theta' \uvect{a}_x - \sin \phi' \cos \theta' \uvect{a}_y \right) d\phi' d\theta' \\
+&= \frac{\mu_0}{2}  M_0 \int_0^\pi    \sin^3 \theta' \uvect{a}_z d\theta' \\
+&= \frac{2\mu_0}{3} M_0 \uvect{a}_z
+\end{align*}
+}
+
+\end{enumerate}
+\end{enumerate}
+
+\answer{\begin{align*}
+J_m\,=\,0\\
+J_{m,s}=a^{'}_{\phi}\,\,M_o\,\sin\theta^{'}\\
+\vect{B}\,=\,a_z\,\frac{2\mu_o}{3}M_o
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

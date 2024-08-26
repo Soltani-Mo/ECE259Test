@@ -1,0 +1,95 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 6-5: 
+\textbf{Goal:} A current $I$ flows in a $w\times w$ square loop as shown in Fig. a) below. Find the magnetic flux density at the off-center point $P(w/4, w/2)$.
+
+\begin{center}
+\includegraphics[scale = 0.6]{\wpath workbook5.png}
+\end{center}
+\textbf{Steps:} 
+\begin{enumerate}
+\item The total magnetic flux density at point $P(w/4,w/2)$ is the sum of the contributions from each segment of the loop. Firstly, we consider the magnetic flux density at an arbitrary point $Q(b,a)$ due to a line current source of length $w$, as shown in Fig b). What is the source position vector $\vect{R}'$ for this configuration?\\
+\solution{
+\begin{align*}
+\vect{R}' = y' \uvect{a}_y
+\end{align*}
+}
+
+\item Determine the observation vector $\vect{R}$.\\
+\solution{
+\begin{align*}
+\vect{R} = b \uvect{a}_x + a \uvect{a}_y
+\end{align*}
+}
+
+\item Determine the differential length vector ${\operatorname d}\vect{l}'$.\\
+\solution{
+\begin{align*}
+d\vect{l}' = dy' \uvect{a}_y
+\end{align*}
+}
+
+\item Determine the differential magnetic flux density.\\
+\solution{
+\begin{align*}
+\vect{R} - \vect{R}' &= b \uvect{a}_x + a \uvect{a}_y \\
+d\vect{B} &= \frac{\mu_0 I}{4 \pi} \frac{d\vect{l}' \times \left(\vect{R} - \vect{R}' \right)}{ \abs{\vect{R} - \vect{R}'}^3} \\
+&= \frac{\mu_0 I}{4\pi} \frac{dy' \uvect{a}_y \times (b\uvect{a}_x + (a-y')\uvect{a}_y}{\left(b^2 + (a-y')^2 \right)^{3/2}} \\
+&= -\uvect{a}_z \frac{\mu_0 I}{4\pi } \frac{b dy'}{\left( b^2 + (a-y')^2 \right)^{3/2}}
+\end{align*}
+}
+
+\item Integrate.\\
+\solution{
+\begin{align*}
+\vect{B} &= -\uvect{a}_z \frac{\mu_0 I}{4\pi} \int_0^{w} \frac{b}{\left( b^2 + (a-y')^2 \right)^{3/2}} dy'\\
+&= -\uvect{a}_z \frac{\mu_0 I}{4\pi b} \left[ \frac{w-a}{\left((a-w)^2 + b^2 \right)^{1/2}} + \frac{a}{\left(a^2 + b^2\right)^{1/2}} \right]
+\end{align*}
+}
+
+\item Use the result in part 6) to compute magnetic flux density at point $P$ due to:\\
+\solution{
+\begin{itemize}
+\item segment A (as marked in Fig. a):
+%\vskip 24pt
+For $a = 3/4 w$, and $b = w/2$
+\begin{align*}
+\vect{B}_A = -\uvect{a}_z \frac{\mu_0 I}{\pi w} \left[ 0.6396 \right]
+\end{align*}
+\item segment B :
+For $a = w/2$ and $b = w/4$
+\begin{align*}
+\vect{B}_B = -\uvect{a}_z \frac{\mu_0 I}{\pi w} \left[ 1.7889 \right]
+\end{align*}
+%\vskip 24pt
+\item segment C:
+%\vskip 24pt
+For $a = w/4$ and $b=w/2$
+\begin{align*}
+\vect{B}_C = -\uvect{a}_z \frac{\mu_0 I}{\pi w} \left[ 0.6397 \right]
+\end{align*}
+\item segment D:
+%\vskip 24pt
+For $a = w/2$ and $b = 3w/4$
+\begin{align*}
+\vect{B}_D = -\uvect{a}_z \frac{\mu_0 I}{\pi w} \left[ 0.3698 \right]
+\end{align*}
+\end{itemize}\,.
+}
+
+\item What is the total magnetic flux density at point $P(w/4, w/2)$?\\
+\solution{
+\begin{align*}
+\vect{B} &= \vect{B}_A + \vect{B}_B + \vect{B}_C + \vect{B}_D\\
+&= -\uvect{a}_z \frac{\mu_0 I}{\pi w} \left[ 3.44 \right]
+\end{align*}
+}
+\end{enumerate}
+\answer{\begin{align*}
+\vect{B} = -\uvect{a}_z \frac{\mu_0 I}{\pi w} \left[ 3.44 \right]
+\end{align*}}
+
+
+\end{document}
+

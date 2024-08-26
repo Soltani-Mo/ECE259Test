@@ -1,0 +1,95 @@
+\def\showsolutions{true}
+
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\textbf{Goal:} Consider the system of two metallic spheres connected by a wire as shown in the figure below. Assume that $a=5\cm$, $b=1\cm$, and $d = 1\m$, as well as that the total charge of the two spheres is $Q = 600\pC$. Find the potential of the spheres and the electric field intensities $E_a$, $E_b$ near the surfaces of the spheres.
+\begin{center}
+	\includegraphics[scale = 0.55] {\wpath Q8.jpg}
+\end{center}
+\textbf{Steps:} 
+\begin{enumerate}
+
+\item Since the two metallic sphere are connected by a wire, the total charge distributes itself between two spheres such that the potential on each sphere is equal, i.e. $V_a = V_b$. Provide expressions for potentials $V_a$ and $V_b$ assuming uniform surface charge densities $\rho_{sa}$ and $\rho_{sb}$ on the spheres.
+
+\solution{
+\begin{align*}
+V_a &= \frac{Q_a}{4\pi \varepsilon_0 a} \\
+V_b &= \frac{Q_b}{4\pi \varepsilon_0 b} \\
+\end{align*}
+where,
+\begin{align*}
+Q_a &= \rho_{sa} 4 \pi a^2  \\
+Q_b &= \rho_{sb} 4\pi b^2\,.
+\end{align*}}
+
+\item Compute charges $Q_a$ and $Q_b$, and surface charge densities $\rho_{sa}$ and $\rho_{sb}$.
+
+\solution{
+\begin{align*}
+Q = Q_a + Q_b \,.
+\end{align*}
+By equating $V_a$ and $V_b$ in part 1 and using the above relation, we get
+\begin{align*}
+Q_a &= \frac{a}{a+b} Q = 500\pC\,, \\
+Q_b &= \frac{b}{a + b} Q = 100\pC\,.
+\end{align*}}
+
+\item What is the value of potential $V_a$ and $V_b$?
+
+\solution{
+\begin{align*}
+V_a = V_b = 90\,\text{V}\,.
+\end{align*}}
+
+\item Use the electrostatic boundary condition for perfect conductors to find the electric fields $\vect{E}_a$ and $\vect{E}_b$.
+
+\solution{
+\begin{align*}
+E_a &= \frac{\rho_{sa}}{\varepsilon_0} = \frac{Q_a}{4\pi \varepsilon_0 a^2} = 1.8 \,\text{kV/m} \\
+E_b &= \frac{\rho_{sb}}{\varepsilon_0} = \frac{Q_b}{4\pi\varepsilon_0 b^2} = 9\,\text{kV/m}
+\end{align*}}
+\end{enumerate}
+\answer{\begin{align*}
+V_a=V_b=90\,\,V\\
+E_a=1.8\,kV/m,\,\,\,E_b=9\,kV/m
+\end{align*}}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

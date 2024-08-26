@@ -1,0 +1,115 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 6-15: 
+\textbf{Goal:} In certain experiments it is desirable to have a region of constant magnetic flux density. This can be created in an off-center cylindrical cavity that is cut in a very long cylindrical conductor carrying a uniform current density. Refer to the cross section in figure below. \\
+\begin{figure}[h!]
+\centering
+\includegraphics[scale = 0.5]{\wpath workbook6.png}
+\caption{Region with an off-centered cylindrical cavity}
+\label{fig:workbook6}
+\end{figure}
+
+ The uniform axial current density is $\vect{J} = \uvect{a}_z J$. Find the magnitude and direction of $\vect{B}$ in the cylindrical cavity whose axis is displaced from that of the conducting part by a distance $d$.\\
+ \\
+\textbf{Steps:} 
+\begin{enumerate}
+\item This problem can be solved by superposition. Using Ampere's law, determine the magnetic flux density $\vect{B}_1$ that we would have inside the cylinder if the cavity was \emph{not} present.\\
+% \vskip 100pt
+\solution{
+Using a circular Amperean loop with radius $r<b$:
+\begin{align*}
+\oint \vect{B}_1\cdot d\vect{l} &= \mu_0 \int_S \vect{J} \cdot d\vect{S} \\
+2 \pi r B_{1,\phi} &= \mu_0 (\pi r^2) J_z \\
+B_{1,\phi} &= \frac{\mu_0}{2} r J_z  \\
+\vect{B}_{1} &= \uvect{a}_\phi \frac{\mu_0}{2} r J_z 
+\end{align*}
+}
+
+\item Write $\vect{B}_1$ using the unit vectors $\uvect{a}_x$, $\uvect{a}_y$ and $\uvect{a}_z$.\\
+%\vskip 100pt
+\solution{
+\begin{align*}
+\vect{B}_1 &= B_{1,\phi} \uvect{a}_\phi \\
+&= \frac{\mu_0}{2} J_z r \uvect{a}_{\phi} \\
+&= \frac{\mu_0}{2} J_z \left( - y \uvect{a}_x + x\uvect{a}_y \right)
+\end{align*}
+}
+
+\item Using Ampere's law, determine the magnetic flux density $\vect{B}_2$ inside a cylindrical conductor of radius $a$ carrying a uniform current with density $-\vect{J}$. \\
+%\vskip 100pt
+\solution{
+Assume that this conductor is centered at the origin $O'$ of a new coordinate system. The location of $O'$ with respect to the origin $O$ of the original coordinate system is $(d,0,0)$. Primed variables will be used to indicate coordinates with respect to $O'$.
+\begin{align*}
+\oint \vect{B}_2\cdot d\vect{l}' &= -\mu_0 \int_S \vect{J} \cdot d\vect{S}' \\
+B_{2,\phi} &= -\frac{\mu_0}{2} r' J_z  \\
+\vect{B}_{2} &= -\uvect{a}_\phi' \frac{\mu_0}{2} r' J_z 
+\end{align*}
+}
+
+\item Write $\vect{B}_2$ using the unit vectors $\uvect{a}_x$, $\uvect{a}_y$ and $\uvect{a}_z$. \\
+%\vskip 50pt
+\solution{
+We will first write $\vect{B}_2$ using the unit vectors $\uvect{a}_x'$, $\uvect{a}_y'$ and $\uvect{a}_z'$ of the new coordinate system, $O'$. Then we can use the fact that the unit vectors $\uvect{a}_x'$, $\uvect{a}_y'$ and $\uvect{a}_z'$ are equal, respectively, to the original unit vectors $\uvect{a}_x$, $\uvect{a}_y$ and $\uvect{a}_z$, because $O'$ was simply translated from $O$.
+\begin{align*}
+\vect{B}_2 &= B_{2,\phi} \uvect{a}_\phi' \\
+&= \frac{\mu_0}{2} J_z r' \uvect{a}_{\phi} \\
+&= \frac{\mu_0}{2} J_z \left( + y' \uvect{a}_x - x'\uvect{a}_y \right)
+\end{align*}
+}
+
+\item Using the results of parts (2) and part (4), determine the total magnetic flux density $\vect{B}$ inside the cavity.\\
+\solution{
+In order to use superposition, we need to use the same coordinate system. So, we must convert $x'$ and $y'$ to the original coordinate system. Firstly, $y' = y$ because $O'$ is only shifted from $O$ along the $x$ axis. Secondly, notice that $x' = x - d$. Therefore, we can write
+\begin{align*}
+\vect{B}_{2} =  \frac{\mu_0}{2} J_z \left( + y \uvect{a}_x - (x-d)\uvect{a}_y \right)
+\end{align*}
+Finally,
+\begin{align*}
+\vect{B} &= \vect{B}_1 + \vect{B}_{2} \\
+&=\frac{\mu_0}{2} J_z \left( d\uvect{a}_y \right)
+\end{align*}
+}
+
+\end{enumerate}
+\answer{\begin{align*}
+\vect{B}\,=\,a_y\frac{\mu_o}{2}J_z d
+\end{align*}}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

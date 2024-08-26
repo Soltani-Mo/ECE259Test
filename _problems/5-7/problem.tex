@@ -1,0 +1,82 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.4-7] A point charge $Q$ exists at a distance $d$ above a large grounded conducting plane. Determine
+\begin{enumerate}[label=(\alph*)]
+\item the surface charge density $\rho_s$,
+\item the total charge induced on the conducting plane.
+\end{enumerate}
+}
+
+\solution{
+%\begin{center}
+%\includegraphics[scale= 0.6]{\ppath 4-7.png}
+%\end{center}
+\begin{center}
+\includegraphics[scale= 1]{\ppath 4-7_diagram.png}
+\end{center}
+With reference to the diagram above,
+\begin{align*}
+\vect{E}\mid_{y=0} &= -\uvect{a}_y \frac{Q}{4\pi\varepsilon R^2}(2 \sin \theta)\\
+&= -\uvect{a}_y\frac{Qd}{2\pi\varepsilon(d^2+r^2)^{3/2}}.
+\end{align*}
+Now we can find the surface charge density $\rho_s$ and total charge $Q_{\text{tot}}$ on the conducting plate.
+\begin{enumerate}[label=(\alph*)]
+\item \begin{align*}
+\rho_s &= \uvect{a}_y\cdot \varepsilon \vect{E}\mid_{y=0}\\
+\rho_s &= -\frac{Qd}{2\pi(d^2+r^2)^\frac{3}{2}}
+\end{align*}
+\item \begin{align*}
+Q_{\text{tot}} &= \int_0^{\infty}\rho_s 2\pi r dr \\
+&= -Q
+\end{align*}
+\end{enumerate}
+}
+
+\answer{
+\begin{enumerate}[label=(\alph*)]
+\item \begin{align*}
+\rho_s=-\frac{Qd}{2\pi(d^2+r^2)^\frac{3}{2}}
+\end{align*}
+\item $ Q_{\text{tot}} = -Q$
+\end{enumerate}
+}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,85 @@
+\def\showsolutions{true}
+
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+\textbf{Goal:} A finite line charge of length $L$ carrying uniform line charge density $\rho_l$ is coincident with the $x$-axis. In the plane bisecting the line charge ($yz$-plane) determine potential $V$.\\
+\\
+\textbf{Steps:} 
+\begin{enumerate}
+\item Choose an appropriate coordinate system.
+
+\solution{Cartesian}
+
+\item Determine the expressions for the differential length element  $\d\vec{l}'$ and the distance between source and observation point $\abs{\vect{R} - \vect{R}'}$.
+
+\solution{\begin{equation*}
+\abs{\vect{R} - \vect{R}'} = (x'\,^2 + y^2 + z^2)^{1/2}
+\end{equation*}}
+
+\item Evaluate the potential $V$ as a function of $y$ and $z$ using performing a line integration.
+
+\solution{\begin{align*}
+V &= \int_{-L/2}^{L/2} \frac{\rho_l}{4\pi \varepsilon_0 (x'\,^2 + y^2 + z^2)^{1/2}}\,dx' \\[0.25em]
+&= \frac{\rho_l}{2\pi \varepsilon_0} \left[ \ln \left( \sqrt{(L/2)^2 + (z^2 + y^2)} + L/2 \right) - \ln \sqrt{y^2 + z^2} \right]
+\end{align*}}
+
+\item Next, determine the electric field $\vect{E}(y,z)$ in the same plane. Can you use Gauss' law to compute this electric field? Explain.
+
+\solution{No, Gauss' law cannot be used in the case of finite length charge.
+}
+
+\item Based on the  symmetry of the geometry, which components of the electric field are non-zero in the bi-secting plane ? 
+
+\solution{Due to symmetry, the $y$-component and $z$-component of the electric field are non-zero in the bisecting plane. }
+
+\item Use Coulumb's law to compute the electric field. 
+
+\solution{\begin{equation*}
+\vect{E} = \frac{1}{4\pi \varepsilon_0}\int_{-L/2}^{L/2} \frac{\rho_l(-x'\,\uvect{a}_x+y\uvect{a}_y+z\uvect{a}_z)}{(x'\,^2 + y^2 + z^2)^{3/2}}\,dx' = (y\uvect{a}_y+z\uvect{a}_z)\frac{\rho_l}{2\pi \varepsilon_0 (y^2+z^2)}\,\frac{L/2}{\sqrt{ (L/2)^2 + y^2 + z^2}}
+\end{equation*}}
+
+\item Determine the electric field using the expression for potential $V$ in part (3).
+
+\solution{Same as part (6). Use $\vect{E} = -\nabla V$.}
+\end{enumerate}
+\answer{\begin{align*}
+V= \frac{\rho_l}{2\pi \varepsilon_0} \left[ \ln \left( \sqrt{(L/2)^2 + (z^2 + y^2)} + L/2 \right) - \ln \sqrt{y^2 + z^2} \right]
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

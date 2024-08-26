@@ -1,0 +1,74 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{For the semi-circular line charge in the figure below, the electric field at an arbitrary point on the $z$-axis has an $x$ and a $z$ component (confirm). Find the $z$-component of the field from the potential $V(0,0,z)$. Can you find the $x$-component too using $V(0,0,z)$?
+\begin{center}
+\includegraphics[scale = 0.8] {\ppath Q4.jpg}
+\end{center}}
+
+\solution {
+\begin{enumerate}[label=(\alph*)]
+\item Due to symmetry about the $z$-axis, any $\uvect{a}_y$ component contributions to the electric field on one side of the semi-circle will cancel with the equal but opposite in direction $\uvect{a}_y$ components on the other side of the semi-circle. To solve for the field we approach it similar to the case of a ring. However, we just integrate $\phi$ over half the ring instead of the whole way around.
+\begin{align*}
+\vect{E}=\frac{Q^{'}a}{a\varepsilon_0 (\sqrt{z^2+a^2})^3}\Big(-\frac{a}{\pi}\uvect{a}_x +\frac{z}{2}\uvect{a}_z\Big)
+\end{align*}
+\item The potential $V(0,0,z)$ for the semi-circle can be found by integrating the contributions to the potential across small sections of the semi circle
+\begin{align*}
+V&=\frac{1}{4\pi\varepsilon_0}\int_{l}\frac{Q'dl}{R}\\
+V&=\frac{Q'}{4\pi\varepsilon_0\sqrt{a^2+z^2}}\int_{l}dl\\
+V&=\frac{Q'}{4\pi\varepsilon_0\sqrt{a^2+z^2}}\pi a\\
+V&=\frac{Q'a}{4\varepsilon_0\sqrt{z^2+a^2}}.
+\end{align*}
+To solve for the field, we simply make use of the relation between potential and electric field $\vect{E}=-\nabla V$.
+\begin{align*}
+E_z&=-\frac{\textrm{d}}{\textrm{d}z}V\\
+E_z&=-\frac{\textrm{d}}{\textrm{d}z}\frac{Q'a}{4\varepsilon_0\sqrt{z^2+a^2}}\\
+E_z&=\frac{Q^{'}a}{a\varepsilon_0 (\sqrt{z^2+a^2})^3}\frac{z}{2}
+\end{align*}
+\item Unfortunately, we cannot use the potential at $V(0,0,z)$ and the gradient to solve for the electric field in the $\uvect{a}_x$ direction as before (i.e. using $E_x=-\frac{\textrm{d}}{\textrm{d}x} V$). This is because we would also need the expression for the potential off of the $z$-axis, which is not provided. 
+\end{enumerate}}
+
+\answer{\begin{enumerate}[label=(\alph*)]
+\item Due to symmetry about the $z$-axis there will be no $\uvect{a}_y$ component in the electric field intensity.
+\item $E_z=\frac{Q^{'}a}{a\varepsilon_0 (\sqrt{z^2+a^2})^3}\frac{z}{2}$
+\item No 
+\end{enumerate}}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

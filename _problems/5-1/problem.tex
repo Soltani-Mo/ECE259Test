@@ -1,0 +1,99 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.4-1] The upper and lower conducting plates of a large parallel-plate capacitor are separated by a distance $d$ and maintained at potentials $V_0$ and $0$, respectively. A dielectric slab of dielectric constant $6.0$ and uniform thickness $0.8d$ is placed over the lower plate. Assuming negligible fringing effect, determine
+\begin{enumerate}[label=(\alph*)]
+\item the potential and electric field distribution in the dielectric slab
+\item the potential and electric field distribution in the air space between the dielectric slab and the upper plate,
+\item the surface charge densities on the upper and lower plates.
+\item Compare the results in part (b) with those without the dielectric slab.
+\end{enumerate}
+}
+
+\solution{
+%\begin{center}
+%\includegraphics[scale= 0.6]{\ppath 4-1.png}
+%\end{center}
+Use subscripts d and a to denote dielectric and air regions respectively. $\nabla^2 V = 0$ in both regions.
+\begin{align*}
+\begin{split}
+&V_d = c_1 y + c_2\\
+&\vect{E}_d = -\uvect{a}_y c_1 \\
+&\vect{D}_d = -\uvect{a}_y \varepsilon_0\varepsilon_r c_1 
+\end{split}
+\begin{split}
+&V_a = c_3 y + c_4\\
+&\vect{E}_a = -\uvect{a}_y c_3  \\
+&\vect{D}_a = -\uvect{a}_y \varepsilon_0 c_3
+\end{split}
+\end{align*}
+Boundary conditions:
+\begin{itemize}
+\item at $y=0$: $V_d=0$
+\item at $y=d$: $V_a=V_0$
+\item at $y=0.8d$: $V_d=V_a$, $\vect{D}_d=\vect{D}_a$ 
+\end{itemize}
+Solving these we arrive at
+\begin{align*}
+c_1 &= \frac{V_0}{(0.8+0.2\varepsilon_r)d}\\
+c_2 &= 0\\
+c_3 &= \frac{\varepsilon_r V_0}{(0.8+0.2\varepsilon_r)d}\\
+c_4 &= \frac{(1-\varepsilon_r)V_0}{1+0.25\varepsilon_r}
+\end{align*}
+\begin{enumerate}[label=(\alph*)]
+\item $V_d = \frac{5yV_0}{(4+\varepsilon_r)d}$, $\vect{E}_d = -\uvect{a}_y\frac{5V_0}{(4+\varepsilon_r)d}$.
+\item $V_a = \frac{5\varepsilon_r y - 4(\varepsilon_r -1)d}{(4+\varepsilon_r)d}V_0$, $\vect{E}_a = -\uvect{a}_y\frac{5\varepsilon_rV_0}{(4+\varepsilon_r)d}$.
+\item $(\rho_s)_{y=d}=-(D_a)_{y=d}=\frac{5\varepsilon_0\varepsilon_rV_0}{(4+\varepsilon_r)d}$.
+$(\rho_s)_{y=0}=-(D_d)_{y=0}= -\frac{5 \varepsilon_0 \varepsilon_r V_0}{(4+\varepsilon_r)d}$.
+\end{enumerate}
+}
+
+\answer{
+%\begin{center}
+%\includegraphics[clip,trim={0cm 0cm 0cm 8.5cm},scale= 0.6]{\ppath 4-1.png}
+%\end{center}
+
+\begin{enumerate}[label=(\alph*)]
+\item $V_d = \frac{5yV_0}{(4+\varepsilon_r)d}$, $\vect{E}_d = -\uvect{a}_y\frac{5V_0}{(4+\varepsilon_r)d}$.
+\item $V_a = \frac{5\varepsilon_r y - 4(\varepsilon_r -1)d}{(4+\varepsilon_r)d}V_0$, $\vect{E}_a = -\uvect{a}_y\frac{5\varepsilon_rV_0}{(4+\varepsilon_r)d}$.
+\item $(\rho_s)_{y=d}=-(D_a)_{y=d}=\frac{5\varepsilon_0\varepsilon_rV_0}{(4+\varepsilon_r)d}$.
+$(\rho_s)_{y=0}=-(D_d)_{y=0}= -\frac{5 \varepsilon_0 \varepsilon_r V_0}{(4+\varepsilon_r)d}$.
+\end{enumerate}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

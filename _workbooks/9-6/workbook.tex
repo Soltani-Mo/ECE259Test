@@ -1,0 +1,95 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 6-47:
+\textbf{Goal:} A d-c current $I = 10\,A $ flows in a triangular loop in the xy-plane as in the figure below. Assuming a uniform magnetic flux density $\vect{B} = \uvect{a}_y 0.5\,T$ in the region, find the forces and torque on the loop. All dimensions are in {cm}.
+\begin{center}
+\includegraphics[scale = 0.6]{\wpath Q6-47.png}
+\end{center}
+\textbf{Steps:} 
+\begin{enumerate}
+\item For \underline{Segment A} in the figure above, what is the differential length vector $d\bs{l}_A$?
+%\vskip 20pt
+
+\solution{
+\begin{align*}
+d\bs{l}_A &= \uvect{a}_x  dx \quad \quad -0.1\;\text{(m)} <x<-0.1\;\text{(m)}
+\end{align*}}
+
+\item Determine the force $\vect{F}_A$ exerted on Segment A by $\vect{B}$.
+%\vskip 30pt
+
+\solution{
+\begin{align*}
+d\vect{F}_A &= I d\bs{l}_A \times \vect{B} \\
+\vect{F}_A &= I \int_{-0.1}^{0.1} \uvect{a}_x \times 0.5 \uvect{a}_y dx \\
+\vect{F}_A &= 1 \uvect{a}_z\;\text{(N)}
+\end{align*}}
+
+\item For \underline{Segment B}, what is the differential length vector $d\bs{l}_B$?
+%\vskip 20pt
+
+\solution{
+\begin{align*}
+d\bs{l}_B &= \frac{ -\uvect{a}_x + 2\uvect{a}_y }{\sqrt{5}} dl \quad \quad  0 < l < \sqrt{0.05}
+\end{align*}}
+
+\item Determine the force $\vect{F}_B$ exerted on Segment B by  $\vect{B}$?
+%\vskip 30pt
+
+\solution{
+\begin{align*}
+\vect{F}_B &= I  \frac{-\uvect{a}_x + 2 \uvect{a}_y}{\sqrt{5}} \times 0.5 \uvect{a}_y \int_0^{\sqrt{0.05}} dl \\
+&= -0.5 \uvect{a}_z
+\end{align*}}
+
+\item For \underline{Segment C}, what is the differential length vector $d\bs{l}_C$?
+%\vskip 20pt
+
+\solution{
+\begin{align*}
+d\bs{l}_C = \frac{-\uvect{a}_x - 2\uvect{a}_y}{\sqrt{5}} dl \quad \quad 0< l < \sqrt{0.05}
+\end{align*}}
+
+\item Determine the force $\vect{F}_C$ exerted on Segment C by  $\vect{B}$?
+%\vskip 30pt
+
+\solution{
+\begin{align*}
+\vect{F}_C &= I  \frac{-\uvect{a}_x - 2 \uvect{a}_y}{\sqrt{5}} \times 0.5 \uvect{a}_y \int_0^{\sqrt{0.05}} dl \\
+&= -0.5 \uvect{a}_z
+\end{align*}}
+
+\item What is total force on the triangular loop?
+%\vskip 20pt
+
+\solution{
+\begin{align*}
+\vect{F} = \vect{F}_A + \vect{F}_B + \vect{F}_C\,.
+\end{align*}}
+\item Determine the torque $\vect{T}$ on the loop due to $\vect{B}$.
+%\vskip 40pt
+
+\solution{
+\begin{align*}
+\vect{T} &= \vect{m} \times \vect{B} \\
+&= I \dfrac{1}{2}(0.2)(0.2) \uvect{a}_z \times 0.5 \uvect{a}_y \\
+&= -0.1 \uvect{a}_x\;\text{(Nm)}\,.
+\end{align*}}
+\end{enumerate}
+\answer{
+\begin{align*}
+\vect{F} = 0\\
+\vect{T} &= -0.1 \uvect{a}_x\;\text{(Nm)}\,.
+\end{align*}
+}
+\end{document}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+\def\showsolutions{true}
+
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+\textbf{Goal:} Determine the electric potential at the center of a non-uniformly charged spherical surface of radius $a$, with $\rho_s(\theta) = \rho_{s,o} \sin(2\theta)$, with $\rho_{s,o}$ a constant and the angle $0 \le \theta \le \pi$.\\
+\\
+\textbf{Steps:}	
+	\begin{enumerate}
+	\item Choose the coordinate system.
+	
+	\solution{Spherical coordinate system.}{\vspace{50pt}}
+	
+	\item Find the differential surface element in the coordinate system chosen above. Then find the differential charge $\d{}Q$ on the spherical surface.
+	
+	\solution{Differential surface element is
+	\begin{equation*}
+	ds' = (R')^2 \sin \theta'd\theta'd\phi'
+	\end{equation*}
+	Hence, differential charge $dQ$ is (evaluated on the sphere surface)
+	\begin{equation*}
+	dQ = \rho_{s,o}\,a^2 \sin \theta' \sin(2\theta')\,d\theta'd\phi'
+	\end{equation*}}{\vspace{100pt}\newpage}
+	
+	\item Find a expression for $|\vec{R} - \vec{R'}|$.
+	
+	\solution{Observation point $R$ is at the origin. $\vec{R'} = R' \vec{a}_{R'} = \alpha \vec{a}_{R}$. Then
+	\begin{equation*}
+	|\vec{R} - \vec{R'}| = |a|\,\vec{a}_{R'} = a
+	\end{equation*}}{\vspace{100pt}}
+	
+	\item Integrate.
+	
+	\solution{\begin{equation*}
+	dV = \frac{\rho_{s,o}\,a^2 \sin \theta' \sin(2\theta')\,d\theta'd\phi'}{4\pi\varepsilon_o \alpha} = \frac{\rho_{s,o} a}{4\pi\varepsilon_o} \sin\theta' \sin2\theta' d \theta' d\phi'
+	\end{equation*}
+	Then
+	\begin{equation*}
+	V = \frac{\rho_{s,o}\,a}{4\pi\varepsilon_o} \int_0^{2\pi} d\phi' \int_0^\pi d\theta' \sin\theta' \sin2\theta' = 0
+	\end{equation*}}{\vspace{100pt}}
+	\end{enumerate}
+	\answer{\begin{align*}
+V = \frac{\rho_{s,o}\,a}{4\pi\varepsilon_o} \int_0^{2\pi} d\phi' \int_0^\pi d\theta' \sin\theta' \sin2\theta' = 0
+	\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,73 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+% Same as Workbook 4-2
+\problem{[Cheng P.4-6] Assume that the space between the inner and outer conductors of a long coaxial cylindrical structure is filled with an electron cloud having a volume density of charge $\rho=A/r$ for $a<r<b$, where $a$ and $b$ are, the radii of the inner and outer conductors, respectively. The inner conductor is maintained at a potential $V_0$, and the outer conductor is grounded. Determine the potential distribution in the region $a<r<b$ by solving Poisson's equation.}
+
+\solution{
+%\begin{center}
+%\includegraphics[scale= 0.9]{\ppath cheng4-6.pdf}
+%\end{center}
+Poisson's equation
+\begin{align*}
+\nabla^2V=\frac{A}{\varepsilon r} \rightarrow
+\frac{1}{r} \frac{\partial}{\partial r}\left( r\frac{\partial V}{\partial r}\right) = \frac{A}{\varepsilon r}.
+\end{align*}
+Integrating yields the solution
+\begin{align*}
+V = -\frac{A}{\varepsilon}r+c_1\ln r+c_2.
+\end{align*}
+Using the boundary conditions we can solve for the constants.
+\begin{align*}
+r&=a: \quad\quad V_0 = -\frac{A}{\varepsilon}a+c_1\ln a+c_2\\
+r&=b: \quad\quad 0 = -\frac{A}{\varepsilon}b+c_1\ln b+c_2.
+\end{align*}
+Solving these yields
+\begin{align*}
+&c_1 = \frac{\frac{A}{\varepsilon}(b-a)-V_{0}}{\ln (\frac{b}{a})},\\
+&c_2 = \frac{\frac{A}{\varepsilon}(a\ln b-b\ln a)+V_{0}\ln b}{\ln (\frac{b}{a})}.
+\end{align*}}
+
+\answer{
+\begin{align*}
+&V_{0} = -\frac{A}{\varepsilon}r+c_1\ln r+c_2,\\
+&c_1 = \frac{\frac{A}{\varepsilon}(b-a)-V_{0}}{\ln (\frac{b}{a})},\\
+&c_2 = \frac{\frac{A}{\varepsilon}(a\ln b-b\ln a)+V_{0}\ln b}{\ln (\frac{b}{a})}.
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

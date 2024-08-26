@@ -1,0 +1,99 @@
+\def\showsolutions{true}
+\def\showworkbooks{true}
+\def\titlestring{Homework Set 1}
+%\input{header.tex}
+
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+\textbf{Goal:} Determine the electric field intensity at the center of a small spherical cavity cut out of a large block of dielectric in which a polarization $\vect{P} = P_0 \uvect{a}_z$ exists. \\
+\\
+\textbf{Steps:} 
+\begin{enumerate}
+\item Determine an equivalent surface charge density $\rho_s$ based on the polarization vector. 
+
+\solution{
+The surface charge density is 
+\begin{align*}
+\rho_{s} = \uvect{a}_n \cdot \vect{P} = P_0 \uvect{a}_z \cdot (-\uvect{a}_R) = -P_0 \cos\theta \,.
+\end{align*} Note that the normal vector points to the exterior of the dielectric.
+Now we have a standard problem of a surface charge distribution creating an electric field, which we solve with the steps introduced previously.}
+
+\item Choose an appropriate coordinate system to compute the electric field at the center of the sphere using Coulomb's law.
+
+\solution{ Spherical.}
+
+\item What is the distance vector $\abs{\vect{R} - \vect{R}'}$?
+
+\solution{
+\begin{align*}
+\vect{R} &= \vect{0} \\
+\vect{R}' &= R\,\uvect{a}_{R'} \\
+&=  R \left( \cos \phi' \sin\theta' \uvect{a}_x + \sin\phi' \sin \theta' \uvect{a}_y + \cos \theta' \uvect{a}_z \right)\,. \\
+\vect{R} - \vect{R}' &= -R\,\vect{a}_{R'} \\
+&= -R \left( \cos\phi' \sin\theta' \uvect{a}_x + \sin \phi' \sin \theta' \uvect{a}_y + \cos \theta' \uvect{a}_z \right) \\
+\abs{\vect{R} - \vect{R}'} &= R\,.
+\end{align*}}
+
+\item What is differential surface element $dS'$?
+
+\solution{
+\begin{equation*}
+dS'= R^2 \sin \theta' d\theta' d\phi'
+\end{equation*}}
+
+\item Integrate to find the electric field.
+
+\solution{
+\begin{align*}
+dQ' &= (-P_0 \cos \theta' ) dS' = (-P\cos \theta' ) R^2 \sin \theta' d\theta' d\phi' \\[0.25em]
+d\vect{E} &= \frac{-P \cos \theta'}{4\pi \varepsilon_0 R^3}R^2 \sin \theta' d\theta' d\phi'(-R)\left( \cos \phi' \sin  \theta' \uvect{a}_x + \sin\phi' \sin \theta' \uvect{a}_y + \cos \theta' \uvect{a}_z \right)  \\[0.25em]
+&= \frac{P_0 \cos \theta' \sin \theta' d\theta' d\phi'}{4 \pi \varepsilon_0} \left( \cos \phi' \sin\theta' \uvect{a}_x + \sin\phi' \sin \theta' \uvect{a}_y + \cos \theta' \uvect{a}_z \right)
+\end{align*}
+Note that all terms except the $z$-component are integrated to zero with respect to $\phi'$. The $z$-component is:
+\begin{align*}
+\vect{E} &= \uvect{a}_z \int_{0}^{2\pi} \int_{0}^{\pi} \frac{P \left(\cos \theta' \right)^2 \sin \theta' d\theta' d\phi'}{4\pi \varepsilon_0} \\
+&= \uvect{a}_z \frac{P}{3\varepsilon_0} \,.
+\end{align*}}
+\answer{\begin{align*}
+\vect{E}=a_z\,\,\frac{P}{3\varepsilon_o}
+\end{align*}}
+\end{enumerate}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

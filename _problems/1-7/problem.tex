@@ -1,0 +1,75 @@
+
+\documentclass[../../header.tex]{subfiles}
+\begin{document}
+\problem{
+Consider the electric field $\vec{E} = \vec{a}_x E_x(x)$ with 
+\[
+E_x(x) = \left\{ 
+\begin{tabular}{ll}
+$\dfrac{\rho_0 x}{\epsilon_0} \left( 1 - \dfrac{x^2}{3 a^2} \right),$  & $|x| < a$ \\[.5cm]
+$\dfrac{2 \rho_0 a}{3 \epsilon_0},$ & $x > a$ \\[.5cm]
+$- \dfrac{2 \rho_0 a}{3 \epsilon_0},$ & $x < -  a $ \\[.2cm]
+\end{tabular}
+\right.
+\]
+Find the corresponding charge distribution in free space.}
+
+\solution{
+	\begin{align*}
+		\rho_v&=\nabla\cdot D\\
+		\rho_v&=\epsilon_0\frac{dE_x}{dx}\\
+		\rho_v&= 
+		\begin{cases}
+			\rho_0 \left( 1 - \frac{x^2}{a^2}\right)\,, & \abs{x} < a \\
+			0\,, & x> a \\
+			0\,, & x< -a
+		\end{cases}
+	\end{align*}
+}
+\answer{
+\begin{align*}
+\rho_v&=
+\begin{cases}
+			\rho_0 \left( 1 - \frac{x^2}{a^2}\right)\,, & \abs{x} < a \\
+			0\,, & x> a \\
+			0\,, & x< -a
+		\end{cases}
+	\end{align*}
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

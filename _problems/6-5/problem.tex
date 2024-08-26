@@ -1,0 +1,62 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{Determine the magnetic flux density at a point on the axis of a solenoid with radius $b$ and length $L$, and with a current $I$ in its $N$ turns of closely wound coil. Show that the result reduces to the following equation as $L\rightarrow\infty$.
+\begin{align*}
+B=\mu_0\frac{N}{L}I
+\end{align*}}
+
+\solution{The differential magnetic field $dB$ created by a differential length $dz'$ at a point $z$ along the axis of the solenoid is given by
+ \begin{align*}
+ dB=\frac{\mu_0Ib^2}{2[(z'-z)^2+b^2]^{3/2}}\frac{N}{L}dz'
+ \end{align*}
+ This can be integrated along the length of the solenoid to give
+ \begin{align*}
+ B&=\frac{\mu_0NIb^2}{2L}\int_0^L\frac{dz'}{[(z'-z)^2+b^2]^{3/2}}\\
+ &=\frac{\mu_0NI}{2L}\Bigg[\frac{L-z}{\sqrt{(L-z)^2+b^2}}+\frac{z}{\sqrt{z^2+b^2}}\Bigg]
+ \end{align*}
+In the limit as $L\rightarrow\infty$, the magnetic field in the centre of the solenoid $(z=L/2)$ will be
+\begin{align*}
+B&=\frac{\mu_0NI}{2L}\Bigg[\frac{L-L/2}{\sqrt{(L-L/2)^2+b^2}}+\frac{L/2}{\sqrt{(L/2)^2+b^2}}\Bigg]\\
+&=\mu_0\frac{N}{L}I
+\end{align*}
+Note that because the solenoid is infinitely long, every point can be described as being in the centre.}
+\answer{Proof problem}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

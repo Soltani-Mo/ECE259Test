@@ -1,0 +1,83 @@
+%\def\showsolutions{true}
+%\def\showworkbooks{true}
+%\def\titlestring{Homework Set 1}
+%\input{header.tex}
+
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+\textbf{Goal:} Prove that the electric potential at an arbitrary point on the $z$-axis produced by the semi-circular line charge of the figure in problem 2-3 is
+\begin{equation*}
+V = \frac{\rho_l a}{4\varepsilon_o \sqrt{z^2 + a^2}},
+\end{equation*}
+where $\rho_l$ is the line charge density in C/m.\\
+\\
+\textbf{Steps:}
+	\begin{enumerate}
+	\item Choose a coordinate system.
+	
+	\solution{Cylindrical coordinate system.}{\vspace{50pt}}
+	
+	\item Find the expression of differential arc length. Then find the differential charge $\d{}Q$.
+	
+	\solution{Differential arc length is
+	\begin{equation*}
+	dl = a\,d\phi'
+	\end{equation*}
+	Hence
+	\begin{equation*}
+	dQ = \rho_l\,a\,d\phi'
+	\end{equation*}}{\vspace{100pt}\newpage}
+
+  \item Find the expression for $|\vec{R} - \vec{R'}|$.
+	
+	\solution{\begin{eqnarray*}
+	\vec{r} &=& z \vec{a}_z\\
+	\vec{r'} &=& a\cos\phi' \vec{a}_x + a\sin\phi' \vec{a}_y\\
+	|\vec{r} - \vec{r'}| &=& \sqrt{z^2 + a^2}
+	\end{eqnarray*}}{\vspace{100pt}}
+	\item Integrate.
+	
+	\solution{	A direct integration yields
+	\begin{equation*}
+	V = \frac{1}{4\pi\varepsilon_o}\int_0^{\pi/2}\frac{\rho_l\,a\,}{\sqrt{z^2 + a^2}}d\phi'+\frac{1}{4\pi\varepsilon_o}\int_{3\pi/2}^{2\pi}\frac{\rho_l\,a\,}{\sqrt{z^2 + a^2}}d\phi'=\frac{\rho_l\,a}{4\varepsilon_o \sqrt{z^2 + a^2}}
+	\end{equation*}}{\vspace{200pt}}
+	\end{enumerate}
+\answer{}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,60 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{A cylindrical bar magnet of radius $b$ and length $L$ has a uniform magnetization $\vec{M} = \vec{a}_z M_o$ along its axis. Determine the magnetic flux density at an arbitrary distant point.}
+
+\solution{
+A cylindrical bar magnet having a uniform magnetization $\vec{M} = \vec{a}_zM_0$ is equivalent to a magnetic volume current density
+\begin{align*}
+	\vec{J}_{\mathrm{m}} = \nabla\times\vec{M} = 0
+\end{align*}
+and a magnetic surface current density
+\begin{align*}
+	\vec{J}_{\mathrm{ms}} &= \vec{M}\times\vec{a}_n\\
+	 &= (\vec{a}_zM_0)\times\vec{a}_r\\
+	 &= \vec{a}_\phi M_0
+\end{align*}
+on the cylinder wall. At a distant point, the magnetic flux density $\vec{B}$ due to $\vec{J}_{\mathrm{ms}}$ flowing on a cylindrical wall of length $L$ and radius $b$ is the same as that due to a circular loop of radius $b$ carrying a current $I = M_0L$. It is given by Eq. 6-44, which is the same as Eq. 6-73 obtained in Example 6-9 where the total dipole moment of the cylindrical magnet is $M_T = I\pi b^2 = M_0L\pi b^2$.\\
+}
+\answer{\begin{align*}
+\vect{B}=\frac{\mu_o M_T}{4\pi R^3}(a_R \cos\theta+ a_{\theta}\sin\theta),\,\, \text{where}\\
+M_T=M_o L\pi b^2
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

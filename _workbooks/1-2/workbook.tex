@@ -1,0 +1,111 @@
+
+\documentclass[../../header.tex]{subfiles}
+
+%
+
+\begin{document}
+\textbf{Goal:} Show that for large $z$, the electric field created on the $z$-axis (observation point $(0,0,z)$) by a semi-circular line charge with density $\rho_l$ at $z=0$, $r=a$ and $0 \leq \phi <\pi$, is equivalent to the field of a point charge with the same amount of charge, located at the origin.
+\\
+\\
+\textbf{Steps:}
+	\begin{enumerate}
+		\item Choose a coordinate system\\
+		\solution{
+			The charge distribution can be easily described in terms of cylindrical coordinates. In particular, the semi-circle  is  expressed as:
+			\begin{equation*}
+				r = a, \quad 0 \le \phi \le \pi, \quad z = 0.
+			\end{equation*}
+			(Compare this with the Cartesian system; how would it be expressed in Cartesian coordinate?). Hence, we choose cylindrical system.
+		}
+		
+		\item Find $dQ'$.\\
+		\solution{
+			Here $dQ' = \rho_l\,dl'$, where $dl' = a\,d\phi'$, a differentially small arc-length on the semi-circle. Note the use of primed coordinate for the source points.
+		}
+		
+		\item Find the vectors $\vec{R}$, $\vec{R'}$, $\vec{R}-\vec{R'}$, and $|\vec{R}-\vec{R'}|$.\\
+		\solution{
+			\begin{itemize}
+				\item $\vec{R}$ is the position vector of the observation point: $\vec{R} = z\vec{a}_z$.
+				\item $\vec{R'}$ is the position of $dQ'$, $\vec{R'} = a \vec{a}_r$. Whenever this is expressed in terms of non-cartesian unit vectors (like here), express all these vectors in terms of the Cartesian unit vectors. You will see why in a moment. Here:
+				\begin{equation*}
+					\vec{R'} = a \vec{a}_{r'} = a \left( \cos \phi' \vec{a}_x + \sin \phi' \vec{a}_y \right)
+				\end{equation*}
+				Note how this vector depends on $\phi'$ (i.e. it is different at different points at the semi-circle).
+				\item $\vec{R} - \vec{R'} = z \vec{a}_z - a \cos \phi' \vec{a}_x - a \sin \phi' \vec{a}_y$
+				\item $|\vec{R} -\vec{R'}| = \sqrt{z^2 + a^2}$
+				(the distance from any point on the semi-circle to $(0,0,z)$ is the same).
+			\end{itemize}
+		}
+		
+		\item Find the electric field due to the semi-circular line charge.\\
+		\solution{
+			For the semi-circular charge distribution, we apply the superposition formula:
+			\begin{align*}
+				\vec{E} &= \int_\text{semi-circle} \frac{dQ'}{4\pi |\vec{R} - \vec{R'}|^3} \left( \vec{R} - \vec{R'} \right)\\
+				\vec{E} &= \int_0^\pi \frac{\rho_l a\,d\phi'}{4\pi \varepsilon_o (z^2 + a^2)^{3/2}} 
+				(z \vec{a}_z - a \cos \phi' \vec{a}_x - a \sin \phi' \vec{a}_y )\\
+				&= \frac{\rho_l a}{4\pi \varepsilon_o (z^2 + a^2)^{3/2} }\left(
+				z\vec{a_z} \int_0^\pi d\phi' - a\vec{a}_x \int_0^\pi\cos\phi' d\phi' - a \vec{a}_y \int_0^\pi \sin \phi' d\phi'
+				\right)\\
+				&= \frac{\rho_l a}{4\pi \varepsilon_o (z^2 + a^2)^{3/2} } \left( \pi z \vec{a}_z - 2a \vec{a}_y \right)
+			\end{align*}
+			
+			Note how the introduction of the Cartesian unit vectors instead of the $r'$-unit vector clarified the variables of the integration. Had we not done that, the dependence of $\vec{a}_{r'}$ on $\phi'$ would have remained implicit. Many times people tend to forget this dependence and derive totally different results.
+		}
+		
+		\item Find the electric field in the limit that $z\gg a$.\\
+		\solution{
+			For $|z| \gg a$, the first term is much larger than the second, and also, $z^2 + a^2 \approx z^2$. Hence,
+			\begin{equation*}
+				\vec{E} = \frac{\rho_l\,a}{4\pi \varepsilon_o (z^2)^{3/2} } \pi z \vec{a}_z = \frac{\rho_l a \pi}{4\pi \varepsilon_o z^2} \vec{a}_z
+			\end{equation*}
+		}
+		
+		\item Compare this electric field to that of a point charge.\\
+		\solution{
+			The total charge on the line is: $Q = \int_0^\pi a\rho_ld\phi=\rho_l \pi a$. If that were considered as a point charge at the origin, it would produce at $(0,0,z)$ an electric field intensity:
+			\begin{equation*}
+				\vec{E} = \frac{\rho_l \pi a}{4\pi \varepsilon_o z^2} \vec{a}_z
+			\end{equation*}
+			which is the same equation we found for the semi-circular line charge for large $z$.\\
+		}	
+	\end{enumerate}
+	\answer{}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

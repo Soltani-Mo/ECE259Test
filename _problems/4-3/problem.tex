@@ -1,0 +1,88 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P3.40] Calculate the amount of electrostatic energy of a uniform sphere of charge with radius $b$ and volume charge density $\rho$ stored in the following regions:
+\begin{enumerate}[label=(\alph*)]
+\item inside the sphere,
+\item outside the sphere.
+\end{enumerate}
+Check your results with those of Example 3-22.}
+
+\solution{
+\begin{align*}
+\vect{D} &=
+\begin{cases}
+ \uvect{a}_R \frac{R}{3} \rho & R<b \\
+\uvect{a}_R \frac{b^3 \rho}{3 R^2} & R> b
+\end{cases}\\[0.5em]
+\vect{E} &= \frac{D}{\varepsilon_0} 
+\end{align*}
+\begin{enumerate}
+\item[a)] ~\\[-2em]
+\begin{align*}
+W_i = \frac{1}{2} \int_V \vect{D}\cdot \vect{E}\,dV = \frac{1}{2} \int_0^b \frac{1}{\varepsilon_0} \left(\frac{R}{3} \rho \right)^2 4\pi R^2\,dR = \frac{2\pi b^5 \rho^2}{45 \varepsilon_0}
+\end{align*}
+\item[b)] ~\\[-2em]
+\begin{align*}
+W_0 = \frac{1}{2} \int_b^\infty \frac{1}{\varepsilon_0} \left(\frac{b^3 \rho}{3R^2} \right)^2 4\pi R^2\,dR = \frac{2\pi b^5 \rho^2}{9 \varepsilon_0}
+\end{align*}
+\end{enumerate}
+Total
+\begin{align*}
+W = W_i + W_0 = \frac{4\pi b^5 \rho^2}{15 \varepsilon_0}
+\end{align*}
+}
+\answer{
+\begin{enumerate}[label=(\alph*)]
+\item ~\\[-2em]
+\begin{align*}
+W_i = \frac{2\pi b^5 \rho^2}{45 \varepsilon_0}
+\end{align*}
+\item ~\\[-2em]
+\begin{align*}
+W_0 = \frac{2\pi b^5 \rho^2}{9 \varepsilon_0}
+\end{align*}
+\end{enumerate}
+Total
+\begin{align*}
+W = W_i + W_0 = \frac{4\pi b^5 \rho^2}{15 \varepsilon_0}
+\end{align*}
+}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+\textbf{Goal:}  In a certain region, the	electric field is given by:
+\begin{equation*}
+	\vec{E} = 4 x y \vec{a}_x + 2 x^2 \vec{a}_y + \vec{a}_z
+\end{equation*}
+Find the total charge enclosed in a cube $0 \leq x \leq 1$, $0 \leq y \leq 1$, $ 0 \leq z \leq 1$.
+\\
+\\
+\textbf{Steps:}
+	\begin{enumerate}
+		\item Calculate the volume charge density.\\
+		\solution{
+			The volume charge density can be found using the differential form of Gauss' Law
+			\begin{equation*}
+				\rho_v =\varepsilon_0 \nabla \cdot \vect{E} = 4\varepsilon_0 y
+			\end{equation*}
+		}
+		
+		\item Integrate the charge density to find the total charge enclosed in the cube\\
+		\solution{
+			\begin{align*}
+				Q &= \int_0^1\int_0^1\int_0^1\rho_vdxdydz\\
+				&= 4\varepsilon_0\int_0^1ydy\\
+				&=2\varepsilon_0
+			\end{align*}
+		}
+		
+		\item Confirm the validity of Gauss’ law in integral form by evaluating the net outward electric flux through the cube, using the cube as the volume where Gauss’ law is applied.\\
+		\solution{
+			The flux through the cube is
+			\begin{align*}
+				\oint_S D \cdot dS=&\varepsilon_0\int_0^1\int_0^1 (E(1,y,z)-E(0,y,z))\cdot\vec{a}_xdydz\\
+				&+\varepsilon_0\int_0^1\int_0^1 (E(x,1,z)-E(x,0,z))\cdot\vec{a}_ydxdz\\
+				&+\varepsilon_0\int_0^1\int_0^1 (E(x,y,1)-E(x,y,0))\cdot\vec{a}_zdxdy\\
+				=&\varepsilon_0\int_0^1\int_0^1 4ydydz\\
+				=&2\varepsilon_0
+			\end{align*}
+		}
+	\end{enumerate}
+	\answer{\begin{align*}
+	Q=2\varepsilon_o
+	\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

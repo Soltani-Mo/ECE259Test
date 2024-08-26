@@ -1,0 +1,80 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{An infinitely long straight conductor with a circular cross section of radius $b$ carries a steady current $I$. Determine the magnetic flux density inside and outside the conductor.}
+
+\solution{First we note that this is a problem with cylindrical symmetry and that Ampère's circuital law can be used to our advantage. If we align the conductor along the $z$-axis, the magnetic flux density $\vect{B}$ will by $\phi$-directed and will be constant along any circular path around the $z$-axis. Figure 6-2(a) shows a cross section of the conductor and the two circular paths of integration, $C_1$, and $C_2$, inside and outside, respectively, the current-carrying conductor. Note again that the directions of $C_1$ and $C_2$ and the direction of $I$ follow the right hand rule. (When the fingers of the right hand follow the directions of $C_1$ and $C_2$, the thumb of the right hand points to the direction of $I$.)
+\begin{enumerate}[label=(\alph*)]
+\item \textit{Inside the conductor:}
+\begin{align*}
+\vect{B}_1 &= \uvect{a}_\phi B_{\phi 1}\\
+d\ell &= \uvect{a}_\phi r_1 d\phi\\
+\oint_{C_1} \vect{B}_1\cdot d\ell &= \int_0^{2\pi} B_{\phi 1}r_1d\phi=2\pi r_1 B_{\phi 1}.
+\end{align*}
+The current through the area enclosed by $C_1$ is 
+\begin{align*}
+I_1 = \frac{\pi r_1^2}{\pi b^2}I = \left( \frac{r_1}{b} \right)^2I.
+\end{align*}
+Therefore, from Ampère's circuital law,
+\begin{align}
+\vect{B}_1 &= \uvect{a}_\phi B_{\phi 1}=\uvect{a}_\phi \frac{\mu_0 r_1 I}{2\pi b^2}, \; r_1\leq b.\label{eqB_1}
+\end{align}
+\item \textit{Outside the conductor:}
+\begin{align*}
+\vect{B}_2 &= \uvect{a}_\phi B_{\phi 2}\\
+d\ell &= \uvect{a}_\phi r_2 d\phi\\
+\oint_{C_2} \vect{B}_2\cdot d\ell &= \int_0^{2\pi} B_{\phi 2}r_2d\phi=2\pi r_2 B_{\phi 2}.
+\end{align*}
+Path $C_2$ outside the conductor encloses the total current $I$. Hence
+\begin{align}
+\vect{B}_2 = \uvect{a}_\phi B_{\phi 2} = \uvect{a}_\phi \frac{\mu_0 I}{2\pi r_2}, \quad r_2 \geq b.\label{eqB_2}
+\end{align}
+\end{enumerate}
+Examination of \eqref{eqB_1} and \eqref{eqB_2} reveals that the magnitude of $\vect{B}$ increases linearly with $r_1$ from 0 until $r_1=b$, after which it decreases inversely with $r_2$. The variation of $B_\phi$ versus $r$ is sketched in Fig. 6-2(b). 
+\begin{center}
+\includegraphics[width=\textwidth]{\ppath chengEx6-1_diagram.png}
+\end{center}
+}
+
+\answer{\begin{align*}
+\text{For}\,r \leq b:\,\,B_1=a_{\phi}\frac{\mu_o r I}{2\pi b^2}\\
+\text{For}\,r \geq b:\,\,B_1=a_{\phi}\frac{\mu_o  I}{2\pi r}
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

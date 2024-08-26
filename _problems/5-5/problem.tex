@@ -1,0 +1,98 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+% Same as Workbook 5-1
+\problem{[Cheng P.4-5] Assume a point charge $Q$ above an infinite conducting plane at $y=0$.
+\begin{enumerate}[label=(\alph*)]
+\item Prove that $V(x,y,z)$ in Eq. (4-37) satisfies Laplace's equation if the conducting plane is maintained at zero potential.
+\item What should the expression for $V(x,y,z)$ be if the conducting plane has a nonzero potential $V_0$?
+\item What is the electrostatic force of attraction between the charge $Q$ and the conducting plane?
+\end{enumerate}
+}
+
+\solution{\begin{center}
+%\includegraphics[scale= 0.6]{\ppath .png}
+\begin{enumerate}[label=(\alph*)]
+\item 
+Eq. (4-37) gives the potential for a point charge above a ground plane. To find this, we just take the potential for a point charge and its image from the ground plane. 
+\begin{align*}
+V(x,y,z) &= \frac{Q}{4\pi\varepsilon_0}\left( \frac{1}{R_+}-\frac{1}{R_-}\right)\\
+R_+ &= \sqrt{x^2+(y-d)^2+z^2}\\
+R_- &= \sqrt{x^2+(y+d)^2+z^2}
+\end{align*}
+Next we would like to show that this obeys Laplace's equation $\nabla^2 V=0$. For simplicity, we will take the Laplacian of the point charge potential $V_+$, as the process for the image is identical. 
+\begin{align*}
+\nabla^2 V_+ &= \frac{d^2 V_+}{dx^2}+\frac{d^2 V_+}{dy^2}+\frac{d^2 V_+}{dz^2}\\
+\nabla^2 V_+ &= \frac{Q}{4\pi\varepsilon_0}\left\{\left( \frac{3x^2}{R_+^{5/2}}-\frac{1}{R_+^{3/2}} \right) +\left( \frac{3(y-d)^2}{R_+^{5/2}}-\frac{1}{R_+^{3/2}} \right)+\left( \frac{3z^2}{R_+^{5/2}}-\frac{1}{R_+^{3/2}} \right) \right\}\\
+\nabla^2 V_+ &= \frac{Q}{4\pi\varepsilon_0}\left\{
+\frac{3R_+}{R_+^{5/2}} - \frac{3}{R_+^{3/2}}\right\}\\
+\nabla^2 V_+ &= \frac{Q}{4\pi\varepsilon_0}\left\{
+0\right\}
+\end{align*}
+Likewise $\nabla^2V_-=0$ as well, so naturally $\nabla^2V=0$.
+\item 
+If the conducting plane is not grounded we must instead solve for the induced surface charge with this new boundary condition. We first start for an expression of the potential due to the point charge and the conducting sheet
+\begin{align*}
+V(x,y,z) &= \frac{Q}{4\pi\varepsilon_0}\frac{1}{\sqrt{x^2+(y-d)^2+z^2}}+\frac{1}{4\pi\varepsilon_0}\int_S\frac{\rho_s}{R_1}dS
+\end{align*}
+where $R_1$ is the distance from $dS$ to the point of interest. The induced surface charge can be determined by taking the electric field from the point charge 
+\begin{align*}
+\vect{E}_Q(x,y,z) = \frac{Q}{4\pi\varepsilon_0}\frac{1}{{x^2+(y-d)^2+z^2}},
+\end{align*}
+and using the boundary conditions above the conducting plane
+\begin{align*}
+\rho(x,z) = \varepsilon_0 \uvect{a}_y\cdot\vect{E}_Q(x,y=0,z).
+\end{align*}
+This potential from the conducting sheet is not a function of the potential of the sheet itself so there will be no difference whether it is at 0 (V) or $V_0$ (V). As a result the expression from (a) will be unchanged.
+\item
+The point charge is attracted towards the negative induced charge on the plane. Because the potential is the same as for the analogous problem with a charge and its image we can just use the force of attraction between the two charges.
+\begin{align*}
+|F|&=\frac{Q^2}{4\pi\varepsilon_{o}d^2},\,\,\, \text{where d is the distance between the charge and the conducting infinite plane.}
+\end{align*}
+\end{enumerate}
+\end{center}}
+\answer{
+\begin{enumerate}[label=(\alph*)]
+\item Proof problem
+\item No change in $V(x,y,z)$ from (a).
+\item \begin{align*}
+|F|=\frac{Q^2}{4\pi\varepsilon_{o}d^2},\,\,\, \text{where d is the distance between the charge and the conducting infinite plane.}
+\end{align*}
+\end{enumerate}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

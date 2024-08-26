@@ -1,0 +1,67 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{[Cheng P.7-7] A conducting sliding bar oscillates over two parallel conducting rails in a sinusoidally varying magnetic field 
+\begin{align*}
+\vect{B} = \uvect{a}_z 5\cos\omega t \; \text{(mT)},
+\end{align*}
+as shown in Fig. 7-13. The position of the sliding bar is given by $x=0.35(1-\cos \omega t)$ (m), and the rails are terminated in a resistance $R=0.2$ ($\Omega$). Find $i$ in Fig.7-13.
+\begin{center}
+\includegraphics[scale = 0.45]{\ppath Cheng7-7_prompt.png}
+\end{center}
+}
+
+\solution{ The flux through the surface composed of the rails, resistor, and bar as a function of time is given by 
+\begin{align*}
+\Phi(t) &= \vect{B}(t)\cdot \vect{S}(t)\\
+&= -(5 \cos\omega t)\cdot 0.2(0.7-x)\\
+&= -0.35\cos \omega t (1+\cos \omega t)\; \text{(mT)}.
+\end{align*}
+We can now find the current $i$
+\begin{align*}
+i &= \frac{v}{R} = \frac{1}{R}\cdot -\frac{d\Phi}{dt}\\
+&= -\frac{1}{R} 0.35 \omega(\sin\omega t + \sin 2\omega t)\\
+&= -1.75\omega \sin\omega t(1+2\cos\omega t)\; \text{(mA)}.
+\end{align*}
+}
+\answer{\begin{align*}
+i=-1.75\omega \sin\omega t(1+2\cos\omega t)\; \text{(mA)}.
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

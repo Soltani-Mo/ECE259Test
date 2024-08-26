@@ -1,0 +1,110 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 7-9:
+\textbf{Goal:} Assuming that a resistance $R$ is connected across the slip rings of the rectangular conducting loop that rotates in a constant magnetic field $\vect{B} = \uvect{a}_y B_0$, shown in Fig. 7-6, prove that the power dissipated in $R$ is equal to the power required to rotate the loop at an angular frequency $\omega$.\\
+\begin{center}
+\includegraphics[scale = 0.9]{\wpath 7-6.png}
+\end{center}
+
+%\vskip 60pt
+\textbf{Steps:} 
+\begin{enumerate}
+\item Determine the emf ${\cal V}$ and current ${\cal I}$ induced in the conducting loop.
+
+\solution{
+\begin{align*}
+{\cal V} &= - \frac{d}{dt} \int_S \vect{B} \cdot d\vect{S} \\
+&= \omega B_0 h w \sin \omega t\,. \\
+{\cal I} &= \frac{\omega B_0 h w \sin \omega t}{R}\,.
+\end{align*}}
+
+\item Determine the power dissipated in the resistor.
+%\vskip 60pt
+
+\solution{
+\begin{align*}
+P_d &= \frac{{\cal V}^2}{R} \\
+&= \frac{\omega^2 B_0^2 h^2 w^2 \sin^2 \omega t}{R}\,.
+\end{align*}}
+
+\item What is the magnetic force exerted on side 1-2 of the loop?
+%\vskip 40pt
+
+\solution{
+\begin{align*}
+\vect{F}_{12} = \uvect{a}_z i h B_0\,.
+\end{align*}}
+
+\item What is the velocity of side 1-2 of the loop?
+%\vskip 40pt
+
+\solution{
+\begin{align*}
+\vect{u}_{12} = \frac{\omega w}{2} \left(\uvect{a}_y \cos \omega t - \uvect{a}_z \sin \omega t \right)
+\end{align*}}
+
+\item What is the magnetic force exerted on side 4-3 of the loop?
+%\vskip 40pt
+
+\solution{
+\begin{align*}
+\vect{F}_{43} = -\uvect{a}_z i h B_0\,.
+\end{align*}}
+
+\item What is the velocity of side 4-3 of the loop?
+%\vskip
+
+\solution{
+\begin{align*}
+\vect{u}_{43} = \frac{\omega w}{2} \left(-\uvect{a}_y \cos \omega t + \uvect{a}_z \sin \omega t \right)
+\end{align*}}
+
+\item What is mechanical power required to rotate coil? (Remember that $P  = \vect{F} \cdot \vect{u}$, where $P$ is power, $\vect{F}$ is force, and $\vect{u}$ is velocity)
+
+\solution{
+\begin{align*}
+P_m &= - \left(\vect{F}_{12}\cdot \vect{u}_{12} + \vect{F}_{43} \cdot \vect{u}_{43} \right)\\
+&= \omega B_0 h w i \sin \omega t \\
+&= P_d\,.
+\end{align*}}
+
+\end{enumerate}
+\answer{Proof problem}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

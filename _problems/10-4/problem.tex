@@ -1,0 +1,102 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{%Notaros example 6.18
+\textit{Rotating loop in a rotating field -- asynchronous motor}. 
+A rectangular loop shown in Fig.~6.19 is exposed to two time-varying magnetic fields $B_1 = B_o \cos \omega t$ and $B_2 = \sin \omega t$. The directions of $B_1$ and $B_2$ fields are as shown in Fig.~6.19. Now the loop from Fig.~Q6.19 also rotates in the same direction with an angular velocity $\omega_o$ ($\omega_o < \omega$), as indicated in Fig.~Q6.20. This device represents an elementary asynchronous motor. Calculate (a) the time-average power of Joule's losses dissipated in the loop, (b) the time-average torque of magnetic force on the loop, and (c) the efficiency of the motor.
+\begin{center}
+\includegraphics[width=0.5\textwidth]{\ppath NotarosExample6-17.png}\\
+\textbf{Figure 6.19} A rectangular wire loop exposed to two time-harmonic magnetic fields of equal amplitudes and $90^\circ$ out of phase (a), which superposed to each other represent a rotating magnetic field (b).
+\end{center}
+\begin{center}
+\includegraphics[width=0.2\textwidth]{\ppath NotarosExample6-18.png}\\
+\textbf{Figure 6.20} Evaluation of the emf in a rectangular contour moving in the magnetic field due to an infinitely long wire with a steady current.
+\end{center}}
+
+\solution{
+\begin{enumerate}[label=(\alph*)]
+\item This is a system based on total (mixed) induction - the magnetic field changes (rotates) in time and the loop moves (rotates). It is called the asynchronous motor because the loop does not rotate in synchronism with the field. The relative rate of rotation of the field with respect to the rotating part of the motor (the loop in our case), called the rotor, equals
+\begin{align*}
+\Delta \omega = \omega - \omega_0,
+\end{align*}
+which is referred to as the slipping angular velocity of the asynchronous motor. Consequently, this system can be replaced by either an equivalent system with a stationary loop and a magnetic field rotating with a velocity $\Delta\omega$ (transformer induction case, as in Fig. 6.19) or an equivalent system with a loop rotating with a velocity $\Delta \omega$ in a static magnetic field (motional induction case). The magnetic flux though the loop in Fig. 6.20 is
+\begin{align*}
+\Phi(t) = ab\vert\vect{B}\vert\cos\Delta\omega t = abB_0\cos(\omega-\omega_0)t.
+\end{align*}
+The time average power of Joule's losses in the loop can be written as 
+\begin{align*}
+(P_J)_\text{ave}&= \frac{1}{T}\int_0^T P_J dt\\
+&= \frac{1}{T}\int_0^T T_m(t)(\omega-\Delta\omega) dt\\
+&= \frac{1}{T}\int_0^T i_\text{ind}(t)abB_0\sin(\theta)(\omega-\Delta\omega) dt\\
+&= \frac{1}{T}\int_0^T \frac{a^2b^2B_0^2(\omega-\Delta\omega)^2\sin^2[(\omega-\Delta\omega) t]}{R} dt\\
+&= \frac{a^2b^2B_0^2(\omega-\Delta\omega)^2}{2R} 
+\end{align*}
+\item The time average torque is 
+\begin{align*}
+\vect{(T_m)_{\text{ave}}}&= \frac{1}{T}\int_0^T T_m(t) dt\\
+&= \frac{1}{T}\int_0^T \frac{a^2b^2B_0^2(\omega-\Delta\omega)\sin^2[(\omega-\Delta\omega) t]}{R} dt\\
+&= \frac{a^2b^2B_0^2(\omega-\Delta\omega)}{2R}.
+\end{align*}
+This torque has the same direction as the slipping velocity of the motor.
+\item The rate of the loop rotation in Fig. 6-20 is $\omega_0$, so the time average mechanical power to rotate the loop is 
+\begin{align*}
+(P_\text{mech})_\text{ave} = (\vect{T}_m)_\text{ave}\omega_0 = \frac{a^2b^2B_0^2(\omega-\Delta\omega)}{2R} \omega_0.
+\end{align*}
+The efficiency of the motor is given by
+\begin{align*}
+\eta = \frac{(P_\text{mech})_\text{ave}}{(P_\text{mech})_\text{ave}+(P_J)_\text{ave}} = \frac{\omega_0}{\omega}
+\end{align*}
+where we neglect the losses in the stationary part of the motor (the stator).
+\end{enumerate}
+}
+
+
+\answer{\begin{enumerate}[label=(\alph*)]
+\item \begin{align*}
+(P_J)_{\text{ave}}=\frac{a^2 b^2 B^{2}_{o}}{2R}(\omega-\omega_o)^2
+\end{align*}
+\item \begin{align*}
+\vect{(T_m)_{\text{ave}}}=\frac{a^2 b^2 B^{2}_{o}}{2R}(\omega-\omega_o)
+\end{align*}
+\item \begin{align*}
+\eta=\frac{\omega_o}{\omega}
+\end{align*}
+\end{enumerate}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

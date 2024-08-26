@@ -1,0 +1,111 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+\textbf{Goal:} Determine the magnetic flux density inside an infinitely long solenoid in free space having $n$ closely wounds turns per unit length and carrying a current $I$.
+\begin{center}
+	(a) \includegraphics[width=0.5\textwidth]{\wpath Problem2_Figure1.png}\\
+	(b) \includegraphics[width=0.7\textwidth]{\wpath Problem2_Figure2.png} 
+\end{center}
+\textbf{Steps:} 
+\begin{enumerate}
+
+\item State Amp\`{e}re's law.\\
+%\vskip 50pt
+\solution{
+The integral form of the Amp\`{e}re's circuit law is
+\begin{equation*}
+\oint_C \vec{B} \cdot d\vec{l} = \mu_0 I_\text{enc}
+\end{equation*}
+where $C$ is the contour of the boundary points of a surface $S$ and $I_\text{enc}$ is the total current passing through surface $S$.
+}
+
+\item Sketch the magnetic field inside the solenoid in diagram (b) above.\\
+\solution{
+\begin{tikzpicture}
+\node at (0,0) { \includegraphics[width=0.5\textwidth]{\wpath Problem2_Figure2.png} };
+\draw [<-] (-3,0.5) -- (0.6,0.5);
+\draw [<-] (-3,0.0) -- (0.6,0.0) node[pos=0.5,above] {$\vec{B}$};
+\draw [<-] (-3,-0.4) -- (0.6,-0.4);
+\node at (3.2,0) {x};
+\node at (3.4,0) {x};
+\node [below] at (3.4,-1) {$\vec{B}$ field is into the page};
+\end{tikzpicture}
+}
+
+\item Determine an Amperian path and sketch it on diagram (b).\\
+\solution{
+\begin{tikzpicture}
+\node at (0,0) { \includegraphics[width=0.5\textwidth]{\wpath Problem2_Figure2.png} };
+\draw [<-] (-3,0.5) -- (0.6,0.5);
+\draw [<-] (-3,0.0) -- (0.6,0.0) node[pos=0.5,below] {$\vec{B}$};
+\draw [<-] (-3,-0.4) -- (0.6,-0.4);
+\node at (3.2,0) {x};
+\node at (3.4,0) {x};
+\node [below] at (3.4,-1) {$\vec{B}$ field is into the page};
+%Drawing the contour.
+\coordinate (p1) at (1,0);
+\coordinate (p2) at (-1,0);
+\coordinate (p3) at (-1,-1);
+\coordinate (p4) at (1,-1);
+\draw [red,line width=2pt] (0,0) -- (0,1.2);
+\draw [red,line width=2pt] (0,1.2) -- (-2,1.2);
+\draw [red,line width=2pt] (-2,1.2) -- (-2,0);
+\draw [red,line width=2pt] (-2,0) -- (0,0);
+\draw [->,red,line width=2pt] (0,1.2) -- (0,0.6);
+\draw [-<,red,line width=2pt] (-2,1.2) -- (-2,0.6);
+\draw [-<,red,line width=2pt] (-2,0) -- (-1,0);
+\draw [->,red,line width=2pt] (-2,1.2) -- (-1,1.2);
+\end{tikzpicture}
+}
+
+\item Applying Amp\`{e}re's law, determine the magnetic field inside the solenoid.\\
+%\vskip 100pt
+\solution{
+\begin{eqnarray*}
+BL &=& \mu_0 n L I\\
+B &=& \mu_0 n I
+\end{eqnarray*}
+}
+
+\end{enumerate}
+
+\answer{\begin{eqnarray*}
+B &=& \mu_0 n I
+\end{eqnarray*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

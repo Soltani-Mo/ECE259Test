@@ -1,0 +1,75 @@
+\def\showsolutions{true}
+\def\showworkbooks{true}
+
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 3-32. 
+\textbf{Goal:} The radius of the core and the inner radius of the outer conductor of a very long coaxial transmission line are $r_i$ and $r_o$, respectively. The space between the conductors is filled with two coaxial layers of dielectrics. The dielectric constants of the dielectrics are $\varepsilon_{r1}$ for $r_i < r < b$ and $\varepsilon_{r2}$ for $b < r < r_o$. Determine its capacitance per unit length.\\
+\\
+\textbf{Steps:} 
+\begin{enumerate}
+\item Using Gauss's Law, determine an expression for the electric fields in both dielectrics.
+
+\solution{
+\begin{eqnarray*}
+\vec{E}_1 &=& \vec{a}_{r} \frac{\rho_l}{2\pi \varepsilon_o\varepsilon_{r1} r}, \quad \text{for} \quad r_i < r < b\\
+\vec{E}_2 &=& \vec{a}_{r} \frac{\rho_l}{2\pi \varepsilon_o\varepsilon_{r2} r}, \quad \text{for} \quad b < r < r_o\\
+\end{eqnarray*}}
+
+\item Determine an expression of the voltage between the two conductors.
+
+\solution{
+We integrate along the electric fields, yielding
+\begin{equation*}
+V = - \int_{r_o}^{r_i} \vec{E} \cdot d\vec{l} = \frac{\rho_l}{2\pi\varepsilon_o}
+\left( \frac{1}{\varepsilon_{r1}} \ln \frac{b}{r_i} + \frac{1}{\varepsilon_{r2}} \ln \frac{r_o}{b} \right)
+\end{equation*}}
+
+\item Determine an expression for the capacitance per unit length.
+
+\solution{
+\begin{equation*}
+C' = \frac{\rho_l}{V} = \frac{2\pi\varepsilon_o}{\frac{1}{\varepsilon_{r1}} \ln (b/r_i) + \frac{1}{\varepsilon_{r2}} \ln (r_o/b)}\;\text{(F/m)}
+\end{equation*}}
+\end{enumerate}
+\answer{\begin{align*}
+C^{'} = \frac{2\pi\varepsilon_o}{\frac{1}{\varepsilon_{r1}} \ln (b/r_i) + \frac{1}{\varepsilon_{r2}} \ln (r_o/b)}\;\text{(F/m)}
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

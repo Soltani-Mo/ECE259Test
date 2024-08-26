@@ -1,0 +1,87 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+\textbf{Goal:} Assume that the $z=0$ plane separates two lossless dielectric regions with $\varepsilon_{r1} =2$  and $\varepsilon_{r2} = 3$.  Let the electric field $\vect{E}_1 = 2y\uvect{a}_x -  3x\uvect{a}_y +  (5 + z)\uvect{a}_z$ in region 1. Find the electric field $\vect{E}_2$ and the electric flux density $\vect{D}_2$ in region 2.\\
+\\
+\textbf{Steps:} 
+\begin{enumerate}
+\item What is the polarization vector $\vect{P}_1$ in region 1? 
+
+\solution{
+\begin{align*}
+\vect{P}_1 &= \varepsilon_0 \left( \varepsilon_{r1} - 1\right) \vect{E}_1 \\
+&= \epsilon_0 \vect{E}_1\,.
+\end{align*}}
+
+\item What is the electric flux density $\vect{D}_1$ in region 1?
+
+\solution{
+\begin{align*}
+\vect{D}_1 = 2\varepsilon_0 \left( 2y \uvect{a}_x - 3x \uvect{a}_y + (5 + z) \uvect{a}_z \right)
+\end{align*}}
+
+\item Using the boundary conditions for electrostatic fields we can compute the electric field $\vect{E}_2$ and the electric flux density $\vect{D}_2$ in region 2 \textit{near} the interface. Use an appropriate boundary condition to find the normal component of $\vect{D}_{2\mathrm{n}}$ in region 2 at the interface.
+
+\solution{
+\begin{align*}
+\vect{D}_{2\textrm{n}} (z = 0) &= \vect{D}_{1\textrm{n}} (z = 0)\\
+&= 10 \varepsilon_0   \uvect{a}_z \,.
+\end{align*}}
+
+\item Use an appropriate boundary condition to find the tangential component of the electric field $\vect{E}_{2\mathrm{t}}$ in region 2 at the interface.
+
+\solution{
+\begin{align*}
+\vect{E}_{2\mathrm{t}} &= \vect{E}_{1\mathrm{t}} \\
+&= \uvect{a}_x 2y  - \uvect{a}_y 3x  \,.
+\end{align*}}
+
+\item What is the electric field $\vect{E}_2$ and the electric flux density $\vect{D}_2$ in region 2?
+
+\solution{
+\begin{align*}
+\vect{D}_2 &= 3 \epsilon_0 \left( \uvect{a}_x 2y - \uvect{a}_y 3 x + \uvect{a}_z \frac{10}{3}  \right) \\
+\vect{E}_2 &=  \uvect{a}_x 2y - \uvect{a}_y 3 x + \uvect{a}_z \frac{10}{3}  \,.
+\end{align*}}
+\end{enumerate}
+\answer{\begin{align*}
+\vect{D}_2 &= 3 \epsilon_0 \left( \uvect{a}_x 2y - \uvect{a}_y 3 x + \uvect{a}_z \frac{10}{3}  \right) \\
+\vect{E}_2 &=  \uvect{a}_x 2y - \uvect{a}_y 3 x + \uvect{a}_z \frac{10}{3}  \,.
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

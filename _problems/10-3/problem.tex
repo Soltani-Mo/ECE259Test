@@ -1,0 +1,66 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+
+\problem{%Notaros example 6.15
+\textit{Moving contour near a time-varying line current.} Refer to Fig.~Q6.17 and assume that the current in the infinite wire conductor is slowly time-varying, with intensity $i(t)$. Find the emf induced in the moving contour.
+\begin{center}
+\includegraphics[width=0.3\textwidth]{\ppath NotarosExample6-15.png}\\
+\textbf{Figure 6.17} Evaluation of the emf in a rectangular contour moving in the magnetic field due to an infinitely long wire with a steady current.
+\end{center}}
+
+\solution{We now have a motion of the contour in a time-varying magnetic field, produced by the current in the wire. Therefore, the e.m.f. is induced in the contour due to combined (transformer plus motional) induction. The flux through the loop is given by
+\begin{align*}
+\Phi(t) &= \int \vect{B}(t)\cdot d\vect{S}(t)\\
+&= \int_{x=c+vt}^{c+vt+a} \frac{\mu_0i(t)}{2\pi x} bdx\\
+&= \frac{\mu_0i(t)b}{2\pi} \ln\frac{c+a+vt}{c+vt}.
+\end{align*}
+The combined e.m.f. is 
+\begin{align*}
+e_{\text{ind}}(t) &= -\frac{d\Phi}{dt}\\
+&= \text{transformer e.m.f.} + \text{motional e.m.f.}\\
+&= -\frac{\mu_0b}{2\pi}\ln\frac{c+a+vt}{c+vt}\frac{di}{dt}+\frac{\mu_0i(t)abv}{2\pi(c+vt)(c+a+vt)}.
+\end{align*}
+We note that the first term in this expression represents the transformer part of the total e.m.f.; it becomes zero in the case of a steady current in the wire. The second term is due to the motional e.m.f.; it becomes zero if the loop is stationary. 
+}
+
+\answer{\begin{align*}
+e_{\text{ind}}(t)=-\frac{\mu_o b}{2\pi}\ln \frac{c+a+vt}{c+vt}\frac{di}{dt}+\frac{\mu_o i(t) abv}{2\pi (c+vt) (c+a+vt)}
+\end{align*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

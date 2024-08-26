@@ -1,0 +1,90 @@
+\documentclass[../../header.tex]{subfiles}
+
+\begin{document}
+%Cheng 7-2
+\textbf{Goal:} The circuit in the figure below is situated in a magnetic field
+\begin{equation*}
+\vec{B} = \vec{a}_z 3 \cos \left(5\pi 10^7 t - \frac{2}{3}\pi x\right) \quad \mu\text{T}.
+\end{equation*}
+Assuming $R = 15\,\Omega$, find the current $i$.
+\begin{center}
+\includegraphics[width=0.5\textwidth]{\wpath Cheng7-2.png}\\
+\textbf{Figure 7-10}. A circuit in time-varying magnetic field.
+\end{center}
+\textbf{Steps:} 
+\begin{enumerate}
+\item State the integral form of Faraday's law.
+%\vskip 100pt
+
+\solution{
+\begin{equation*}
+\oint_C \vec{E} \cdot d\vec{l} = -\frac{d\Phi}{dt}
+\end{equation*}}
+
+\item Calculate the magnetic flux through the loop.
+%\vskip 200pt
+
+\solution{
+\begin{eqnarray*}
+\int_S \vec{B} \cdot d\vec{s} &=& \int_0^{0.6} \vec{a}_z 3 \cos\left(5\pi 10^7 t - \frac{2}{3} \pi x\right) 10^{-6} \vec{a}_z 0.2 dx\\
+&=& - \frac{0.18}{2\pi} \left[ \sin\left(5\pi 10^7 - 0.4 \pi\right) - \sin(5\pi 10^7 t) \right] 10^{-6} \quad \text{(V)}
+\end{eqnarray*}}
+
+
+\item Calculate the electromotive force inducted in the loop.
+%\vskip 200pt
+
+\solution{
+\begin{equation*}
+V = -\frac{d}{dt} \int_S \vec{B} \cdot d\vec{s} = 45 \left[ \cos(5\pi 10^7 - 0.4 \pi) - \cos (5\pi 10^7 t) \right] \quad \text{(V)}
+\end{equation*}}
+
+\item Calculate current $i$.
+%\vskip 100pt
+
+\solution{
+\begin{equation*}
+i = -\frac{V}{2R} = -1.5 \left[ \cos (5\pi 10^7 t - 0.4\pi) - \cos (5\pi 10^7 t) \right] = -1.76 \sin (5\pi 10^7 - 0.2 \pi) \quad \text{(A)}
+\end{equation*}}
+
+\end{enumerate}
+\answer{\begin{equation*}
+i = -1.76 \sin (5\pi 10^7 - 0.2 \pi) \quad \text{(A)}
+\end{equation*}}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
